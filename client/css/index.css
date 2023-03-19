@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(67, 64, 64);
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+/* the user datails part */
+div.registration-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 15vh;
+    
+}
+
+div.inputs-container {
+    width:  100%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.inputs-container input {
+    all: initial;
+    width: 30vw;
+    color: aliceblue;
+    border:1px solid rgb(8, 113, 90) ;
+    box-shadow: 0 0 10px solid rgb(7, 7, 165);
+    padding: 1em;
+}
+input::placeholder {
+    color: #00c507;
+    font-style: italic;
+  }
+  input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  background-color: #4b0c0c;
+}
