@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="shortcut icon" href="/static/img/uia-icon.svg" type="image/x-icon">
+    <title>Upcoming.ai</title>
+</head>
+<body>
+  <div class="page">
+    <div class="logo">
+        <img src="/static/img/uia-icon.svg" alt="logo" width="30vw"><p>upcoming.ai</p>
+    </div>
+    <div class="sign-in-button">
+        <button>sign in</button>
+    </div>
+    <div class="registration-container">
+        <form method="post" action="{ url 'register' }" id="registration">
+            {% csrf_token %}
+            <div class="heading">
+                <h1>Create an account on upcoming.ai</h1>
+            </div>
+            <div class="inputs-container">
+                <label for="username">Username: </label>
+                <input type="text" name="username" placeholder="eg. peter" required>
+            </div>
+            <div class="inputs-container">
+                <label for="email">Email: </label>
+                <input type="email" name="email" placeholder="youremail@example.com" required>
+            </div>
+            <div class="inputs-container">
+                <label for="password">Password: </label>
+                <input type="password" name="password" placeholder="eg. #$%$fxfgf56" required>
+            </div>
+            <div class="warning">
+                <p id="error-message"></p>
+            </div>
+            <div class="inputs-container">
+                <button type="submit">Create Account</button>
+            </div>
+        </form>
+        <script src="/static/js/registration.js" defer></script>
+        {% block content %}
+        {% endblock content%}
+    </div>
+  </div>
+</body>
+</html>

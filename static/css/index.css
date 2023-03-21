@@ -1,0 +1,202 @@
+:root {
+    /* transparent backgrounds */
+    --transparent--bg: rgba(0, 0, 0, 0);
+    /* all button colors */
+    --btn--bg--color: #02252b6f;
+    --btn--hover--bg-color: #0229042a;
+    --btn--txt--color: #022904;
+    --btn--border--color: rgb(6, 119, 85);
+    /* all heading colors */
+    --heading--txt--color: #094d59;
+    /* all inputs colors */
+    --input--label--color:#022904;
+    --input--txt--color: rgb(3, 34, 61);
+    --input--border--color: rgb(8, 101, 113);
+    --placeholder--txt--color: #0a8774;
+    /* text colors for p elements */
+    --warning--txt-color: red;
+  }
+  :root {
+    /* transparent backgrounds */
+    --transparent--bg: rgba(0, 0, 0, 0);
+    /* all button colors */
+    --btn--bg--color: #2d2d2d;
+    --btn--hover--bg-color: #1d1d1d;
+    --btn--txt--color: #ffffff;
+    --btn--border--color: rgb(135, 135, 135);
+    /* all heading colors */
+    --heading--txt--color: #7ca06f;
+    /* all inputs colors */
+    --input--label--color: #dcdcdc;
+    --input--txt--color: #ffffff;
+    --input--border--color: rgb(135, 135, 135);
+    --placeholder--txt--color: #a0a0a0;
+    /* text colors for p elements */
+    --warning--txt-color: #ff6347;
+    --logo--txt--color: rgb(23, 217, 175);
+  }
+  * {
+    box-sizing: border-box;
+  }
+  
+html, body {
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+/* login page styling */
+div.page {
+    width: 100%;
+    height: 100vh;
+    min-height: 500px;
+    background: url(/static/img/dark-background.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-size: cover;
+}
+div.logo {
+    float: left;
+    height: fit-content;
+    width: fit-content;
+    padding: 1em;
+}
+.logo:hover {
+    border-bottom: 2px solid var(--btn--border--color);
+    cursor: pointer;
+}
+.logo p {
+    color: var(--logo--txt--color);
+    padding: 0;
+    margin: 0;
+    float: right;
+    padding-top:0.5em;
+}
+div.sign-in-button {
+    float: right;
+    height: fit-content;
+    width: fit-content;
+    padding: 1em;
+  
+}
+.sign-in-button  button{
+    border: 2px solid var(--btn--border--color);
+    background-color: var(--transparent-bg);
+    color: var(--btn--txt--color);
+    padding: 0.5em;
+    font-size: larger;
+    border-radius: 1em;
+    width: 10vw;
+}
+.sign-in-button  button:hover {
+    cursor: pointer;
+    background-color: var(--btn--hover--bg-color);
+}
+/* heading of the page */
+div.heading h1 {
+    margin: 0;
+    padding: 0;
+    color: var(--heading--txt--color) ;
+    font-size: 1.5em;
+}
+
+/* the user datails part */
+div.registration-container {
+    display: flex;
+    align-items: centerc;
+    justify-content: center;
+    padding-top: 5vh;
+}
+div.inputs-container {
+    width:  100%;
+    height: 13vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+div.inputs-container label {
+    color: var(--input--label--color);
+    font-size: smaller;
+    width: 5vw;
+    margin-right: 3em;
+    float: left;
+}
+.inputs-container input {
+    float: right;
+    all: initial;
+    width: 20vw;
+    color: var(--input--txt--color);
+    border-bottom:2px solid  var(--input--border--color);
+    padding: 0.7em;
+    text-indent: 1em;
+}
+input::placeholder {
+    color: var(--placeholder--txt--color);
+    font-style: italic;
+    font-size: medium;
+}
+div.warning {
+    color: var(--warning--txt-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 2vh;
+}
+.inputs-container button {
+    background-color: var(--btn--bg--color);
+    padding: 1em;
+    border: none;
+    color: var(--btn--txt--color);
+    width: 15vw;
+}
+.inputs-container button:hover {
+    border-radius: 0.4em;
+    background-color: var(--btn--hover--bg-color);
+    cursor: pointer;
+}
+
+/* media query for smaller screens */
+@media (max-width: 1000px){
+    div.registration-container {
+        float: left;
+        width: auto;
+        padding-left: 5%;
+    }
+    div.sign-in-button {
+        padding: 0.9em;
+    }
+    .sign-in-button  button{
+        width: auto;
+    }
+    div.heading h1 {
+        font-size: 0.9em;
+        padding: 0.2em;
+    }
+    div.inputs-container {
+        width:  100%;
+        height: auto;
+        display: block;
+        padding: 0.8em 0 0.8em 0;
+    }
+    .inputs-container input {
+        width: 90%;
+        text-indent: 5em;
+        padding: 0.7em;
+        margin: 0;
+    }
+    .inputs-container button {
+        width: auto;
+    }
+    div.inputs-container label {
+        margin-right:5em ;
+    }
+    div.warning {
+        font-size: 2.5vw;
+        padding-left: 3em;
+    }
+}
