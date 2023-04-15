@@ -1,3 +1,6 @@
+/*
+*validating the user inputs
+*/ 
 const form = document.querySelector("#registration");
 const errorMessage = document.getElementById('error-message');
 
