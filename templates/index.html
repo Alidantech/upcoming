@@ -21,8 +21,7 @@
         <button>sign in</button>
     </div>
     <div class="registration-container">
-        <form method="post" action="{ url 'register' }" id="registration">
-            {% csrf_token %}
+        <form method="post" action="" id="registration">
             <div class="heading">
                 <h1>Create an account on upcoming.ai</h1>
             </div>
@@ -46,8 +45,7 @@
             </div>
         </form>
         <script src="/static/js/registration.js" defer></script>
-        {% block content %}
-        {% endblock content%}
+       
     </div>
   </div>
 </body>
