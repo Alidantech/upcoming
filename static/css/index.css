@@ -16,28 +16,7 @@
     /* text colors for p elements */
     --warning--txt-color: red;
   }
-  :root {
-    /* transparent backgrounds */
-    --transparent--bg: rgba(0, 0, 0, 0);
-    /* all button colors */
-    --btn--bg--color: #2d2d2d;
-    --btn--hover--bg-color: #1d1d1d;
-    --btn--txt--color: #ffffff;
-    --btn--border--color: rgb(135, 135, 135);
-    /* all heading colors */
-    --heading--txt--color: #7ca06f;
-    /* all inputs colors */
-    --input--label--color: #dcdcdc;
-    --input--txt--color: #ffffff;
-    --input--border--color: rgb(135, 135, 135);
-    --placeholder--txt--color: #a0a0a0;
-    /* text colors for p elements */
-    --warning--txt-color: #ff6347;
-    --logo--txt--color: rgb(23, 217, 175);
-  }
-  * {
-    box-sizing: border-box;
-  }
+  
   
 html, body {
     margin: 0;
@@ -57,23 +36,6 @@ div.page {
     background-size: cover;
     background-attachment: fixed;
     background-size: cover;
-}
-div.logo {
-    float: left;
-    height: fit-content;
-    width: fit-content;
-    padding: 1em;
-}
-.logo:hover {
-    border-bottom: 2px solid var(--btn--border--color);
-    cursor: pointer;
-}
-.logo p {
-    color: var(--logo--txt--color);
-    padding: 0;
-    margin: 0;
-    float: right;
-    padding-top:0.5em;
 }
 div.sign-in-button {
     float: right;
