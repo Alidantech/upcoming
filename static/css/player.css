@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.player-page {
+    background-repeat: no-repeat;
+    background-image: url(/static/img/music-bg.jpg);
+    background-size: cover;   
+     width: 100%;
+    height: 100vh;
+}
+.background {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.726));
+}
+
+
+.song {
+    background-color: rgba(60, 65, 63, 0.815);
+    box-shadow: 0 4px 6px rgba(2, 51, 35, 0.781), 0 1px 3px rgba(2, 19, 53, 0.747);
+    height: 95vh;
+    border-radius: 10px;
+    width: 95%;
+    display: grid;
+    grid-template-rows: 80% 20%;
+}
+
+.details {
+    background-color: rgba(0, 0, 0, 0.349);
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.details-container {
+    height: 100%;
+    width: 70%;
+    display: grid;
+    grid-template-rows: 90% 10%;
+}
+.details-container img{
+    border-radius: 10px;
+}
+.details-container > div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls {
+  
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+.song-progress {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    padding: 3vh;
+}
+.song-progress p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 1vh;
+    margin-top: 0.5em;
+    background-color: brown;
+}
+.controls-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.controls-grid {
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+}
+.controls-grid > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

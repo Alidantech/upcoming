@@ -5,10 +5,10 @@
 
     /*page colors*/
     --color-primary: #0a1e24ef;
-    --color-secondary: #fff;
-    --color-background: #f7f7f7;
+    --color-secondary: #d3c8c8;
+    --color-background: #ffffff;
     --color-text: #333;
-    --color-shadow: rgba(0, 0, 0, 0.1);
+    --color-shadow: rgba(214, 199, 199, 0.1);
     --color-footer:rgba(0, 0, 0, 0.767);
 
     /*page heights*/

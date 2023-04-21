@@ -1,79 +1,48 @@
-let mediaRecorder; // Variable to store MediaRecorder instance
-let recordedChunks = []; // Array to store recorded audio chunks
-let progressBar = document.getElementById('progressBar'); // Progress bar element
-let recordBtn = document.getElementById('recordBtn'); // Record button element
-let stopBtn = document.getElementById('stopBtn'); // Stop button element for recording
-let playBtn = document.getElementById('playBtn'); // Play button element
-let stopPlaybackBtn = document.getElementById('stopPlaybackBtn'); // Stop button element for playback
-let audioPlayer = document.getElementById('audioPlayer'); // Audio player element
+// Load Wavesurfer.js library
+var wavesurfer = WaveSurfer.create({
+  container: '#waveform',
+  waveColor: 'blue',
+  progressColor: 'brown'
+});
 
-recordBtn.addEventListener('click', startRecording);
-stopBtn.addEventListener('click', stopRecording);
-playBtn.addEventListener('click', playRecording);
-stopPlaybackBtn.addEventListener('click', stopPlayback);
+// Handle file selection
+var fileInput = document.getElementById('file-input');
+fileInput.addEventListener('change', function() {
+  var file = this.files[0];
+  
+  // Load audio file using FileReader API
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    var audioBlob = new Blob([e.target.result], { type: file.type });
+    var audioUrl = URL.createObjectURL(audioBlob);
+    wavesurfer.load(audioUrl);
+  };
+  reader.readAsArrayBuffer(file);
+});
 
-// Start recording function
-function startRecording() {
-  recordBtn.disabled = true;
-  playBtn.disabled = true;
-  progressBar.value = 0;
-  progressBar.style.display = 'block';
-  recordedChunks = [];
-  navigator.mediaDevices.getUserMedia({ audio: true })
-    .then(function(stream) {
-      mediaRecorder = new MediaRecorder(stream);
-      mediaRecorder.start();
-      updateProgressBar();
-      mediaRecorder.addEventListener('dataavailable', function(event) {
-        recordedChunks.push(event.data);
-      });
-      mediaRecorder.addEventListener('stop', function() {
-        progressBar.style.display = 'none';
-        recordBtn.disabled = false;
-        playBtn.disabled = false;
-        stopBtn.disabled = true;
-        stopPlaybackBtn.disabled = true;
-        let blob = new Blob(recordedChunks, { type: 'audio/webm' });
-        audioPlayer.src = URL.createObjectURL(blob);
-        audioPlayer.controls = true;
-        audioPlayer.style.display = 'block';
-      });
-    })
-    .catch(function(error) {
-      console.error('Error accessing microphone:', error);
-    });
-}
+// Add event listener to play button
+var playBtn = document.getElementById('playBtn');
+playBtn.addEventListener('click', function() {
+  // Start playing audio
+  wavesurfer.play();
+  
+  // Update progress bar as audio plays
+  wavesurfer.on('audioprocess', function() {
+    var progress = wavesurfer.getCurrentTime() / wavesurfer.getDuration();
+    var progressBar = document.getElementById('progressBar');
+    progressBar.style.width = progress * 100 + '%';
+  });
+});
 
-// Stop recording function
-function stopRecording() {
-  mediaRecorder.stop();
-  stopBtn.disabled = true;
-  stopPlaybackBtn.disabled = true;
-}
+// Add event listeners to update loading progress bar
+wavesurfer.on('loading', function(progress) {
+  var loadingBar = document.getElementById('loadingBar');
+  loadingBar.style.width = progress * 1 + '%';
+  console.log(progress);
+});
 
-// Play recording function
-function playRecording() {
-  audioPlayer.play();
-  stopBtn.disabled = true;
-  stopPlaybackBtn.disabled = false;
-}
+wavesurfer.on('ready', function() {
+  var loadingContainer = document.getElementById('loadingContainer');
+  loadingContainer.style.display = 'none';
+});
 
-// Stop playback function
-function stopPlayback() {
-  audioPlayer.pause();
-  audioPlayer.currentTime = 0;
-  stopBtn.disabled = false;
-  stopPlaybackBtn.disabled = true;
-}
-
-// Update progress bar function
-function updateProgressBar() {
-  let recordingTime = 0;
-  let intervalId = setInterval(function() {
-    recordingTime += 100;
-    progressBar.value = recordingTime / 1000;
-    if (mediaRecorder.state === 'inactive') {
-      clearInterval(intervalId);
-    }
-  }, 100);
-}
