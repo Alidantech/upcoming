@@ -123,7 +123,6 @@ input:focus {
       flex-basis: calc(33.33% - 20px);
     }
   }
-  
   @media (max-width: 480px) {
     .music-item {
       flex-basis: calc(50% - 20px);
