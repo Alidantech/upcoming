@@ -7,7 +7,7 @@
 *::-webkit-scrollbar {
   width: 6px;
 }
-  
+
   /* target the thumb */
 *::-webkit-scrollbar-thumb {
   background-color: #024d27;
