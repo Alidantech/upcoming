@@ -168,12 +168,12 @@ h1:hover {
     padding: 10px;
     color: #a9d6f5;
     text-decoration: none;
-    border: 3px solid transparent;
+    border: 1px solid transparent;
     transition: border-bottom 0.3s ease-in-out;
   }
   
   .nav-links a:hover {
-    border-bottom: 3px solid #046d2e;
+    border-bottom: 1px solid #046d2e;
     color: #06ffb4;
   }
   
