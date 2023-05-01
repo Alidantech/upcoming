@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,37 +8,63 @@
     <link rel="shortcut icon" href="{% static 'uia-icon.svg' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'global.css' %}">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
-    <script src="/static/js/master.js" defer></script>
+    <script src="{% static 'js/master.js' %}" defer></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="{% static 'uia-icon.svg' %}" alt="logo" width="30vw"><p>upcoming.ai</p>
-        </div>
-        <div class="page-heading">
-        <div class="heading">
-            {% block heading %}
-
-            {% endblock %} 
-        </div>
-        </div>
-        <div class="page-links">
-            <nav class="navigation-bar">
-                <ul class="nav-links">
-                    <li><a href="/">Home</a></li>
-                    <li><a href="users/">artists</a></li>
-                    <li><a href="#">Record</a></li>
-                    <li><a href="latest/">latest</a></li>
-                    <li><a href="#">Account</a></li>
-                    <li><a href="#">About</a></li>
-                </ul>
-              </nav>
-        </div>
-    </header>
-    <main>
-    {% block content %}
-    {% endblock %}
-    </main> 
+<header>
+    <div class="logo">
+        <img src="{% static 'uia-icon.svg' %}" alt="logo" width="25vw"><p>upcoming.ai</p>
+    </div>
+    <div class="page-heading">
+    <div class="heading">
+        <h1> {% block heading %}{% endblock %} </h1>
+    </div>
+    </div>
+    <div class="page-links">
+        <nav class="navigation-bar">
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#">artists</a></li>
+                <li><a href="record/">Record</a></li>
+                <li><a href="music/">music</a></li>
+                <li><a href="account/">Account</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+          </nav>
+    </div>
+</header>
+<main>
+  {% block content %}
+  {% comment %} main page content goes here {% endcomment %}
+  {% endblock %}
+</main> 
+<footer class="bg-dark text-white py-4">
+  <div class="link-container">
+      <div class="section">
+        <h4>Developers</h4>
+        <ul class="list-unstyled">
+          <li><a href="#">API Documentation</a></li>
+          <li><a href="#">Developer Blog</a></li>
+          <li><a href="#">Developer Tools</a></li>
+        </ul>
+      </div>
+      <div class="section">
+        <h4>Explore</h4>
+        <ul class="list-unstyled">
+          <li><a href="#">Record a Song</a></li>
+          <li><a href="#">Discover Music</a></li>
+          <li><a href="#">Home</a></li>
+        </ul>
+      </div>
+      <div class="section">
+        <h4>Contact Us</h4>
+        <ul class="list-unstyled">
+          <li><a href="mailto:support@upcoming.com">support@upcoming.com</a></li>
+          <li><a href="#">Join the Community</a></li>
+        </ul>
+      </div>
+    </div>
+</footer>      
 </body>
 </html>

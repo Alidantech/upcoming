@@ -1,6 +1,10 @@
 from django.http import HttpResponse
 from django.template import loader
 
-def latest(request):
-    template = loader.get_template('latest.html')
+def music(request):
+    template = loader.get_template('music.html')
+    return HttpResponse(template.render())
+
+def record(request):
+    template = loader.get_template('record.html')
     return HttpResponse(template.render())

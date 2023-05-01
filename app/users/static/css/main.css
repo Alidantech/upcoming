@@ -1,5 +1,72 @@
-* {
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
+/* Style the main content area */
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #0a1e24ef;
 }
+
+.main-content {
+    color: #333;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  /* Style the paragraphs */
+  .main-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-transform: uppercase;
+    background-color: #0a1e24ef;
+    color: #fff;
+    transition: background-color 0.2s ease-in-out;
+  }
+  
+  .btn:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  /* Style the images */
+  .img-fluid {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Style the container and columns */
+  .container {
+    margin: 0 auto;
+    padding: 50px;
+    background-color: #f3e8e8;
+  }
+  
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 15px;
+  }
+  

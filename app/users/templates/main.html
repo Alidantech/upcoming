@@ -1,20 +1,59 @@
 {% extends "master.html" %}
 {% load static %}
-
-{% block title %}
-  upcoming.ai
-{% endblock %}
-
-{% block heading %}
-  <h1> main page <h1>
-{% endblock %} 
-
+{% block title %}  upcoming.ai{% endblock %}
+{% block heading %} Homepage {% endblock %} 
 {% block content %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
 <div class="main-content">
-
-  <h2>make amazing music with upcoming</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{% static 'img/person-in-studio.jpg' %}" alt="Musician recording a song" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h2>Record and Share Your Music Online</h2>
+        <p>Upcoming is the app where you can record your songs and get feedback on their quality. Our platform is designed to help aspiring musicians improve their skills and get discovered by a wider audience.</p>
+        <h3>How It Works</h3>
+        <p>Simply sign up for an account, record your song, and upload it to our platform. Our innovative AI technology will analyze your song and provide you with feedback on various aspects of its quality, including melody, harmony, rhythm, and lyrics.</p>
+        <a href="#" class="btn btn-primary">Sign Up Now</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Record Your Songs Online</h3>
+        <p>With Upcoming, you can record your songs using our easy-to-use online recording tool. Our platform also allows you to edit and enhance your recordings, so you can create the perfect track.</p>
+        <a href="#" class="btn btn-primary">Start Recording Now</a>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'img/recording-online.jpg' %}" alt="Person recording music online" class="img-fluid">
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="{% static 'img/listening-online.jpg' %}" alt="Person listening to music online" class="img-fluid">
+      </div>
+      <div class="col-md-6">
+        <h3>Discover New Music</h3>
+        <p>Browse through our collection of songs and discover new artists. Our platform allows you to listen to songs, leave feedback, and connect with other musicians.</p>
+        <a href="#" class="btn btn-primary">Start Exploring Now</a>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Create an Account</h3>
+        <p>To get started with Upcoming, create an account today. With an account, you can record and upload your songs, listen to other artists, and connect with the music community.</p>
+        <a href="#" class="btn btn-primary">Create Your Account Now</a>
+      </div>
+      <div class="col-md-6">
+        <img src="{% static 'img/creating-account.jpg' %}" alt="Person creating an account on Upcoming" class="img-fluid">
+      </div>
+    </div>
+  </div>
 </div>
-   
-  
-  
 {% endblock %}

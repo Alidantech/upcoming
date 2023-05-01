@@ -25,7 +25,7 @@
     --btn--txt--color: #ffffff;
     --btn--border--color: rgb(135, 135, 135);
     /* all heading colors */
-    --heading--txt--color: #cdf0e1;
+    --heading--txt--color: #65daa7;
     /* all inputs colors */
     --input--label--color: #dcdcdc;
     --input--txt--color: #ffffff;
@@ -33,7 +33,7 @@
     --placeholder--txt--color: #a0a0a0;
     /* text colors for p elements */
     --warning--txt-color: #ff6347;
-    --logo--txt--color: rgb(7, 253, 200);
+    --logo--txt--color: rgb(22, 238, 191);
 
     --footer-text-color: #1f034d;
     --footer-font-size: 14px;
@@ -59,8 +59,13 @@
     background-color: #f7f7f7;
   }
   
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
   /* Reset some default styles */
-  body, h1, h2, h3, p, ul, li {
+  header > h1, ul, li {
     margin: 0;
     padding: 0;
     list-style-type: none;
@@ -71,12 +76,6 @@
   body {
     background-color: var(--color-background);
     color: var(--color-text);
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
   }
   
   /* Header styles */
@@ -118,16 +117,18 @@
     }
     .logo p {
         color: var(--logo--txt--color);
+        font-family:cursive;
         text-indent: 0.5em;
         padding: 0;
         margin: 0;
         float: right;
-        padding-top:0.5em;
     }
     
  /* Heading style */
- h1 {
+header h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 1.5em;
+    line-height: 1.5;
     font-weight: bold;
     text-align: center;
     color: var(--heading--txt--color);
@@ -140,7 +141,9 @@
 h1:hover {
     color: #0b8831; /* Changing text color to a different shade on hover */
 }
-
+h2:hover {
+  color: #0b8831; /* Changing text color to a different shade on hover */
+}
   
   /* Navigation bar styles */
   .navigation-bar {
@@ -177,8 +180,6 @@ h1:hover {
     color: #06ffb4;
   }
   
-  
-
   /* Reduce header height to 5vh on scroll */
    header.scrolled {
     height: 5vh;
@@ -186,58 +187,55 @@ h1:hover {
   
   /* Main content styles */
   main {
-    width: 100%;
-    height: var(--main-page-height);
+    width: auto;
+    height: fit-content;
+    margin: 0;
     margin-top: var(--header-height);
+    overflow: auto;
   }
-  
-  .main-content {
-    width: 100%;
-    background-color: var(--color-secondary);
-    box-shadow: 0 2px 6px var(--color-shadow);
-  }
-  
-
-  
-  /* Footer container */
+   /* Style the headings */
   footer {
-    background-color: var(--color-footer);
-    color: var(--footer-text-color);
+    background-color: #111c27;
+    color: #a39c9c;
+    width: 100%;
+    padding: 1rem 0;
     height: 50vh;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    overflow: hidden;
   }
   
-  /* Contacts section on the left */
-  .contacts {
-    width: 50%;
+  footer h4 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
   }
   
-  /* Contact details */
-  .contact-details {
-    font-size: var(--footer-font-size);
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
   
-  /* Footer links section on the right */
-  .footer-links {
-    width: 50%;
-    text-align: right;
+  footer li {
+    margin-bottom: 1rem;
+    width: 100%;
+    text-align: center;
   }
   
-  /* Footer links */
-  .footer-link {
-    color: var(--footer-text-color);
-    font-size: var(--footer-font-size);
-    margin-left: 10px;
+  footer a {
+    color: #738da3;
     text-decoration: none;
+    transition: .2s ease-in-out;
   }
   
-  /* Footer links hover effect */
-  .footer-link:hover {
-    color: #ccc;
+  footer a:hover {
+    color: #ffc107;
+    text-decoration: underline;
   }
-  
+  .link-container {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+
+  .section {
+    padding: 5vw;
+  }
