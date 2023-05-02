@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: auto;
+}
+body, html {
+    height: 100vh;
+    overflow: hidden;
+    color: rgb(2, 19, 41);
+    font-size: 1em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.side-content {
+    height: 100vh;
+}
+.main-content {
+    height: 100vh;
+}
+header {
+    padding: 1vh;
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.logo {
+    height: 3vh;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo p {
+    font-size: 0.1em;
+    color:rgb(2, 19, 41);
+}
+h1 {
+    text-align: center;
+    width: fit-content;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    width: 70%;
+    color: rgb(5, 37, 87);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

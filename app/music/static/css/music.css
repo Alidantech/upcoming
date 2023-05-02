@@ -14,19 +14,7 @@
   border-radius: 3px;
 }
 
-.music-page {
-    background-color: rgb(250, 242, 242);
-    width: 100%;
-    height: auto;
-    display: grid;
-    grid-template-columns: 20% 80%;
 
-}
-.navigation-grid {
-  background-color: #555;
-  height: 100vh;
-  overflow: hidden;
-}
 /* Style the search bar container */
 .search-container {
   display: flex;

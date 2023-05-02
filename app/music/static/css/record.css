@@ -12,11 +12,7 @@ body {
     font-family: sans-serif;
     overflow: hidden;
 }
-div.page{
-    width: 100%;
-    display: grid;
-    grid-template-columns: 20% 80%;
-}
+
 .recording-page {
     float: right;
     margin-top: 0;
@@ -67,7 +63,9 @@ div.exit {
     border: none;
     color: red;
 }
-  
+.recording-page {
+    width: 100%;
+}
 /* Add a card-like style to the divs */
 .recording-page > div {
     background-color: #0f0f0f;

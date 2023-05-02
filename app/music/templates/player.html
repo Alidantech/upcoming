@@ -1,5 +1,8 @@
-<link rel="stylesheet" href="/static/css/player.css">
-<div class="player-page">
+{% extends 'template.html' %}
+{% load static %}
+{% block content %}
+<script src="https://unpkg.com/wavesurfer.js" defer></script>
+<link rel="stylesheet" href=" {% static '/css/player.css' %}">
     <div class="background">
         <div class="song">
             <div class="details">
@@ -41,3 +44,4 @@
         </div>
     </div>
 </div>
+{% endblock %}
