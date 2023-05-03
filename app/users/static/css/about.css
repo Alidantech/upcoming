@@ -1,0 +1,23 @@
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: #0a1e24ef;
+  margin: 20px 0;
+}
+.main-content {
+    color: #333;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    margin: 0;
+    padding: 0 3vw;
+  }
+
+  /* Style the paragraphs */
+  .main-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }

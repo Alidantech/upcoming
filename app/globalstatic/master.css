@@ -38,7 +38,7 @@ header {
     font-size: 0.1em;
     color:rgb(2, 19, 41);
 }
-h1 {
+header h1 {
     text-align: center;
     width: fit-content;
     font-size: 1em;
@@ -47,4 +47,21 @@ h1 {
     width: 70%;
     color: rgb(5, 37, 87);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    padding-top: 1vh;
+}
+.menu-container button {
+    background-color: transparent;
+    border: none;
+    padding: 1px;
+}
+.menu-container button:hover {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.178);
+    cursor: pointer;
 }

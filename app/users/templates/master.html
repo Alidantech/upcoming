@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="{% static 'js/master.js' %}" defer></script>
     <title>{% block title %}{% endblock %}</title>
+    {% block static %}{% endblock %}
 </head>
 <body>
 <header>
@@ -29,7 +30,7 @@
                 <li><a href="record/">Record</a></li>
                 <li><a href="music/">Music</a></li>
                 <li><a href="account/">Account</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="about/">About</a></li>
             </ul>
           </nav>
     </div>
