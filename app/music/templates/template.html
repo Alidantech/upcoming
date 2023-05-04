@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'uia-icon.svg' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'master.css' %}">
-    <script src="{% static 'js/master.js' %}" defer></script>
+    <script src="{% static 'master.js' %}" defer></script>
     <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
@@ -21,9 +21,22 @@
             </div>
             <h1>Record Music</h1>
             <div class="menu-container">
-                <button><img src="{% static 'menu-icon.svg' %}" alt="menu" width="20vw" height="auto">
+                <button onclick="showNavigation()">
+                    <img src="{% static 'menu-icon.svg' %}" alt="menu" width="20vw" height="auto">
+                </button>
             </div>
         </header>
+        <div class="navigation-container">
+            <div class="side-menu-container" id="navigator">
+                <ul>
+                   <a href="/"> <li href="/">Home</li></a>
+                   <a href="/"> <li>Settings</li></a>
+                    <a href="/"> <li>Account</li></a>
+                    <a href="/"><li>More</li></a>
+                    <a href="/">   <li>Close</li></a>
+                </ul>
+            </div>
+        </div>
         {% block sidebar %}
         {% endblock sidebar %}
     </div>

@@ -65,3 +65,31 @@ header h1 {
     background-color: rgba(0, 0, 0, 0.178);
     cursor: pointer;
 }
+
+.side-menu-container {
+    display: none;
+    background-color: #0a1e24ef;
+    position: absolute;
+    width: 19%;
+    height: 10%;
+    padding: 1em;
+    color: aquamarine;
+    margin-left: 0.5%;
+    transition: width 3s ease-in-out;
+}
+.side-menu-container:hover {
+    height: fit-content;
+}
+ul {
+    list-style-type: none;
+    
+}
+li {
+    padding: 2vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.76);
+    cursor: pointer;
+}
+li:hover {
+    background-color: rgba(9, 122, 84, 0.13);
+    color: rgb(10, 219, 115);
+}

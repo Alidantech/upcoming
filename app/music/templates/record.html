@@ -3,7 +3,6 @@
 {%block title %} Create Music {% endblock %}
 <div class="page">
 {% block sidebar %}
-<script src="https://unpkg.com/wavesurfer.js" defer></script>
 <link rel="stylesheet" href=" {% static '/css/record.css' %}">
 {% endblock %}
 {% block content %}
@@ -111,9 +110,11 @@
         length: <br>
         </div>
     </div>
-    <script src="/static/js/record.js" defer></script>
+    
 </div>
 </div>
 {% endblock %}
+<script src="/static/js/record.js" defer></script>
+<script src="https://unpkg.com/wavesurfer.js" defer></script>
 
 
