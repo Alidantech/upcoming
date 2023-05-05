@@ -1,6 +1,7 @@
 {% extends 'template.html' %}
 {% load static %}
-<div class="main-content">
+{% block title %} music {% endblock %}
+{% block heading %}latest music{% endblock %}
   {% block sidebar %}
   <link rel="stylesheet" href=" {% static '/css/music.css' %}">
   <div class="navigation-container">
@@ -15,35 +16,70 @@
       <img src="/static/img/music-bg.jpg" alt="album-cover" width="35vw" height="auto">
       <Strong>Genre name</Strong>
     </div>
+    <div class="genre">
+      <img src="/static/img/music-bg.jpg" alt="album-cover" width="35vw" height="auto">
+      <Strong>Genre name</Strong>
+    </div>
+    <div class="genre">
+      <img src="/static/img/music-bg.jpg" alt="album-cover" width="35vw" height="auto">
+      <Strong>Genre name</Strong>
+    </div>
+    <div class="genre">
+      <img src="/static/img/music-bg.jpg" alt="album-cover" width="35vw" height="auto">
+      <Strong>Genre name</Strong>
+    </div>
+    <div class="genre">
+      <img src="/static/img/music-bg.jpg" alt="album-cover" width="35vw" height="auto">
+      <Strong>Genre name</Strong>
+    </div>
   </div>
   </div>
   {% endblock %}
   {% block content %}
+  <div class="page-heading">
+    <h2>music by willy paul</h2>
+  </div>     
   <div class="main-container">
-    <div class="music-item">
-      <img src="/static/img/music-bg.jpg" width="100%" height="auto" alt="Album Cover">
-      <h3>Song Title</h3>
-      <p>Artist Name</p>
-      <button class="play-button"><i class="fa fa-play"></i></button>
-    </div>
-    <div class="music-item">
-      <img src="/static/img/music-bg.jpg" width="100%" height="auto" alt="Album Cover">
-      <h3>Song Title</h3>
-      <p>Artist Name</p>
-      <button class="play-button"><i class="fa fa-play"></i></button>
-    </div>
-    <div class="music-item">
-      <img src="/static/img/dark-background.jpg" width="100%" height="auto" alt="Album Cover">
-      <h3>Song Title</h3>
-      <p>Artist Name</p>
-      <button class="play-button"></button>
-    </div>
-    <div class="music-item">
-      <img src="/static/img/dark-background.jpg" width="100%" height="auto" alt="Album Cover">
-      <h3>Song Title</h3>
-      <p>Artist Name</p>
-      <button class="play-button"></button>
-    </div>
+    <div class="cartegory-container">
+    <h3>new favorite songs</h3>
+      <div class="music-container">
+        <button class="scroll-btn right"><img src="{% static 'right-icon.svg' %}" alt="scroll right" width="35vw" height="auto"></button>
+        <button class="scroll-btn left"><img src="{% static 'left-icon.svg' %}" alt="Scroll Left" width="35vw" height="auto"></button>
+        
+        <div class="music-item">
+          <img src="/static/img/music-bg.jpg" width="100%" height="auto" alt="Album Cover">
+          <h3>Song Title</h3>
+          <p>Artist Name</p>
+          <button class="play-button"><i class="fa fa-play"></i></button>
+        </div> 
+        <div class="music-item">
+          <img src="/static/img/music-bg.jpg" width="100%" height="auto" alt="Album Cover">
+          <h3>Song Title</h3>
+          <p>Artist Name</p>
+          <button class="play-button"><i class="fa fa-play"></i></button>
+        </div> <div class="music-item">
+          <img src="/static/img/music-bg.jpg" width="100%" height="auto" alt="Album Cover">
+          <h3>Song Title</h3>
+          <p>Artist Name</p>
+          <button class="play-button"><i class="fa fa-play"></i></button>
+        </div> 
+        <div class="music-item">
+          <img src="/static/img/music-bg.jpg" width="100%" height="auto" alt="Album Cover">
+          <h3>Song Title</h3>
+          <p>Artist Name</p>
+          <button class="play-button"><i class="fa fa-play"></i></button>
+        </div> <div class="music-item">
+          <img src="/static/img/music-bg.jpg" width="100%" height="auto" alt="Album Cover">
+          <h3>Song Title</h3>
+          <p>Artist Name</p>
+          <button class="play-button"><i class="fa fa-play"></i></button>
+        </div> <div class="music-item">
+          <img src="/static/img/music-bg.jpg" width="100%" height="auto" alt="Album Cover">
+          <h3>Song Title</h3>
+          <p>Artist Name</p>
+          <button class="play-button"><i class="fa fa-play"></i></button>
+        </div> 
+    </div> 
   </div>
+  <script src=" {% static '/js/music.js' %}"></script>
   {% endblock %}
-</div>

@@ -12,3 +12,7 @@ def main(request):
 def about(request):
   template = loader.get_template('about.html')
   return HttpResponse(template.render())
+
+def artists(request):
+  template = loader.get_template('artists.html')
+  return HttpResponse(template.render())
