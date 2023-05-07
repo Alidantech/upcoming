@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: aliceblue;
 }
 
 *::-webkit-scrollbar {
@@ -14,10 +15,11 @@
   border-radius: 3px;
 }
 
-
 /* Style the search bar container */
 .search-container {
-  display: flex;
+  display: none;
+  background-color: #222;
+  position: fixed;
   justify-content: center;
   align-items: center;
   width: 100%;
@@ -48,7 +50,6 @@
   font-size: 17px;
   width: 20%;
   height: 70%;
-  color: white;
   cursor: pointer;
   border-radius: 0   10px 10px 0;
 }
@@ -92,56 +93,60 @@ input:focus {
     overflow: auto;
   }
   .page-heading {
-    height: 10vh;
+    height: 7vh;
     width: 100%;
-    background-color: #c4bdbd8c;
+    background-color: #062a5f42;
   }
   .page-heading h2, h3 {
-    padding: 1em;
+    padding: 0.5em;
   }
   .cartegory-container {
-    background-color: #308a5d44;
-    padding: 20px;
-    height: 50%;
+    background-color: #b3a6a600;
+    height: 30vh;
+    border-bottom: 2px solid blue;
+    margin: 5px 0;
+    display: grid;
+    grid-template-rows: 20% 80%;
   }
+  .content-container {
+    display: flex;
+    position: relative;
+  }
+  .button-container {
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    height: 21vh;
+  }
+  .scroll-btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+  .scroll-btn.right {
+    transform: translateY(-50%);
+  }
+  .scroll-btn.left {
+    transform: translateY(-50%);
+    display: none;
+  }
+  
   .music-container {
+    background-color: #22222200;
     position: relative;
     width: 100%;
     white-space: nowrap;
     overflow-x: hidden;
   }
   .music-item {
-    margin: 10px;
-    width: 25vw;
-    height: fit-content;
+    margin: 0 10px;
+    width: 20%;
+    height: 23vh;
     background: linear-gradient(to bottom, rgba(42, 42, 56, 0.89), rgba(28, 56, 28, 0.685));
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(32, 31, 31, 0.842);
-    padding: 10px;
     text-align: center;
     display: inline-block;
-    width: 25%;
-    height: fit-content;
-  }
-  .scroll-btn {
-    position: fixed;
-    top: 35%;
-    z-index: 1;
-   background-color: transparent;
-   border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .scroll-btn.right {
-    right: 20px; /* set your desired distance from the right edge */
-    transform: translateY(-50%);
-  }
-  
-  .scroll-btn.left {
-    left: 20px; /* set your desired distance from the left edge */
-    transform: translateY(-50%);
-    left: 20%;
   }
   
   @media (max-width: 768px) {

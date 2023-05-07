@@ -6,7 +6,7 @@
 body, html {
     height: 100vh;
     overflow: hidden;
-    color: rgb(2, 19, 41);
+    color: rgb(49, 76, 110);
     font-size: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -16,9 +16,11 @@ main {
 }
 .side-content {
     height: 100vh;
+    background-color: #0a1e24ef;
 }
 .main-content {
     height: 100vh;
+    background-color: #0a1e24;
 }
 header {
     padding: 1vh;
@@ -36,7 +38,7 @@ header {
 }
 .logo p {
     font-size: 0.1em;
-    color:rgb(2, 19, 41);
+    color:rgb(4, 236, 236);
 }
 header h1 {
     text-align: center;
@@ -45,7 +47,7 @@ header h1 {
     margin: 0;
     padding: 0;
     width: 70%;
-    color: rgb(5, 37, 87);
+    color: rgb(43, 77, 133);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .menu-container {

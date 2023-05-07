@@ -12,26 +12,7 @@
       </form>
     </div>
   <div class="music-typelist">
-    <div class="genre">
-      <img src="/static/img/music-bg.jpg" alt="album-cover" width="35vw" height="auto">
-      <Strong>Genre name</Strong>
-    </div>
-    <div class="genre">
-      <img src="/static/img/music-bg.jpg" alt="album-cover" width="35vw" height="auto">
-      <Strong>Genre name</Strong>
-    </div>
-    <div class="genre">
-      <img src="/static/img/music-bg.jpg" alt="album-cover" width="35vw" height="auto">
-      <Strong>Genre name</Strong>
-    </div>
-    <div class="genre">
-      <img src="/static/img/music-bg.jpg" alt="album-cover" width="35vw" height="auto">
-      <Strong>Genre name</Strong>
-    </div>
-    <div class="genre">
-      <img src="/static/img/music-bg.jpg" alt="album-cover" width="35vw" height="auto">
-      <Strong>Genre name</Strong>
-    </div>
+    
   </div>
   </div>
   {% endblock %}
@@ -41,11 +22,15 @@
   </div>     
   <div class="main-container">
     <div class="cartegory-container">
-    <h3>new favorite songs</h3>
+      <div class="heading-container">
+        <h3>new songs</h3>
+      </div>
+      <div class="content-container">
+    <div class="button-container">
+      <button class="scroll-btn left"><img src="{% static 'left-icon.svg' %}" alt="Scroll Left" width="35vw" height="auto"></button>
+    </div>
       <div class="music-container">
-        <button class="scroll-btn right"><img src="{% static 'right-icon.svg' %}" alt="scroll right" width="35vw" height="auto"></button>
-        <button class="scroll-btn left"><img src="{% static 'left-icon.svg' %}" alt="Scroll Left" width="35vw" height="auto"></button>
-        
+       
         <div class="music-item">
           <img src="/static/img/music-bg.jpg" width="100%" height="auto" alt="Album Cover">
           <h3>Song Title</h3>
@@ -80,6 +65,10 @@
           <button class="play-button"><i class="fa fa-play"></i></button>
         </div> 
     </div> 
+    <div class="button-container">
+      <button class="scroll-btn right"><img src="{% static 'right-icon.svg' %}" alt="scroll right" width="35vw" height="auto"></button>
+    </div>
+  </div>
   </div>
   <script src=" {% static '/js/music.js' %}"></script>
   {% endblock %}
