@@ -1,13 +1,21 @@
-{% extends 'template.html' %}
+{% extends 'base.html' %}
+
 {% load static %}
+{% block static %}
+  <link rel="stylesheet" href=" {% static '/css/record.css' %}">
+{% endblock static %}
+
 {%block title %} Create Music {% endblock %}
-<div class="page">
+{% block heading %}Create Music{% endblock %}
+
+
 {% block sidebar %}
-<link rel="stylesheet" href=" {% static '/css/record.css' %}">
+
 {% endblock %}
+
 {% block content %}
-<div class="recording-page">
-    <div class="top-continer" style="background-color: #00000000;">
+    <div class="recording-page">
+        <div class="top-continer" style="background-color: #00000000;">
         <div class="lyrics-container">
             <p class="bridge">
                 They say everything can be replaced<br>
@@ -110,11 +118,7 @@
         length: <br>
         </div>
     </div>
-    
-</div>
-</div>
+    </div>
+    </div>
 {% endblock %}
-<script src="/static/js/record.js" defer></script>
-<script src="https://unpkg.com/wavesurfer.js" defer></script>
-
 

@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="{% static 'master.css' %}">
     <script src="{% static 'master.js' %}" defer></script>
     <title>{% block title %}{% endblock %}</title>
+    {% block static %}{% endblock static %}
 </head>
 <body>
 <main>
@@ -26,13 +27,6 @@
                 </button>
             </div>
         </header>
-        <ul>
-            <a href="/"> <li href="/">Home</li></a>
-            <a href="/"> <li>Settings</li></a>
-             <a href="/"> <li>Account</li></a>
-             <a href="/"><li>More</li></a>
-             <a href="/">   <li>Close</li></a>
-         </ul>
         <div class="navigation-container">
             <div class="side-menu-container" id="navigator">
                 <ul>
