@@ -25,10 +25,10 @@
   </nav>
   <h2>Filter by</h2>
   <form action="#" method="get">
-      <div class="form-group">
-          <label for="search-input">Search</label>
-          <input type="text" id="search-input" name="search" placeholder="Search...">
-      </div>
+    <div class="search-bar">
+      <input type="text" placeholder="Search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </div>
       <div class="form-group">
           <label for="genre-select">Genre</label>
           <select id="genre-select" name="genre">
@@ -62,108 +62,35 @@
   <div class="button-container">
     <button class="btn btn-all">All</button>
     <button class="btn btn-songs">Songs</button>
-    <button class="btn btn-music">Music</button>
     <button class="btn btn-album">Albums</button>
+    <button class="btn btn-music">Music</button>
+    <button class="btn btn-music">Artists</button>
     <button class="btn btn-latest">Latest</button>
   </div>
   <div class="account-details">
     <img src="https://source.unsplash.com/random/400x400/?guitarist" alt="Artist Profile Picture">
   </div>
 </div>
-
 <div class="main-content-container">
-  <div class="album-heading-container">
-    <h2>Latest Songs In Town</h2>
-  </div>
-  <div class="album-cards-container">
-    <div class="album-card">
-      <img src="https://picsum.photos/seed/album1/400/400" alt="Album Cover">
-      <h3>Album Title 1</h3>
-      <p>Artist Name</p>
-      <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="Album Cover"></button>
-    </div>
-  
-    <div class="album-card">
-      <img src="https://picsum.photos/seed/album2/400/400" alt="Album Cover">
-      <h3>Album Title 2</h3>
-      <p>Artist Name</p>
-      <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="Album Cover"></button>
-    </div>
-    <div class="album-card">
-      <img src="https://picsum.photos/seed/album3/400/400" alt="Album Cover">
-      <h3>Album Title 3</h3>
-      <p>Artist Name</p>
-      <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="Album Cover"></button>
-    </div>
-    <div class="album-card">
-      <img src="https://picsum.photos/seed/album4/400/400" alt="Album Cover">
-      <h3>Album Title 4</h3>
-      <p>Artist Name</p>
-      <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="play"></button>
-    </div>
-  </div>
-  
-  <div class="songs-list-container">
-    <h2>Songs Today</h2>
-<ul class="song-list">
-  <li>
-    <div class="song-title">Song Title:</div>
-    <div class="song-artist">Artist Name:</div>
-    <div class="song-duration">Duration:</div>
-    <div class="song-listens">Listens:</div>
-    <div></div>
-  </li>
-  <li>
-    <div class="song-title">Song 1</div>
-    <div class="song-artist">Artist 1</div>
-    <div class="song-duration">3:45</div>
-    <div class="song-listens">100065</div>
-    <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="Album Cover"></button>
-    
-  </li>
-  <li>
-    <div class="song-title">Song 2</div>
-    <div class="song-artist">Artist 2</div>
-    <div class="song-duration">4:10</div>
-    <div class="song-listens">2324</div>
-    <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="Album Cover"></button>
-  </li>
-  <li>
-    <div class="song-title">Song 3</div>
-    <div class="song-artist">Artist 3</div>
-    <div class="song-duration">2:55</div>
-    <div class="song-listens">200</div>
-    <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="Album Cover"></button>
-  </li>
-</ul>
 
-  </div>
-  
-  <div class="artists-container">
-    <h2>best artists</h2>
-    <div class="artist">
-      <img src="https://source.unsplash.com/random/400x400/?person" alt="Artist Profile Picture">
-      <h3>Artist Name</h3>
-    </div>
-    <div class="artist">
-      <img src="https://source.unsplash.com/random/400x400/?singer" alt="Artist Profile Picture">
-      <h3>Artist Name</h3>
-    </div>
-    <div class="artist">
-      <img src="https://source.unsplash.com/random/400x400/?musician" alt="Artist Profile Picture">
-      <h3>Artist Name</h3>
-    </div>
-    <div class="artist">
-      <img src="https://source.unsplash.com/random/400x400/?guitarist" alt="Artist Profile Picture">
-      <h3>Artist Name</h3>
-    </div>
-  </div>
+    {% include 'music-albums.html' %}
+    {% include 'music-songs.html' %}
+    {% include 'music-artists.html' %}
+    {% block albums %}
+    {% endblock albums %}
+
+    {% block songs %}
+    {% endblock songs %}
+
+    {% block artists %}
+    {% endblock artists %}
+
     <div class="song-player">
       <div class="song-info">
         <img src="https://source.unsplash.com/random/400x400/?musician" alt="Song Image">
         <div class="song-details">
-          <div class="song-name">Song Name</div>
-          <div class="song-artist">Artist Name</div>
+          <div class="song-name">Dance With Me</div>
+          <div class="song-artist">Alidante</div>
         </div>
       </div>
       <div class="song-playing">
@@ -173,15 +100,14 @@
           <div class="total-time">4:30</div>
         </div>
         <div class="song-controls">
-          <button class="prev-btn"><img src="{% static 'prev-icon.svg' %}" width="25vw" alt="prvious"></button>
-          <button class="play-btn"><img src="{% static 'play-icon.svg' %}" width="30vw" alt="play"></button>
-          <button class="next-btn"><img src="{% static 'next-icon.svg' %}" width="25vw" alt="next"></i></button>
-          {% comment %} <button class="fav-btn"></i></button>
-          <button class="maximize-btn"></i></button> {% endcomment %}
+          <button class="fav-btn"><img src="{% static 'like-icon.svg' %}" width="15vw" alt="next"></button>
+          <button class="prev-btn"><img src="{% static 'prev-icon.svg' %}" width="20vw" alt="prvious"></button>
+          <button class="play-btn"><img src="{% static 'play-icon.svg' %}" width="25vw" alt="play"></button>
+          <button class="next-btn"><img src="{% static 'next-icon.svg' %}" width="20vw" alt="next"></button>
+          <button class="maximize-btn"><img src="{% static 'max-icon.svg' %}" width="15vw" alt="next"></button>
         </div>
       </div>
     </div>
   </div>
-  
 </div>
-{% endblock %}
+{% endblock content %}

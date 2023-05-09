@@ -15,7 +15,8 @@
 
 .sidebar h2 {
     margin-top: 0;
-    color: #4e8a8a;
+    color: #53384a;
+    font-size: 1.1em;
 }
 
 .sidebar-menu ul {
@@ -30,7 +31,7 @@
 
 .sidebar-menu li a {
     text-decoration: none;
-    color: #4e8a8a;
+    color: #31755e;
     display: block;
     padding: 5px;
     border-radius: 5px;
@@ -38,7 +39,34 @@
 }
 
 .sidebar-menu li a:hover {
-    background-color: #ddd;
+    background-color: #263d50d8;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 5px;
+  background-color: #354550;
+}
+
+.search-bar input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+}
+
+.search-bar button[type="submit"] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.fa-search {
+  font-size: 18px;
+  color: #c4b9b9;
 }
 
 .form-group {
@@ -70,8 +98,8 @@
 }
 
 button[type="submit"] {
-    background-color: #182e4e;
-    color: #fff;
+    background-color: #7a0b5f;
+    color: #f0e2e2;
     border: none;
     padding: 5px 10px;
     border-radius: 5px;
@@ -84,10 +112,10 @@ button[type="submit"]:hover {
 }
 /* select element styling */
 .form-group select {
-  background-color: #f8f8f8;
+  background-color: #cfcaca;
   border: 1px solid #ddd;
   border-radius: 4px;
-  color: #555;
+  color: #ad1569;
   font-size: 16px;
   padding: 10px;
   width: 200px;
@@ -105,14 +133,15 @@ button[type="submit"]:hover {
 
 /* styling for the select element options */
 .form-group select option {
-  background-color: #02202eec;
-  color: #5a8582;
+  background-color: #c7c3c7ec;
+  color: #94078d;
   padding: 10px;
 }
 
 /* the main part of the page */
 .main-content-container {
-  padding: 10vh 15px;
+  padding: 8vh 15px;
+  padding-bottom: 20vh;
 }
 
 .heading-container {
@@ -129,7 +158,7 @@ button[type="submit"]:hover {
 .heading-container h1 {
   font-size: 1.5em;
   padding: 15px;
-  color: #0c8d8d;
+  color: #aeb4b4;
 }
 .button-container {
   display: flex;
@@ -147,12 +176,12 @@ button[type="submit"]:hover {
   font-weight: bold;
   padding: 5px 10px;
   cursor: pointer;
-  color: #0c8d8d;
+  color: #cabbca;
 }
 
 .btn:hover {
-  background-color: #0c8d8d;
-  color: #FFFFFF;
+  background-color: #cabeca;
+  color: #2b031a;
 }
 
 .btn:not(:last-child) {
@@ -164,7 +193,7 @@ button[type="submit"]:hover {
 .btn-music,
 .btn-album ,
 .btn-latest {
-  border: 1px solid #0c8d8d;
+  border: 1px solid #c9bec9;
 }
 .account-details {
   display: flex;
@@ -181,6 +210,7 @@ button[type="submit"]:hover {
 }
 
 /* Album Cards */
+
 .album-cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -226,7 +256,8 @@ button[type="submit"]:hover {
 .main-content-container > div h2 {
  
     font-size: 1.2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 5vh;
     padding:10px;
     color: #752271;
 }
@@ -234,12 +265,12 @@ button[type="submit"]:hover {
   font-size: 1.2rem;
   padding: 5px 15px;
   background-color: #180114b2;
-  color: #a2a5aa;
+  color: #83878d;
 }
 .album-card p {
  padding: 5px 15px;
  background-color: #180114b2;
-  color: #b1b3b4;
+  color: #4f8f76;
 }
 /* Songs List */
 .songs-list-container {
@@ -261,7 +292,7 @@ button[type="submit"]:hover {
   border-radius: 5px;
   transition: background-color 0.3s ease;
    border-bottom: 1px solid rgba(128, 128, 128, 0.014);
-   grid-template-columns: 22% 23% 22% 23% 10%;
+   grid-template-columns: 24% 24% 24% 24% 4%;
 }
 
 
@@ -321,10 +352,10 @@ button[type="submit"]:hover {
 
 .artist {
   display: inline-block;
-  margin-right: 2rem;
   text-align: center;
-  width: 20%;
-  min-width: 100px;
+  width: 19%;
+  min-width: 80px;
+  margin: 0;
 }
 
 .artist img {
@@ -336,11 +367,12 @@ button[type="submit"]:hover {
   border: 1px solid blue;
 }
 
-.artist h4 {
-  font-size: 1.2rem;
+.artist h3 {
+  font-size: 1.1rem;
   margin-top: 10px;
   margin-bottom: 0;
   padding: 10px;
+  color: #336659;
 }
 
 .song-player {
@@ -377,14 +409,15 @@ button[type="submit"]:hover {
 }
 
 .song-name {
-  font-size: 18px;
+  font-size: 0.9em;
   font-weight: bold;
   margin-bottom: 5px;
+  color: #a50c8b;
 }
 
 .song-artist {
-  font-size: 14px;
-  color: #666;
+  font-size: 0.7em;
+  color: #336659;
 }
 .song-playing {
   display: grid;
@@ -403,7 +436,7 @@ button[type="submit"]:hover {
 
 .progress-bar {
   height: 50%;
-  background-color: rgb(71, 4, 55);
+  background-color: rgb(22, 65, 62);
   width: 70%;
   border-radius: 10px;
   margin: 3px 10px;
@@ -418,7 +451,7 @@ button[type="submit"]:hover {
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 0 100px;
+  margin: 0 70px;
   font-size: 16px;
   color: #666666;
 }

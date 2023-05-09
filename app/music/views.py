@@ -8,3 +8,4 @@ def music(request):
 def record(request):
     template = loader.get_template('record.html')
     return HttpResponse(template.render())
+
