@@ -64,7 +64,7 @@
     <button class="btn btn-songs">Songs</button>
     <button class="btn btn-music">Music</button>
     <button class="btn btn-album">Albums</button>
-    <button class="btn btn-account">My Account</button>
+    <button class="btn btn-latest">Latest</button>
   </div>
   <div class="account-details">
     <img src="https://source.unsplash.com/random/400x400/?guitarist" alt="Artist Profile Picture">
@@ -80,22 +80,26 @@
       <img src="https://picsum.photos/seed/album1/400/400" alt="Album Cover">
       <h3>Album Title 1</h3>
       <p>Artist Name</p>
+      <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="Album Cover"></button>
     </div>
   
     <div class="album-card">
       <img src="https://picsum.photos/seed/album2/400/400" alt="Album Cover">
       <h3>Album Title 2</h3>
       <p>Artist Name</p>
+      <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="Album Cover"></button>
     </div>
     <div class="album-card">
       <img src="https://picsum.photos/seed/album3/400/400" alt="Album Cover">
       <h3>Album Title 3</h3>
       <p>Artist Name</p>
+      <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="Album Cover"></button>
     </div>
     <div class="album-card">
       <img src="https://picsum.photos/seed/album4/400/400" alt="Album Cover">
       <h3>Album Title 4</h3>
       <p>Artist Name</p>
+      <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="play"></button>
     </div>
   </div>
   
@@ -107,28 +111,29 @@
     <div class="song-artist">Artist Name:</div>
     <div class="song-duration">Duration:</div>
     <div class="song-listens">Listens:</div>
-    <div>Play Song</div>
+    <div></div>
   </li>
   <li>
     <div class="song-title">Song 1</div>
     <div class="song-artist">Artist 1</div>
     <div class="song-duration">3:45</div>
     <div class="song-listens">100065</div>
-    <button class="play-button">Play</button>
+    <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="Album Cover"></button>
+    
   </li>
   <li>
     <div class="song-title">Song 2</div>
     <div class="song-artist">Artist 2</div>
     <div class="song-duration">4:10</div>
     <div class="song-listens">2324</div>
-    <button class="play-button">Play</button>
+    <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="Album Cover"></button>
   </li>
   <li>
     <div class="song-title">Song 3</div>
     <div class="song-artist">Artist 3</div>
     <div class="song-duration">2:55</div>
     <div class="song-listens">200</div>
-    <button class="play-button">Play</button>
+    <button class="play-button"><img src="{% static 'play-icon.svg' %}" width="35vw" alt="Album Cover"></button>
   </li>
 </ul>
 
@@ -153,6 +158,30 @@
       <h3>Artist Name</h3>
     </div>
   </div>
-
+    <div class="song-player">
+      <div class="song-info">
+        <img src="https://source.unsplash.com/random/400x400/?musician" alt="Song Image">
+        <div class="song-details">
+          <div class="song-name">Song Name</div>
+          <div class="song-artist">Artist Name</div>
+        </div>
+      </div>
+      <div class="song-playing">
+        <div class="song-progress">
+          <div class="current-time">0:00</div>
+          <div class="progress-bar"></div>
+          <div class="total-time">4:30</div>
+        </div>
+        <div class="song-controls">
+          <button class="prev-btn"><img src="{% static 'prev-icon.svg' %}" width="25vw" alt="prvious"></button>
+          <button class="play-btn"><img src="{% static 'play-icon.svg' %}" width="30vw" alt="play"></button>
+          <button class="next-btn"><img src="{% static 'next-icon.svg' %}" width="25vw" alt="next"></i></button>
+          {% comment %} <button class="fav-btn"></i></button>
+          <button class="maximize-btn"></i></button> {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </div>
+  
 </div>
 {% endblock %}

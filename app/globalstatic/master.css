@@ -21,7 +21,7 @@
 body, html {
     height: 100vh;
     overflow: hidden;
-    color: rgb(49, 76, 110);
+    color: rgb(255, 255, 255);
     font-size: 1em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -32,8 +32,8 @@ main {
 .side-content {
     padding-top: 5vh;
     height: 100vh;
-    background-color: #0a1e24ef;
     overflow: auto;
+    background-color: #01141af8;
 }
 .side-content::-webkit-scrollbar {
     width: 2px;
@@ -48,7 +48,7 @@ main {
   }
 .main-content {
     height: 100vh;
-    background-color: #0a1e24;
+    background-color: #041114;
     overflow: auto;
 }
 header {
@@ -60,7 +60,7 @@ header {
     align-items: center;
     justify-content: start;
     width: 20%;
-    background-color: #0a1e24ee;
+    background-color: #0a1e24ef;
 }
 .logo {
     height: 3vh;
@@ -80,7 +80,6 @@ header h1 {
     margin: 0;
     padding: 0;
     width: 70%;
-    color: rgb(43, 77, 133);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .menu-container {
@@ -103,12 +102,10 @@ header h1 {
 
 .side-menu-container {
     display: none;
-    background-color: #0a1e24ef;
     position: absolute;
     width: 19%;
     height: 10%;
     padding: 1em;
-    color: aquamarine;
     margin-left: 0.5%;
     transition: width 3s ease-in-out;
 }

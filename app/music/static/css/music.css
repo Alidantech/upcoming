@@ -123,7 +123,8 @@ button[type="submit"]:hover {
   padding: 0 20px;
   position: fixed;
   width: 80%;
-  background-color: #022029ee;
+  background-color: #02161dee;
+  z-index: 100;
 }
 .heading-container h1 {
   font-size: 1.5em;
@@ -162,7 +163,7 @@ button[type="submit"]:hover {
 .btn-songs,
 .btn-music,
 .btn-album ,
-.btn-account {
+.btn-latest {
   border: 1px solid #0c8d8d;
 }
 .account-details {
@@ -176,6 +177,7 @@ button[type="submit"]:hover {
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  border: 1px solid blue;
 }
 
 /* Album Cards */
@@ -189,42 +191,55 @@ button[type="submit"]:hover {
   border-radius: 10px;
   overflow: hidden;
   background-color: #555;
-  box-shadow: 1px solid rgba(46, 44, 44, 0.911), 2px solid rgba(75, 69, 69, 0.808);
+  box-shadow: 2px 2px 4px rgba(23, 31, 36, 0.562), 2px 2px 4px rgba(22, 27, 32, 0.568);
   height: 25vh;
   display: grid;
-  grid-template-rows: 70% 15% 15%;
+  grid-template-rows:70% 15% 15%;
 }
-
+.album-card:hover {
+  cursor: pointer;
+  scale: 1.03;
+}
 .album-card img {
   display: block;
   width: 100%;
   height: auto;
   border-radius: 10px 10px 0 0;
 }
+.album-card button {
+  display: none;
+  width: 35px;
+  position: fixed;
+  height: auto;
+  border-radius: 50%;
+  bottom: 10px;
+  right: 15px;
+}
+.album-card:hover button{
+  display: block;
+}
 .main-content-container h1 {
-  font-size: 1.2em;
+  font-size: 1.1em;
   padding: 1em;
   padding-top: 0;
-
 }
 .main-content-container > div h2 {
  
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
     padding:10px;
-    color: #475f85;
-  
+    color: #752271;
 }
 .album-card h3 {
   font-size: 1.2rem;
   padding: 5px 15px;
-  background-color: #ada8ad5d;
-  color: #010c1b;
+  background-color: #180114b2;
+  color: #a2a5aa;
 }
 .album-card p {
  padding: 5px 15px;
- background-color: #ada8ad5d;
- color: #010a1d;
+ background-color: #180114b2;
+  color: #b1b3b4;
 }
 /* Songs List */
 .songs-list-container {
@@ -238,17 +253,26 @@ button[type="submit"]:hover {
 }
 
 .song-list li {
-  display: flex;
+  display: grid;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
   padding: 10px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+   border-bottom: 1px solid rgba(128, 128, 128, 0.014);
+   grid-template-columns: 22% 23% 22% 23% 10%;
 }
 
+
 .song-list li:hover {
-  background-color: #032a3be5;
+  background-color: #02212ec4;
+  scale: 0.99;
+}
+.song-list li:first-child:hover {
+  background-color: transparent;
+  scale: 1;
+  cursor: text;
 }
 
 .song-title,
@@ -258,14 +282,11 @@ button[type="submit"]:hover {
   flex: 1;
   margin-right: 10px;
   color: #949090;
-
 }
 
 .play-button {
-  background-color: #333;
-  color: #be2899;
   border: none;
-  padding: 10px 15px;
+  padding: 0;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -312,7 +333,7 @@ button[type="submit"]:hover {
   height: 80px;
   margin: 0 auto;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid blue;
 }
 
 .artist h4 {
@@ -322,3 +343,92 @@ button[type="submit"]:hover {
   padding: 10px;
 }
 
+.song-player {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 80%;
+  background-color: #011324f5;
+  border-top: 1px solid #03102c79;
+  z-index: 999;
+  height: 10vh;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 20% 80%;
+}
+
+.song-info {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+
+.song-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  margin: 10px;
+  border: 1px solid blue;
+}
+
+.song-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.song-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.song-artist {
+  font-size: 14px;
+  color: #666;
+}
+.song-playing {
+  display: grid;
+  grid-template-rows: 30% 70%;
+
+}
+.song-progress {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: smaller;
+  
+}
+
+.progress-bar {
+  height: 50%;
+  background-color: rgb(71, 4, 55);
+  width: 70%;
+  border-radius: 10px;
+  margin: 3px 10px;
+}
+.song-controls {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+.song-controls button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: 0 100px;
+  font-size: 16px;
+  color: #666666;
+}
+
+.song-controls button:hover {
+  color: #f00;
+}
+
+.fav-btn {
+  margin-right: 0;
+  font-size: 20px;
+  color: #f00;
+}
