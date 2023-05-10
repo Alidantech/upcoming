@@ -225,10 +225,12 @@ button[type="submit"]:hover {
   height: 25vh;
   display: grid;
   grid-template-rows:70% 15% 15%;
+  transform-origin: center;
+  transition: transform 0.8s ease-in-out;
 }
 .album-card:hover {
   cursor: pointer;
-  scale: 1.03;
+  transform: scale(1.03);
 }
 .album-card img {
   display: block;
@@ -255,22 +257,25 @@ button[type="submit"]:hover {
 }
 .main-content-container > div h2 {
  
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     margin-bottom: 0.5rem;
     margin-top: 5vh;
     padding:10px;
     color: #752271;
 }
 .album-card h3 {
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   padding: 5px 15px;
   background-color: #180114b2;
   color: #83878d;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 .album-card p {
  padding: 5px 15px;
  background-color: #180114b2;
   color: #4f8f76;
+  font-size: 0.6em;
 }
 /* Songs List */
 .songs-list-container {
@@ -288,22 +293,32 @@ button[type="submit"]:hover {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 10px;
-  padding: 10px;
+  padding: 5px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
-   border-bottom: 1px solid rgba(128, 128, 128, 0.014);
-   grid-template-columns: 24% 24% 24% 24% 4%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.014);
+  grid-template-columns: 15% 25% 28% 28% 4%;
+  transform-origin: center;
+  transition: transform 0.8s ease-in-out;
+  font-size: 0.8em;
 }
 
 
 .song-list li:hover {
-  background-color: #02212ec4;
-  scale: 0.99;
+  background-color: #02212e2f;
+  scale: 1.001;
+  box-shadow: 1px 2px rgba(30, 30, 44, 0.712);
+  transform: scale(1.01);
+}
+.song-list li:first-child {
+  font-size: 0.6em;
+  color: #2b031a;
 }
 .song-list li:first-child:hover {
   background-color: transparent;
-  scale: 1;
   cursor: text;
+  transform: scale(1);
+  box-shadow: none;
 }
 
 .song-title,
@@ -312,14 +327,20 @@ button[type="submit"]:hover {
 .song-listens {
   flex: 1;
   margin-right: 10px;
-  color: #949090;
 }
-
+.song-artist {
+  color: #31755e;
+  font-size: 0.6em;
+}
+.song-artist:hover {
+  text-decoration: underline;
+}
 .play-button {
   border: none;
   padding: 0;
-  border-radius: 5px;
+  border-radius: 60%;
   cursor: pointer;
+
 }
 
 .play-button:hover {
@@ -368,7 +389,7 @@ button[type="submit"]:hover {
 }
 
 .artist h3 {
-  font-size: 1.1rem;
+  font-size: 0.8rem;
   margin-top: 10px;
   margin-bottom: 0;
   padding: 10px;
@@ -386,7 +407,7 @@ button[type="submit"]:hover {
   height: 10vh;
   overflow: hidden;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 20% 70% 10%;
 }
 
 .song-info {
@@ -409,14 +430,14 @@ button[type="submit"]:hover {
 }
 
 .song-name {
-  font-size: 0.9em;
+  font-size: 0.7em;
   font-weight: bold;
   margin-bottom: 5px;
   color: #a50c8b;
 }
 
-.song-artist {
-  font-size: 0.7em;
+.song-details .song-artist {
+  font-size: 0.6em;
   color: #336659;
 }
 .song-playing {
@@ -464,4 +485,27 @@ button[type="submit"]:hover {
   margin-right: 0;
   font-size: 20px;
   color: #f00;
+}
+
+.song-volume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.volume-bar {
+  background-color: #3a0528;
+  width: 2vw;
+  border-radius: 5px;
+  height: 90%;
+}
+.volume-bar-progress {
+  background-color: #abb6b2;
+  border-radius: 5px 5px 0px 0px;
+  width: 2vw;
+  height: 40%;
+  font-size: 0.5em;
+  padding: 2px;
+  color: #2c021b;
+  font-weight: bold;
 }
