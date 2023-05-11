@@ -229,7 +229,7 @@ button[type="submit"]:hover {
   transition: transform 0.8s ease-in-out;
 }
 .album-card:hover {
-  cursor: pointer;
+  cursor: auto;
   transform: scale(1.03);
 }
 .album-card img {
@@ -246,9 +246,12 @@ button[type="submit"]:hover {
   border-radius: 50%;
   bottom: 10px;
   right: 15px;
+  border: none;
+  box-shadow: none;
 }
 .album-card:hover button{
   display: block;
+  cursor: pointer;
 }
 .main-content-container h1 {
   font-size: 1.1em;
@@ -270,12 +273,22 @@ button[type="submit"]:hover {
   color: #83878d;
   word-wrap: break-word;
   word-break: break-all;
+  
 }
 .album-card p {
  padding: 5px 15px;
  background-color: #180114b2;
   color: #4f8f76;
   font-size: 0.6em;
+  
+}
+.album-card p:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+.album-card h3:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 /* Songs List */
 .songs-list-container {
@@ -297,18 +310,32 @@ button[type="submit"]:hover {
   border-radius: 5px;
   transition: background-color 0.3s ease;
   border-bottom: 1px solid rgba(128, 128, 128, 0.014);
-  grid-template-columns: 15% 25% 28% 28% 4%;
+  grid-template-columns:5% 15% 25% 17.5% 25% 10% 2.5%;
   transform-origin: center;
   transition: transform 0.8s ease-in-out;
   font-size: 0.8em;
 }
-
+.song-item button {
+  display: none;
+  position: fixed;
+  height: auto;
+  bottom: 10px;
+  right: 15px;
+  border: none;
+  box-shadow: none;
+}
+.song-item:hover button{
+  display: block;
+  cursor: pointer;
+  scale: 1.05;
+}
 
 .song-list li:hover {
   background-color: #02212e2f;
   scale: 1.001;
   box-shadow: 1px 2px rgba(30, 30, 44, 0.712);
   transform: scale(1.01);
+  cursor:auto;
 }
 .song-list li:first-child {
   font-size: 0.6em;
@@ -320,6 +347,19 @@ button[type="submit"]:hover {
   transform: scale(1);
   box-shadow: none;
 }
+.song-list button {
+  display: none;
+}
+.song-list:hover button {
+  display: block;
+}
+.song-image img {
+  width: 40px;
+  height: 40px;
+  border-radius: 20%;
+  margin: auto;
+  border: 1px solid blue;
+}
 
 .song-title,
 .song-artist,
@@ -328,23 +368,22 @@ button[type="submit"]:hover {
   flex: 1;
   margin-right: 10px;
 }
+.song-listens {
+  color: #859097ea;
+}
+.song-album,
 .song-artist {
   color: #31755e;
   font-size: 0.6em;
+  cursor: pointer;
 }
+.song-album {
+  font-size: 0.8em;
+  cursor: pointer;
+}
+.song-album,
 .song-artist:hover {
   text-decoration: underline;
-}
-.play-button {
-  border: none;
-  padding: 0;
-  border-radius: 60%;
-  cursor: pointer;
-
-}
-
-.play-button:hover {
-  background-color: #666;
 }
 
 @media screen and (max-width: 768px) {
@@ -355,10 +394,6 @@ button[type="submit"]:hover {
   .song-list li div {
     flex-basis: 100%;
     margin-bottom: 5px;
-  }
-
-  .play-button {
-    flex-basis: 100%;
   }
 }
 
