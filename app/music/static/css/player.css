@@ -3,22 +3,14 @@
     padding: 0;
     box-sizing: border-box;
 }
-
-.player-page {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-image: url(/static/img/dark-background.jpg);
-    background-size: cover;   
-     width: 100%;
-    height: 100vh;
-}
 .background {
     height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(to left, rgba(0, 0, 0, 0.733), rgba(0, 0, 0, 0.726));
+    background: linear-gradient(to bottom, rgba(1, 51, 44, 0.966), rgba(2, 43, 59, 0.918));
+   
 }
 .song-image img{
 
@@ -76,7 +68,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    color: rgb(219, 115, 245);
+    color: rgb(238, 245, 244);
 }
 
 .progress-bar {
@@ -84,11 +76,11 @@
     height: 0.8vh;
     border-radius: 2px;
     margin-top: 0.5em;
-    background-color: rgb(177, 103, 172);
+    background-color: rgb(43, 97, 70);
 }
 .progress-bar:hover{
     height: 1vh;
-    background-color: rgba(173, 98, 168, 0.849);
+    background-color: rgba(27, 70, 36, 0.849);
 }
 .controls-container {
     display: flex;

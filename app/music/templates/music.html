@@ -73,7 +73,7 @@
 
     {% include 'music-albums.html' %}
     {% include 'music-songs.html' %}
-    {% include 'music-artists.html' %}
+  
     {% block albums %}
     {% endblock albums %}
 
@@ -102,7 +102,7 @@
           <button class="prev-btn"><img src="{% static 'prev-icon.svg' %}" width="20vw" alt="prvious"></button>
           <button class="play-btn"><img src="{% static 'play-icon.svg' %}" width="25vw" alt="play"></button>
           <button class="next-btn"><img src="{% static 'next-icon.svg' %}" width="20vw" alt="next"></button>
-          <button class="maximize-btn"><img src="{% static 'max-icon.svg' %}" width="15vw" alt="next"></button>
+          <a href="player/"><button class="maximize-btn"><img src="{% static 'max-icon.svg' %}" width="15vw" alt="next"></button></a>
         </div>
       </div>
       <div class="song-volume">

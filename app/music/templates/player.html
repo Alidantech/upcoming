@@ -1,43 +1,44 @@
-{% extends 'template.html' %}
 {% load static %}
-{% block content %}
-<script src="https://unpkg.com/wavesurfer.js" defer></script>
+{% block static %}
 <link rel="stylesheet" href=" {% static '/css/player.css' %}">
-    <div class="background">
-        <div class="song">
-            <div class="details">
-              <div class="details-container">
-                <div class="song-image">
-                    <img src="/static/img/dark-background.jpg" alt="music image" height="90%" width="auto">
-                </div>            
-                <div class="song-name">
-                    <h1>Alidante ft me - all my life</h1>
-                </div>
-              </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vibrant.js/1.1.0/Vibrant.min.js"></script>
+{% endblock static %}
+
+{% block content %}
+<div class="background">
+    <div class="song">
+        <div class="details">
+            <div class="details-container">
+            <div class="song-image">
+                <img src="https://source.unsplash.com/random/400x400/?music" alt="song photo">
+            </div>            
+            <div class="song-name">
+                <h1>Alidante ft me - all my life</h1>
             </div>
-            <div class="controls">
-                <div class="song-progress">
-                    <p id="start-time">00:00</p>
-                    <div class="progress-bar"></div>
-                    <p id="end-time">03:26</p>
-                </div>
-                <div class="controls-container">
-                    <div class="controls-grid">
-                        <div class="prev">
-                            <button id="previous"> 
-                                <img src="/static/img/prev-icon.svg" width="30vw" height="auto">
-                            </button>
-                        </div>
-                        <div class="play">
-                            <button id="play">
-                                <img src="/static/img/play-icon.svg" width="40vw" height="auto">
-                            </button>
-                        </div>
-                        <div class="next">
-                            <button id="next">
-                                <img src="/static/img/next-icon.svg" width="25vw" height="auto">
-                            </button>
-                        </div>
+            </div>
+        </div>
+        <div class="controls">
+            <div class="song-progress">
+                <p id="start-time">00:00</p>
+                <div class="progress-bar"></div>
+                <p id="end-time">03:26</p>
+            </div>
+            <div class="controls-container">
+                <div class="controls-grid">
+                    <div class="prev">
+                        <button id="previous"> 
+                            <img src="{% static 'prev-icon.svg' %}" width="30vw" alt="next">
+                        </button>
+                    </div>
+                    <div class="play">
+                        <button id="play">
+                            <img src="{% static 'play-icon.svg' %}" width="35vw" alt="next">
+                        </button>
+                    </div>
+                    <div class="next">
+                        <button id="next">
+                           <img src="{% static 'next-icon.svg' %}" width="30vw" alt="next">
+                        </button>
                     </div>
                 </div>
             </div>
