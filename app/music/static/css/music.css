@@ -4,139 +4,66 @@
   box-sizing: border-box;
   color: #bdc2c1;
 }
+/* the side bar part */
+.navigation {
+  
+  border-bottom: 1px solid rgba(9, 63, 77, 0.322);
+  padding: 10px;
+  height: 30vh;
+  display: grid;
+  grid-template-rows: 33.33% 33.33% 33.33%;
+  box-shadow: 2px 2px 4px rgba(15, 86, 134, 0.705);
 
-
-/* the side bar of the page */
-.sidebar {
-    width: 100%;
-    padding: 20px;
-    color: #4cadad;
 }
 
-.sidebar h2 {
-    margin-top: 0;
-    color: #53384a;
-    font-size: 1.1em;
+.navigation a {
+  background-color: #0a42305b;
+  box-shadow: 2px 2px 4px rgba(37, 83, 110, 0.486);
+  margin: auto;
+  width: 90%;
+  text-decoration: none;
+  text-align: start;
+  padding: 1vw;
+  transform: scale(1);
+  transition: transform 0.5s ease-out;
 }
 
-.sidebar-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+.navigation a:hover {
+  text-decoration: underline;
+  transform: scale(1.01);
+}
+.change-list {
+  display: grid;
+  height: 10vh;
+  grid-template-columns: 20% 60% 20%;
+  align-items: center;
+  justify-content: center;
+
+}
+.change-list h2 {
+  text-align: center;
+  width: 100%;
 }
 
-.sidebar-menu li {
-    margin-bottom: 10px;
-}
+.group-list {
 
-.sidebar-menu li a {
-    text-decoration: none;
-    color: #31755e;
-    display: block;
-    padding: 5px;
-    border-radius: 5px;
-    transition: background-color 0.2s ease-in-out;
 }
-
-.sidebar-menu li a:hover {
-    background-color: #263d50d8;
-}
-.search-bar {
+.content-list li {
   display: flex;
   align-items: center;
-  border: 1px solid transparent;
-  border-radius: 2px;
-  padding: 5px;
-  background-color: #354550;
+  justify-content: start;
+}
+.content-list img {
+  margin: 0;
+  border: 1px solid blue;
+  display: block;
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 5px;
+  margin-right: 10px;
 }
 
-.search-bar input[type="text"] {
-  flex: 1;
-  border: none;
-  outline: none;
-  font-size: 16px;
-}
 
-.search-bar button[type="submit"] {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.fa-search {
-  font-size: 18px;
-  color: #c4b9b9;
-}
-
-.form-group {
-    margin-bottom: 10px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.form-group input[type="text"],
-.form-group select {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.form-group select {
-    background-color: #03394970;
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 7L0.576704 0.573733L11.4233 0.573732L6 7Z' fill='%23000'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 5px center;
-}
-
-button[type="submit"] {
-    background-color: #7a0b5f;
-    color: #f0e2e2;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-}
-
-button[type="submit"]:hover {
-    background-color: #555;
-}
-/* select element styling */
-.form-group select {
-  background-color: #cfcaca;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  color: #ad1569;
-  font-size: 16px;
-  padding: 10px;
-  width: 200px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  cursor: pointer;
-}
-
-/* hover and focus styles for the select element */
-.form-group select:hover, select:focus {
-  outline: none;
-  border-color: #000000;
-}
-
-/* styling for the select element options */
-.form-group select option {
-  background-color: #c7c3c7ec;
-  color: #94078d;
-  padding: 10px;
-}
 
 /* the main part of the page */
 .main-content-container {
@@ -312,7 +239,7 @@ button[type="submit"]:hover {
   border-bottom: 1px solid rgba(128, 128, 128, 0.014);
   grid-template-columns:5% 15% 25% 17.5% 25% 10% 2.5%;
   transform-origin: center;
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.5s ease-in;
   font-size: 0.8em;
 }
 .song-item button {

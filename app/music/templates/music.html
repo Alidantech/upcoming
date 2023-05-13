@@ -8,50 +8,29 @@
 
 {% block sidebar %}
 <div class="sidebar">
-  <h2>Music Library</h2>
-  <nav class="sidebar-menu">
-      <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">Albums</a></li>
-          <li><a href="#">Artists</a></li>
-          <li><a href="#">Songs</a></li>
-          <li><a href="#">Playlists</a></li>
-          <li><a href="#">Genres</a></li>
-          <li><a href="#">Recently Played</a></li>
-          <li><a href="#">Favorites</a></li>
-      </ul>
-  </nav>
-  <h2>Filter by</h2>
-  <form action="#" method="get">
-    <div class="search-bar">
-      <input type="text" placeholder="Search">
-      <button type="submit"><i class="fa fa-search"></i></button>
-    </div>
-      <div class="form-group">
-          <label for="genre-select">Genre</label>
-          <select id="genre-select" name="genre">
-              <option value="">All genres</option>
-              <option value="rock">Rock</option>
-              <option value="pop">Pop</option>
-              <option value="jazz">Jazz</option>
-              <option value="hip-hop">Hip-Hop</option>
-              <option value="electronic">Electronic</option>
-          </select>
-      </div>
-      <div class="form-group">
-          <label for="year-select">Year</label>
-          <select id="year-select" name="year">
-              <option value="">All years</option>
-              <option value="2022">2022</option>
-              <option value="2021">2021</option>
-              <option value="2020">2020</option>
-              <option value="2019">2019</option>
-              <option value="2018">2018</option>
-          </select>
-      </div>
-      <button type="submit">Apply Filters</button>
-  </form>
+  <div class="navigation">
+    <a href="/dashboard">Home</a>
+    <a href="/record">Record</a>
+    <a href="/beats">Beats</a>
+  </div>  
+  <div class="change-list">
+    <button type="button">&lt</button> <h2>Genres</h2> <button type="button">&gt</button>
+  </div>
+  <div class="group-list">
+    <ul class="content-list">
+      <li><img src="https://source.unsplash.com/random/400x400/?pop"  width="50vw">Pop</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?rock"  width="50vw">Rock</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?hiphop"  width="50vw">Hip Hop</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?rnb"  width="50vw">R&B</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?blues"  width="50vw">blues</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?reggea"  width="50vw">reggea</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?bongo"  width="50vw">Tanzania</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?rhumba"  width="50vw">kenya</li>
+    </ul>
+  </div>
+  
 </div>
+
 {% endblock %}
 
 {% block content %}
@@ -85,7 +64,7 @@
 
     <div class="song-player">
       <div class="song-info">
-        <img src="https://source.unsplash.com/random/400x400/?musician" alt="Song Image">
+        <img src="https://source.unsplash.com/random/400x400/?musician"  width="20vw">
         <div class="song-details">
           <div class="song-name">Dance With Me</div>
           <div class="song-artist">Alidante</div>
