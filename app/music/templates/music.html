@@ -4,17 +4,32 @@
 
 
 {% block title %} music {% endblock %}
-{% block heading %}upcoming music{% endblock %}
 
 {% block sidebar %}
 <div class="sidebar">
   <div class="navigation">
-    <a href="/dashboard">Home</a>
-    <a href="/record">Record</a>
-    <a href="/beats">Beats</a>
+    <a href="/dashboard"><img src="{% static 'home-icon.svg' %}" width="15vw" alt="next">Home</a>
+    <a href="/record"><img src="{% static 'record-icon.svg' %}" width="15vw" alt="next">Record</a>
+    <a href="/beats"><img src="{% static 'beat-icon.svg' %}" width="15vw" alt="next">Beats</a>
   </div>  
   <div class="change-list">
-    <button type="button">&lt</button> <h2>Genres</h2> <button type="button">&gt</button>
+   
+    <h2>Genres</h2>
+     
+  </div>
+  <div class="group-list">
+    <ul class="content-list">
+      <li><img src="https://source.unsplash.com/random/400x400/?pop">Summer Vibes</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?rock"  width="50vw">Throwback Jams</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?hiphop"  width="50vw">Chill Beats</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?blues"  width="50vw">Workout Motivation</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?blues"  width="50vw">Relaxing Piano Melodies</li>
+    </ul>
+  </div>
+  <div class="change-list">
+   
+    <h2>Playlists</h2>
+     
   </div>
   <div class="group-list">
     <ul class="content-list">
@@ -24,11 +39,10 @@
       <li><img src="https://source.unsplash.com/random/400x400/?rnb"  width="50vw">R&B</li>
       <li><img src="https://source.unsplash.com/random/400x400/?blues"  width="50vw">blues</li>
       <li><img src="https://source.unsplash.com/random/400x400/?reggea"  width="50vw">reggea</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?bongo"  width="50vw">Tanzania</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?rhumba"  width="50vw">kenya</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?guitarist"  width="50vw">Tanzania</li>
+      <li><img src="https://source.unsplash.com/random/400x400/?girl"  width="50vw">kenya</li>
     </ul>
   </div>
-  
 </div>
 
 {% endblock %}
@@ -85,7 +99,7 @@
         </div>
       </div>
       <div class="song-volume">
-        <div class="volume-bar"><div class="volume-bar-progress">70%</div></div>
+        <div class="volume-bar"><div class="volume-bar-progress"></div></div>
       </div>
     </div>
   </div>

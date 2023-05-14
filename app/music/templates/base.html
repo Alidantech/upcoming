@@ -21,24 +21,12 @@
                 <p>up <br>
                 coming</p>
             </div>
-            <h1>{% block heading %}{% endblock %}</h1>
             <div class="menu-container">
                 <button onclick="showNavigation()">
                     <img src="{% static 'search-icon.svg' %}" alt="menu" width="20vw" height="auto">
                 </button>
             </div>
         </header>
-        <div class="navigation-container">
-            <div class="side-menu-container" id="navigator">
-                <ul>
-                   <a href="/"> <li href="/">Home</li></a>
-                   <a href="/"> <li>Settings</li></a>
-                    <a href="/"> <li>Account</li></a>
-                    <a href="/"><li>More</li></a>
-                    <a href="/">   <li>Close</li></a>
-                </ul>
-            </div>
-        </div>
         {% block sidebar %}
         {% endblock sidebar %}
     </div>

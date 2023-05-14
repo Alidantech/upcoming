@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 /* Create a custom scroll bar */
 *::-webkit-scrollbar {
@@ -62,6 +63,7 @@ header {
     justify-content: start;
     width: 20%;
     background-color: #021920;
+    z-index: 100;
 }
 .logo {
     height: 3vh;
@@ -74,56 +76,43 @@ header {
     font-size: 0.1em;
     color:rgb(4, 236, 236);
 }
+.logo:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    scale: 1.1;
+}
 header h1 {
-    text-align: center;
-    width: fit-content;
-    font-size: 1em;
-    margin: 0;
-    padding: 0;
-    width: 70%;
+    width: 80%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-.menu-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: auto;
-    padding-top: 1vh;
-}
-.menu-container button {
-    background-color: transparent;
+header button {
     border: none;
-    padding: 1px;
 }
-.menu-container button:hover {
-    border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.178);
+header button:hover {
     cursor: pointer;
-}
-
-.side-menu-container {
-    display: none;
-    position: absolute;
-    width: 19%;
-    height: 10%;
-    padding: 1em;
-    margin-left: 0.5%;
-    transition: width 3s ease-in-out;
-}
-
-.side-menu-container:hover {
-    height: fit-content;
+    scale: 1.1;
 }
 ul {
     list-style-type: none;
-    
-}
-li {
-    padding: 2vw;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.76);
+    padding: 0;
+    margin: 20px 0;
+  }
+
+  li {
+    background-color: #01182242;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(61, 60, 60, 0.1);
+    transition: background-color 0.3s ease;
+    font-size: 0.8em;
+  }
+
+  li:hover {
+    background-color: #061e3660;
     cursor: pointer;
-}
-li:hover {
-    background-color: rgba(9, 122, 84, 0.13);
-    color: rgb(10, 219, 115);
+  }
+button:hover {
+    scale: 1.1;
 }
