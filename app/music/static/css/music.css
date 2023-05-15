@@ -490,3 +490,11 @@
   color: #2c021b;
   font-weight: bold;
 }
+.buttons {
+  display: grid;
+  grid-template-rows: 50% 50%;
+  padding: 10px;
+}
+.buttons button {
+  padding: 5px;
+}

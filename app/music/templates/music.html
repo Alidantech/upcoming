@@ -91,15 +91,19 @@
           <div class="total-time">4:30</div>
         </div>
         <div class="song-controls">
-          <button class="fav-btn"><img src="{% static 'like-icon.svg' %}" width="15vw" alt="next"></button>
-          <button class="prev-btn"><img src="{% static 'prev-icon.svg' %}" width="20vw" alt="prvious"></button>
-          <button class="play-btn"><img src="{% static 'play-icon.svg' %}" width="25vw" alt="play"></button>
-          <button class="next-btn"><img src="{% static 'next-icon.svg' %}" width="20vw" alt="next"></button>
-          <a href="player/"><button class="maximize-btn"><img src="{% static 'max-icon.svg' %}" width="15vw" alt="next"></button></a>
+          <button title="like" class="fav-btn"><img src="{% static 'like-icon.svg' %}" width="15vw" alt="next"></button>
+          <button title="previous" class="prev-btn"><img src="{% static 'prev-icon.svg' %}" width="20vw" alt="prvious"></button>
+          <button title="play" class="play-btn"><img src="{% static 'play-icon.svg' %}" width="25vw" alt="play"></button>
+          <button title="next" class="next-btn"><img src="{% static 'next-icon.svg' %}" width="20vw" alt="next"></button>
+          <a href="player/"><button title="maximize" class="maximize-btn"><img src="{% static 'max-icon.svg' %}" width="15vw" alt="next"></button></a>
         </div>
       </div>
       <div class="song-volume">
         <div class="volume-bar"><div class="volume-bar-progress"></div></div>
+        <div class="buttons">
+          <button title="lyrics" class="play-btn"><img src="{% static 'lyrics-icon.svg' %}" width="15vw" alt="play"></button>
+          <button title="equalizer" class="next-btn"><img src="{% static 'equalizer-icon.svg' %}" width="15vw" alt="next"></button>
+        </div>
       </div>
     </div>
   </div>
