@@ -4,6 +4,20 @@
     margin: 0;
     padding: 0;
 }
+/* Create a custom scroll bar */
+*::-webkit-scrollbar {
+    width: 2px;
+  }
+*::-webkit-scrollbar-thumb {
+    background-color: #6e7680;
+    border-radius: 4px;
+  }
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #0b5555;
+  }
+*::-webkit-scrollbar-track {
+    background-color: #00000007;
+  }
 
 /* General Styles */
 body {
@@ -68,9 +82,8 @@ div.exit {
 }
 /* Add a card-like style to the divs */
 .recording-page > div {
-    background-color: #0f0f0f;
+    background-color: #091118ef;
     border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.5);
     margin-bottom: 0.5vh;
   }
 /* Specific Styles */
@@ -80,13 +93,13 @@ div.exit {
     grid-template-columns: 40% 60%; /* two columns of equal width */
     grid-gap: 0.3em; /* gap between grid items */
     overflow: hidden;
-    background-color: #00000000;
+    background-color: #091118ef;
 }
 .lyrics-container {
     font-size: 1.4rem;
     line-height: 2;
     height: 100%;
-    background-color: #0f0f0f;
+    background-color: #091118ef;
     color: #19e2c1;
     padding: 20px;
     border-radius: 5px;
@@ -95,18 +108,6 @@ div.exit {
     scrollbar-width: thin; /* set scrollbar width */
     scrollbar-color: #555 #222; /* set scrollbar color */
 }
-
-/* target the scrollbar */
-.lyrics-container::-webkit-scrollbar {
-width: 6px;
-}
-
-/* target the thumb */
-.lyrics-container::-webkit-scrollbar-thumb {
-background-color: #555;
-border-radius: 3px;
-}
-  
 .bridge {
     color: #5d756d;
 }
@@ -114,48 +115,35 @@ border-radius: 3px;
 .chorus {
     color: #435c5f;
 }
-
 .verse {
     color: #a18f9c;
 }
 .effects-container {
-    background-color: #0f0f0f;
+    background-color: #091118ef;
     height: 100%;
     border-radius: 5px;
     overflow-y: auto;
     scrollbar-width: thin; /* set scrollbar width */
     scrollbar-color: #555 #222; /* set scrollbar color */
 }
-*::-webkit-scrollbar {
-    width: 6px;
-    }
-    
-    /* target the thumb */
-*::-webkit-scrollbar-thumb {
-    background-color: #555;
-    border-radius: 3px;
-    }
-
 .effect-type{
     width: 100%;
     height: 4vh;
 }
-
 .effect-type {
     display: flex;
     flex-wrap: wrap;
   }
-  
-  .effect-type button {
+.effect-type button {
     flex-basis: 12.5%;
-    background-color: #161515;
+    background-color: #091118ef;
     color: #83a197;
     border: hidden;
     word-wrap: break-word;
     border-right: 1px solid #1e221e;
     border-bottom: 1px solid #1d271d;
   }
-  .effect-type button:last-child{
+.effect-type button:last-child{
     border-right:hidden;
   }
 
@@ -183,17 +171,16 @@ border-radius: 3px;
 .vocal, .beat {
     height: 1vh;
     width: 0;
-    background-color: #fff;
     transition: width 1s ease;
 }
 
 .beat {
-    background-color: #ff0055;
+    
 }
 
 .controls-container {
     display: grid;
-    grid-template-columns: 20% 50% 30%;
+    grid-template-columns: 10% 70% 20%;
     height: 10vh;
     padding: 1vh;
 }
@@ -202,13 +189,35 @@ border-radius: 3px;
     align-items: center;
     justify-content: center;
 }
+.controls-container > div button {
+    margin: auto;
+}
 .add-buttons{
-    background-color: #19e2c1;
-    
+   padding: auto;
 }
 .control-buttons {
-    background-color: #5d756d;
+    padding: auto;
 }
 .current-info {
-    background-color: #1e221e;
+   display: grid;
+   grid-template-columns: 30% 70%;
+}
+.current-info h3{
+    font-size: 0.8em;
+    margin: 0;
+    padding: 2px;
+    text-align: center;
+}
+.current-info p {
+    font-size: 0.6em;
+    margin: 0;
+    padding: 2px;
+    color: #175249;
+}
+.current-info img {
+    width: 40px;
+    height: 40px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin: auto 5px;
 }

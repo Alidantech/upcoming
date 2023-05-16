@@ -8,7 +8,14 @@
 {%block title %} Create Music {% endblock %}
 
 {% block sidebar %}
-
+<div id="sidebar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  
 {% endblock %}
 
 {% block content %}
@@ -99,21 +106,42 @@
     </div>
     <div class="controls-container">
         <div class="add-buttons">
-            <button id="beat">+</button>
-            <button id="record">O</button>
+            <button id="beat">
+                <img src="{% static 'record-icon.svg' %}" alt="menu" width="25vw" height="auto">
+            </button>
+            <button id="record">
+                <img src="{% static 'add-icon.svg' %}" alt="menu" width="28vw" height="auto">
+            </button>
         </div>
         <div class="control-buttons">
-        <button>add beat</button>
-        <button>add beat</button>
-        <button>add beat</button>
-        <button>add beat</button>
-        <button>add beat</button>
-        <button>add beat</button>
+        <button>
+            <img src="{% static 'left-icon.svg' %}" alt="menu" width="15vw" height="auto">
+        </button>
+        <button>
+            <img src="{% static 'undo-icon.svg' %}" alt="menu" width="20vw" height="auto">
+        </button>
+        <button>
+            <img src="{% static 'prev-icon.svg' %}" alt="menu" width="25vw" height="auto">
+        </button>
+        <button>
+            <img src="{% static 'play-icon.svg' %}" alt="menu" width="30vw" height="auto">
+        </button>
+        <button>
+            <img src="{% static 'next-icon.svg' %}" alt="menu" width="25vw" height="auto">
+        </button>
+        <button>
+            <img src="{% static 'redo-icon.svg' %}" alt="menu" width="20vw" height="auto">
+        </button>
+        <button>
+            <img src="{% static 'right-icon.svg' %}" alt="menu" width="15vw" height="auto">
+        </button>
         </div>
         <div class="current-info">
-        this is the name playing audio <br>
-        size: <br>
-        length: <br>
+            <img src="https://source.unsplash.com/random/400x400/?musician"  width="auto">
+            <div class="audio-details">
+            <h3>Dance With You</h3>
+            <p>Alidante</p>
+            </div>
         </div>
     </div>
     </div>
