@@ -7,7 +7,7 @@ The front-end languages used are JavaScript, HTML, and CSS for the user interfac
 ## Prerequisites
 - Python (version 3.9)
 - Node.js (version X.X.X)
-- npm (version X.X.X)
+- npm (version 9.6.6)
 
 ## Installation
 
@@ -36,7 +36,7 @@ The front-end languages used are JavaScript, HTML, and CSS for the user interfac
 ## Configuration
 
 1. Create a `.env` file in the project root directory and add the necessary environment variables:
-    ```
+    ```python
     DEBUG=True
     SECRET_KEY=your-secret-key
     ```
