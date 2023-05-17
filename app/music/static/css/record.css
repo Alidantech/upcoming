@@ -82,7 +82,7 @@ div.exit {
 }
 /* Add a card-like style to the divs */
 .recording-page > div {
-    background-color: #091118ef;
+    background-color: #041114;
     border-radius: 5px;
     margin-bottom: 0.5vh;
   }
@@ -99,7 +99,8 @@ div.exit {
     font-size: 1.4rem;
     line-height: 2;
     height: 100%;
-    background-color: #091118ef;
+    background-color: #041114;
+
     color: #19e2c1;
     padding: 20px;
     border-radius: 5px;
@@ -119,7 +120,8 @@ div.exit {
     color: #a18f9c;
 }
 .effects-container {
-    background-color: #091118ef;
+    background-color: #041114;
+
     height: 100%;
     border-radius: 5px;
     overflow-y: auto;

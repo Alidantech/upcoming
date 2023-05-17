@@ -1,6 +1,8 @@
+const waveformContainer = document.getElementById('waveform');
+
 // Load Wavesurfer.js library
 var wavesurfer = WaveSurfer.create({
-  container: '#waveform',
+  container: waveformContainer,
   waveColor: 'blue',
   progressColor: 'brown'
 });

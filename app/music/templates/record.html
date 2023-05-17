@@ -3,6 +3,8 @@
 {% load static %}
 {% block static %}
   <link rel="stylesheet" href=" {% static '/css/record.css' %}">
+  <script src="https://unpkg.com/wavesurfer.js"></script>
+  <script src=" {% static '/js/record.js' %}"></script>
 {% endblock static %}
 
 {%block title %} Create Music {% endblock %}
@@ -90,14 +92,6 @@
         <div class="wave">
             <div id="waveform">
             </div> 
-        </div>
-        <div class="wave">
-            <div id="waveform">
-            </div> 
-        </div>
-        <div class="wave">
-            <div id="waveform">
-            </div> 
         </div>      
     </div>
     <div class="progress-container">
@@ -107,12 +101,14 @@
     <div class="controls-container">
         <div class="add-buttons">
             <button id="beat">
-                <img src="{% static 'record-icon.svg' %}" alt="menu" width="25vw" height="auto">
+              <img src="{% static 'record-icon.svg' %}" alt="menu" width="25vw" height="auto">
             </button>
             <button id="record">
-                <img src="{% static 'add-icon.svg' %}" alt="menu" width="28vw" height="auto">
+              <img src="{% static 'add-icon.svg' %}" alt="menu" width="28vw" height="auto">
             </button>
-        </div>
+            <input type="file" id="file-input" style="display: none;">
+          </div>
+          
         <div class="control-buttons">
         <button>
             <img src="{% static 'left-icon.svg' %}" alt="menu" width="15vw" height="auto">
