@@ -1,50 +1,16 @@
-const waveformContainer = document.getElementById('waveform');
+import WaveSurfer from 'wavesurfer.js';
 
-// Load Wavesurfer.js library
+// Create an instance of WaveSurfer
 var wavesurfer = WaveSurfer.create({
-  container: waveformContainer,
-  waveColor: 'blue',
-  progressColor: 'brown'
+    container: '#waveform',
+    waveColor: 'violet',
+    progressColor: 'purple'
 });
 
-// Handle file selection
-var fileInput = document.getElementById('file-input');
-fileInput.addEventListener('change', function() {
-  var file = this.files[0];
-  
-  // Load audio file using FileReader API
-  var reader = new FileReader();
-  reader.onload = function(e) {
-    var audioBlob = new Blob([e.target.result], { type: file.type });
-    var audioUrl = URL.createObjectURL(audioBlob);
-    wavesurfer.load(audioUrl);
-  };
-  reader.readAsArrayBuffer(file);
-});
+// Load an audio file
+wavesurfer.load('example/media/demo.wav');
 
-// Add event listener to play button
-var playBtn = document.getElementById('playBtn');
-playBtn.addEventListener('click', function() {
-  // Start playing audio
-  wavesurfer.play();
-  
-  // Update progress bar as audio plays
-  wavesurfer.on('audioprocess', function() {
-    var progress = wavesurfer.getCurrentTime() / wavesurfer.getDuration();
-    var progressBar = document.getElementById('progressBar');
-    progressBar.style.width = progress * 100 + '%';
-  });
+// Subscribe to the 'ready' event and play the audio once it's ready
+wavesurfer.on('ready', function () {
+    wavesurfer.play();
 });
-
-// Add event listeners to update loading progress bar
-wavesurfer.on('loading', function(progress) {
-  var loadingBar = document.getElementById('loadingBar');
-  loadingBar.style.width = progress * 1 + '%';
-  console.log(progress);
-});
-
-wavesurfer.on('ready', function() {
-  var loadingContainer = document.getElementById('loadingContainer');
-  loadingContainer.style.display = 'none';
-});
-

@@ -6,7 +6,7 @@ The front-end languages used are JavaScript, HTML, and CSS for the user interfac
 
 ## Prerequisites
 - Python (version 3.9)
-- Node.js (version X.X.X)
+- Node.js (version 20.2.0)
 - npm (version 9.6.6)
 
 ## Installation

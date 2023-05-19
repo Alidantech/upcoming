@@ -1,2 +1,3 @@
 venv/
 src/productionfiles
+src/globalstatic/js/wavesurfer_js

@@ -3,8 +3,8 @@
 {% load static %}
 {% block static %}
   <link rel="stylesheet" href=" {% static '/css/record.css' %}">
-  <script src="https://unpkg.com/wavesurfer.js"></script>
-  <script src=" {% static '/js/record.js' %}"></script>
+  <script type="module" src=" {% static '/js/record.js' %}"></script>
+  <script type="module" src=" {% static '/js/wavesurfer_js/src/wavesurfer.js' %}"></script>
 {% endblock static %}
 
 {%block title %} Create Music {% endblock %}
