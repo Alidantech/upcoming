@@ -159,15 +159,11 @@ div.exit {
 }
 .wave {
     margin-bottom: 5px;
-    height: 50%;
-    border: 2px solid rgb(28, 28, 36);
+    height: auto;
 }
 
 .progress-container {
     height: 15vh;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .vocal, .beat {
@@ -176,10 +172,86 @@ div.exit {
     transition: width 1s ease;
 }
 
-.beat {
-    
-}
+.file-input-container {
+    position: relative;
+  }
+  
+  .hidden-input {
+    display: none;
+  }
+  
+  .custom-file-input {
+    background-color: #4CAF50;
+    color: rgb(98, 228, 12);
+    padding: 0;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .selected-file-name {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.5em;
+    color: #19e2c1;
+    max-width: 8vw;
+  }
+  
+  .progress-container {
+    display: grid;
+    vertical-align: auto;    
+    grid-template-rows: 50% 50%;
+  }
 
+  .progress-container > div {
+    display: grid;
+    grid-template-columns: 5% 5% 80% 5% 5%;
+    margin: auto;
+  }
+  
+  .vocal {
+    border: 1px solid rgb(48, 33, 33);
+    border: hidden;
+    height: 100%;
+    width: 100%;
+  }
+  .vocal > div {
+    margin: auto;
+  }
+  
+  .beat {
+    border: 1px solid brown;
+    height: 100%;
+    width: 100%;
+  }
+  .beat > div {
+    margin: auto;
+  }
+  
+  #progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #595e51;
+    margin: auto;
+  }
+  
+  #progress {
+    height: 100%;
+    background-color: #076d26; /* Set the color for the progress */
+    width: 0;
+  }
+  
+  #elapsed-time,
+  #remaining-time {
+    font-size: 12px;
+    color: #333;
+    text-align: center;
+  }
+  
+  
+  
+  
 .controls-container {
     display: grid;
     grid-template-columns: 10% 70% 20%;

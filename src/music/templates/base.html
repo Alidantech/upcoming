@@ -8,9 +8,7 @@
     <link rel="shortcut icon" href="{% static 'img/uia-icon.svg' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     <script src="{% static 'js/base.js' %}" defer></script>
-    <title>{% block title %}{% endblock %}</title>
-    {% block static %}{% endblock static %}
-    
+    <title>{% block title %}{% endblock %}</title>    
 </head>
 <body>
 <main>
@@ -35,5 +33,6 @@
         {% endblock %}
     </div>
 </main> 
+{% block static %}{% endblock static %}
 </body>
 </html>
