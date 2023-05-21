@@ -2,7 +2,8 @@
 var wavesurfer = WaveSurfer.create({
     container: '#waveform',
     waveColor: 'blue',
-    progressColor: 'purple'
+    progressColor: 'purple',
+    height: 200 // Set the desired height here
   });
   
   // Load audio file when selected
@@ -12,9 +13,23 @@ var wavesurfer = WaveSurfer.create({
     var fileURL = URL.createObjectURL(file);
     wavesurfer.load(fileURL);
   });
-  
+
   // Play button functionality
   var playButton = document.getElementById('play-button');
+  
+  var isPlaying = false;
+
+  // Handle play/pause events
+  wavesurfer.on('play', function() {
+    isPlaying = true;
+    playButton.src = "/static/img/pause-icon.svg";
+  });
+
+  wavesurfer.on('pause', function() {
+    isPlaying = false;
+    playButton.src = "/static/img/play-icon.svg";
+  });
+
   playButton.addEventListener('click', function() {
     wavesurfer.playPause();
   });
@@ -62,3 +77,4 @@ function formatTime(time) {
   seconds = seconds < 10 ? '0' + seconds : seconds;
   return minutes + ':' + seconds;
 }
+
