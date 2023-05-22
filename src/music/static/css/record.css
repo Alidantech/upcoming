@@ -365,3 +365,62 @@ div.logo {
   max-width: 100%;
   margin: auto;
 }
+.add-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.selected-file-name {
+  font-weight: bold;
+}
+
+#record, #stopButton {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.vocal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#elapsed-time, #remaining-time {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#progressBar {
+  width: 100%;
+  height: 10px;
+  background-color: #ccc;
+  margin-bottom: 10px;
+}
+
+#progressFill {
+  height: 100%;
+  background-color: #00aaff;
+}
+
+#recorded-file-name {
+  font-weight: bold;
+}
+
+#recorded-file-name audio {
+  width: 100%;
+}
+
+#headphone, #pause, #mute {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}

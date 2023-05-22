@@ -78,3 +78,106 @@ function formatTime(time) {
   return minutes + ':' + seconds;
 }
 
+/**
+ * The audio recorder
+ */
+const recordButton = document.getElementById('start-record');
+const pauseButton = document.getElementById('pause');
+const progressBarRec = document.getElementById('progressFill');
+const elapsedTime = document.getElementById('elapsed-time');
+const remainingTime = document.getElementById('remaining-time');
+
+let mediaRecorder;
+let chunks = [];
+let startTime;
+let timerInterval;
+let isPaused = false;
+
+// Function to update the recording progress
+function updateProgress() {
+  const elapsedTimeInSeconds = Math.floor((Date.now() - startTime) / 1000);
+  const minutes = Math.floor(elapsedTimeInSeconds / 60);
+  const seconds = elapsedTimeInSeconds % 60;
+
+  // Update elapsed time display
+  elapsedTime.textContent = `${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+
+  // Update progress bar
+  progressBarRec.style.width = `${(elapsedTimeInSeconds / MAX_RECORDING_TIME) * 100}%`;
+
+  // Update remaining time
+  const remainingTimeInSeconds = MAX_RECORDING_TIME - elapsedTimeInSeconds;
+  const remainingMinutes = Math.floor(remainingTimeInSeconds / 60);
+  const remainingSeconds = remainingTimeInSeconds % 60;
+  remainingTime.textContent = `${String(remainingMinutes).padStart(2, '0')}:${String(remainingSeconds).padStart(2, '0')}`;
+}
+
+// Event listener for record button
+recordButton.addEventListener('click', function () {
+  if (!mediaRecorder || mediaRecorder.state === 'inactive') {
+    // Reset progress and chunks
+    progressBarRec.style.width = '0%';
+    elapsedTime.textContent = '00:00';
+    remainingTime.textContent = '02:00';
+    chunks = [];
+
+    // Start recording
+    navigator.mediaDevices.getUserMedia({ audio: true })
+      .then(function (stream) {
+        mediaRecorder = new MediaRecorder(stream);
+
+        mediaRecorder.ondataavailable = function (e) {
+          chunks.push(e.data);
+        };
+
+        mediaRecorder.onstart = function () {
+          startTime = Date.now();
+          timerInterval = setInterval(updateProgress, 1000);
+        };
+
+        mediaRecorder.onstop = function () {
+          clearInterval(timerInterval);
+          const audioBlob = new Blob(chunks, { type: 'audio/webm' });
+          const audioUrl = URL.createObjectURL(audioBlob);
+
+          // Set the recorded audio as the source for the audio element
+          const audioPlayer = document.getElementById('recorded-file-name');
+          audioPlayer.src = audioUrl;
+
+          // Enable playback controls
+          audioPlayer.controls = true;
+
+          // Update the recorded file name display
+          audioPlayer.textContent = 'Audio Recorded';
+
+          // Stop the media tracks
+          stream.getTracks().forEach(track => track.stop());
+        };
+
+        mediaRecorder.start();
+      })
+      .catch(function (err) {
+        console.error('Error accessing microphone:', err);
+      });
+  } else if (mediaRecorder.state === 'paused') {
+    // Resume recording
+    mediaRecorder.resume();
+    isPaused = false;
+    startTime += Date.now() - pauseStartTime;
+    timerInterval = setInterval(updateProgress, 1000);
+  }
+});
+
+// Event listener for pause button
+pauseButton.addEventListener('click', function () {
+  if (mediaRecorder && mediaRecorder.state === 'recording') {
+    // Pause recording
+    mediaRecorder.pause();
+    isPaused = true;
+    pauseStartTime = Date.now();
+    clearInterval(timerInterval);
+  }
+});
+
+// Define the maximum recording time (in seconds)
+const MAX_RECORDING_TIME = 120;
