@@ -3,7 +3,7 @@ var wavesurfer = WaveSurfer.create({
     container: '#waveform',
     waveColor: 'blue',
     progressColor: 'purple',
-    height: 200 // Set the desired height here
+    height: 150 // Set the desired height here
   });
   
   // Load audio file when selected

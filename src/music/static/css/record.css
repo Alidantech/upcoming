@@ -67,16 +67,61 @@ div.logo {
         float: right;
         padding-top:0.1em;
     }
-div.exit {
-    max-height: 5vh;
-}
-.exit button {
-    float:right;
-    padding: 1.5vh;
-    background: transparent;
-    border: none;
-    color: red;
-}
+    .navigation {
+      z-index: -1;
+      border-bottom: 1px solid rgba(9, 63, 77, 0.322);
+      padding: 10px;
+      height: 33vh;
+      display: grid;
+      grid-template-rows: 33.33% 33.33% 33.33%;
+      box-shadow: 2px 2px 4px rgba(3, 26, 41, 0.466);
+      padding-bottom: 3.2vh;
+    }
+    
+    .navigation a {
+      background-color: #0a37425b;
+      box-shadow: 2px 2px 4px rgba(54, 70, 80, 0.315);
+      margin: auto;
+      width: 90%;
+      text-decoration: none;
+      text-align: start;
+      padding: 1vw;
+      transform: scale(1);
+      transition: transform 0.5s ease-out;
+      display: flex;
+      align-items: center;
+      color: wheat;
+    }
+    .navigation a > img {
+      margin-right: 1vw;
+    }
+    
+    .navigation a:hover {
+      text-decoration: underline;
+      transform: scale(1.01);
+    }
+    .mysongs-container h2 {
+      text-align: center;
+      width: 100%;
+      font-size: 1.1em;
+      color: #a50e48;
+      margin: auto;
+      padding-top: 0.5em;
+    }
+    .mysongs-container li {
+      display: flex;
+      align-items: center;
+      justify-content: start;
+    }
+    .mysongs-container img {
+      margin: 0;
+      border: 1px solid rgba(0, 0, 29, 0.178);
+      display: block;
+      max-width: 40px;
+      max-height: 40px;
+      border-radius: 5px;
+      margin-right: 10px;
+    }
 .recording-page {
     width: 100%;
 }
@@ -165,33 +210,8 @@ div.exit {
 }
 #waveform {
   margin: auto;
-}
-#waveform {
-  position: relative;
-}
-
-#waveform::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: gray;
-}
-
-.wavesurfer-wave {
-  position: relative;
-}
-
-.wavesurfer-wave::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: red;
+  width: 100%;
+  height: 100%;
 }
 
 .progress-container {
@@ -213,7 +233,6 @@ div.exit {
   }
   
   .custom-file-input {
-    background-color: #4CAF50;
     color: rgb(98, 228, 12);
     padding: 0;
     border-radius: 4px;
@@ -304,14 +323,16 @@ div.exit {
     padding: auto;
 }
 .current-info {
-   display: grid;
-   grid-template-columns: 30% 70%;
+  display: inline;
+  align-items: start;
+  justify-content: start;
+  margin: 0;
+  padding: 0;
 }
-.current-info h3{
-    font-size: 0.8em;
-    margin: 0;
-    padding: 2px;
-    text-align: center;
+.audio-details {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 15% 85%;
 }
 .current-info p {
     font-size: 0.6em;
@@ -319,10 +340,28 @@ div.exit {
     padding: 2px;
     color: #175249;
 }
-.current-info img {
-    width: 40px;
-    height: 40px;
-    border: 1px solid blue;
-    border-radius: 5px;
-    margin: auto 5px;
+.file-input-container {
+  position: relative;
+}
+
+.hidden-input {
+  display: none;
+}
+
+.custom-file-input {
+  color: rgb(98, 228, 12);
+  padding: 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.selected-file-name {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.5em;
+  color: #19e2c1;
+  max-width: 100%;
+  margin: auto;
 }
