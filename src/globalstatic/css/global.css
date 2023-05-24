@@ -81,6 +81,7 @@
   /* Header styles */
   header {
     background-color: var(--color-primary);
+    backdrop-filter: blur(10px);
     color: var(--color-secondary);
     height: var(--header-height);
     width: 100%;

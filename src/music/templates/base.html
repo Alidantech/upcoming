@@ -7,10 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'img/uia-icon.svg' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/loading.css' %}">
     <script src="{% static 'js/base.js' %}" defer></script>
     <title>{% block title %}{% endblock %}</title>    
 </head>
 <body>
+    {% include 'loading.html' %} <!-- Include the loading overlay template -->
 <main>
     <div class="side-content">
         <header>
@@ -33,6 +35,9 @@
         {% endblock %}
     </div>
 </main> 
-{% block static %}{% endblock static %}
+{% block static %}
+
+{% endblock static %}
+<script src="{% static 'js/loading.js' %}"></script> <!-- Include the loading.js script -->
 </body>
 </html>
