@@ -166,62 +166,68 @@ div.logo {
 }
 .effects-container {
     background-color: #041114;
-
     height: 100%;
     border-radius: 5px;
     overflow-y: auto;
     scrollbar-width: thin; /* set scrollbar width */
     scrollbar-color: #555 #222; /* set scrollbar color */
+    display: grid;
+    grid-template-rows: 15% 85%;
 }
 .effect-type{
     width: 100%;
-    height: 4vh;
-}
-.effect-type {
     display: flex;
-    flex-wrap: wrap;
-  }
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
 .effect-type button {
-    flex-basis: 12.5%;
-    background-color: #091118ef;
-    color: #83a197;
-    border: hidden;
-    word-wrap: break-word;
-    border-right: 1px solid #1e221e;
-    border-bottom: 1px solid #1d271d;
-  }
-.effect-type button:last-child{
-    border-right:hidden;
-  }
+  border: 1px solid rgba(71, 1, 13, 0.884);
+  margin: 0;
+  padding: 0.5rem;
+  color: white;
+  margin: auto;
+}
 
+.effect-type button:hover {
+  scale: 1;
+  border-color: blue;
+}
+.effect-container {
+  width: 95%;
+  height: 90%;
+  border: 1px solid saddlebrown ;
+  margin: auto;
+}
 
 .wave-container {
     display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 32vh;
 }
+.wave-container > div {
+  margin: auto;
+}
 .wave {
   width:  98%;
-  height: 90%;
-  display:flex;
-    align-items: center;
-    justify-content: center;
+  height: 60%;
+  border: 1px solid gray;
 }
 #waveform {
   margin: auto;
   width: 100%;
   height: 100%;
 }
+.mini-wave {
+  width:  98%;
+  height: 20%;
+  border: 1px solid rgb(124, 82, 82);
+}
 
 .progress-container {
     height: 20vh;
-}
-
-.vocal, .beat {
-    height: 1vh;
-    width: 0;
-    transition: width 1s ease;
 }
 
 .file-input-container {
@@ -257,15 +263,23 @@ div.logo {
 
   .progress-container > div {
     display: grid;
-    grid-template-columns: 5% 5% 80% 5% 5%;
+    grid-template-columns: 5% 10% 5% 60% 5% 15%;
     margin: auto;
   }
-  
+  .progress-container button {
+    background-color: transparent;
+  }
+  .progress-container h4 {
+    font-size: 0.9em;
+    text-align: center;
+    width: 100%;
+    color: #00aaff;
+  }
   .vocal {
     border: 1px solid rgb(48, 33, 33);
-    border: hidden;
     height: 100%;
     width: 100%;
+    border-radius:  0px  0px 10px 10px ;
   }
   .vocal > div {
     margin: auto;
@@ -274,6 +288,8 @@ div.logo {
   .beat {
     height: 100%;
     width: 100%;
+    border: 1px solid rgb(48, 33, 33);
+    border-radius: 10px 10px  0px  0px ;
   }
   .beat > div {
     margin: auto;
@@ -281,30 +297,48 @@ div.logo {
   
   #progress-bar {
     width: 100%;
-    height: 5px;
+    height: 1vh;
     background-color: #595e51;
     margin: auto;
+    border-radius: 5px;
   }
   
   #progress {
     height: 100%;
     background-color: #076d26; /* Set the color for the progress */
     width: 0;
+    border-radius: 5px;
   }
   
   #elapsed-time,
   #remaining-time {
-    font-size: 12px;
-    color: #333;
+    font-size: 0.1em;
+    color: #6d0840;
     text-align: center;
   }
   
-  
-  
+  .progress-buttons {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .progress-buttons div {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .progress-buttons button {
+    margin: 0 auto;
+  }
   
 .controls-container {
     display: grid;
-    grid-template-columns: 10% 70% 20%;
+    grid-template-columns: 15% 70% 15%;
     height: 10vh;
     padding: 1vh;
 }
@@ -315,6 +349,7 @@ div.logo {
 }
 .controls-container > div button {
     margin: auto;
+
 }
 .add-buttons{
    padding: auto;
@@ -331,8 +366,7 @@ div.logo {
 }
 .audio-details {
   width: 100%;
-  display: grid;
-  grid-template-columns: 15% 85%;
+
 }
 .current-info p {
     font-size: 0.6em;
@@ -362,8 +396,7 @@ div.logo {
   text-overflow: ellipsis;
   font-size: 0.5em;
   color: #19e2c1;
-  max-width: 100%;
-  margin: auto;
+  max-width: 70%;
 }
 .add-buttons {
   display: flex;
