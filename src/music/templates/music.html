@@ -3,7 +3,7 @@
 {% load static %}
 
 
-{% block title %} music {% endblock %}
+{% block title %}Listen To Music {% endblock %}
 
 {% block sidebar %}
 <div class="sidebar">
@@ -48,68 +48,46 @@
 {% endblock %}
 
 {% block content %}
-<div class="heading-container">
-  <h1>Diamond Plutnumz New Songs</h1>
-  <div class="button-container">
-    <button class="btn btn-all">All</button>
-    <button class="btn btn-songs">Songs</button>
-    <button class="btn btn-album">Albums</button>
-    <button class="btn btn-music">Music</button>
-    <button class="btn btn-music">Artists</button>
-    <button class="btn btn-latest">Latest</button>
-  </div>
-  <div class="account-details">
-    <img src="https://source.unsplash.com/random/400x400/?guitarist" alt="Artist Profile Picture">
-  </div>
-</div>
-<div class="main-content-container">
-
-    {% include 'music-albums.html' %}
-    {% include 'music-songs.html' %}
-  
-    {% block albums %}
-    {% endblock albums %}
-
-    {% block songs %}
-    {% endblock songs %}
-
-    {% block artists %}
-    {% endblock artists %}
-
-    <div class="song-player">
-      <div class="song-info">
-        <img src="https://source.unsplash.com/random/400x400/?musician"  width="20vw">
-        <div class="song-details">
-          <div class="song-name">Dance With Me</div>
-          <div class="song-artist">Alidante</div>
-        </div>
-      </div>
-      <div class="song-playing">
-        <div class="song-progress">
-          <div class="current-time">0:00</div>
-          <div class="progress-bar"></div>
-          <div class="total-time">4:30</div>
-        </div>
-        <div class="song-controls">
-          <button title="like" class="fav-btn"><img src="{% static 'img/like-icon.svg' %}" width="15vw" alt="next"></button>
-          <button title="previous" class="prev-btn"><img src="{% static 'img/prev-icon.svg' %}" width="20vw" alt="prvious"></button>
-          <button title="play" class="play-btn"><img src="{% static 'img/play-icon.svg' %}" width="25vw" alt="play"></button>
-          <button title="next" class="next-btn"><img src="{% static 'img/next-icon.svg' %}" width="20vw" alt="next"></button>
-          <a href="player/"><button title="maximize" class="maximize-btn"><img src="{% static 'img/max-icon.svg' %}" width="15vw" alt="next"></button></a>
-        </div>
-      </div>
-      <div class="song-volume">
-        <div class="volume-bar"><div class="volume-bar-progress"></div></div>
-        <div class="buttons">
-          <button title="lyrics" class="play-btn"><img src="{% static 'img/lyrics-icon.svg' %}" width="15vw" alt="play"></button>
-          <button title="equalizer" class="next-btn"><img src="{% static 'img/equalizer-icon.svg' %}" width="15vw" alt="next"></button>
-        </div>
-      </div>
+  <div class="heading-container">
+    <h1>Diamond Plutnumz New Songs</h1>
+    <div class="button-container">
+      <button class="btn btn-all">All</button>
+      <button class="btn btn-songs">Songs</button>
+      <button class="btn btn-album">Albums</button>
+      <button class="btn btn-music">Music</button>
+      <button class="btn btn-music">Artists</button>
+      <button class="btn btn-latest">Latest</button>
+    </div>
+    <div class="account-details">
+      <img src="https://source.unsplash.com/random/400x400/?guitarist" alt="Artist Profile Picture">
     </div>
   </div>
-</div>
+  <div class="main-content-container">
+
+      {% include 'music-albums.html' %}
+      {% include 'music-songs.html' %}
+      {% include 'now-playing.html' %}
+    
+      {% block albums %}
+      {% endblock albums %}
+
+      {% block songs %}
+      {% endblock songs %}
+
+      {% block artists %}
+      {% endblock artists %}
+
+      {% block now-playing %}
+      {% endblock now-playing %}
+
+  </div>
 {% endblock content %}
+
 {% block static %}
   <link rel="stylesheet" href=" {% static '/css/music.css' %}">
+  <link rel="stylesheet" href=" {% static '/css/albums.css' %}">
+  <link rel="stylesheet" href=" {% static '/css/artists.css' %}">
+  <link rel="stylesheet" href=" {% static '/css/now-playing.css' %}">
+  <link rel="stylesheet" href=" {% static '/css/songs.css' %}">
   <script src="{% static 'js/music.js' %}"></script>
 {% endblock static %}

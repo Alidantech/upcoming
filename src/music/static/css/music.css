@@ -2,8 +2,8 @@
   margin:0;
   padding: 0;
   box-sizing: border-box;
-  color: #bdc2c1;
 }
+
 /* the side bar part */
 .navigation {
   z-index: -1;
@@ -17,7 +17,6 @@
 }
 
 .navigation a {
-  background-color: #0a37425b;
   box-shadow: 2px 2px 4px rgba(54, 70, 80, 0.315);
   margin: auto;
   width: 90%;
@@ -29,46 +28,46 @@
   display: flex;
   align-items: center;
 }
-.navigation a > img {
-  margin-right: 1vw;
-}
+
+.navigation a > img {margin-right: 1vw;}
 
 .navigation a:hover {
   text-decoration: underline;
   transform: scale(1.01);
 }
+
 .change-list {
   display: grid;
   height: 5vh;
   align-items: center;
   justify-content: center;
 }
+
 .change-list h2 {
   text-align: center;
   width: 100%;
   font-size: 1.1em;
-  color: #a50e48;
 }
 
-.group-list {
-  overflow: hidden;
-}
+.group-list { overflow: hidden; }
+
 .group-list::-webkit-scrollbar {
   width: 2px;
-  background-color: transparent;
 }
+
 .group-list::-webkit-scrollbar-thumb {
-  background-color: rgb(4, 85, 99);
   border-radius: 0;
 }
+
 .group-list::-webkit-scrollbar-track {
-  background-color: transparent;
 }
+
 .content-list li {
   display: flex;
   align-items: center;
   justify-content: start;
 }
+
 .content-list img {
   margin: 0;
   border: 1px solid blue;
@@ -78,8 +77,6 @@
   border-radius: 5px;
   margin-right: 10px;
 }
-
-
 
 /* the main part of the page */
 .main-content-container {
@@ -95,13 +92,12 @@
   padding: 0 20px;
   position: fixed;
   width: 80%;
-  background-color: #02161dee;
   z-index: 100;
 }
+
 .heading-container h1 {
   font-size: 1.5em;
   padding: 15px;
-  color: #aeb4b4;
 }
 .button-container {
   display: flex;
@@ -110,7 +106,7 @@
   height: 100%;
 }
  button {
-  background-color: transparent;
+  
 }
 .btn {
   border: none;
@@ -119,12 +115,10 @@
   font-weight: bold;
   padding: 5px 10px;
   cursor: pointer;
-  color: #cabbca;
 }
 
 .btn:hover {
-  background-color: #cabeca;
-  color: #2b031a;
+  
 }
 
 .btn:not(:last-child) {
@@ -138,6 +132,7 @@
 .btn-latest {
   border: 1px solid #c9bec9;
 }
+
 .account-details {
   display: flex;
   align-items: center;
@@ -152,349 +147,4 @@
   border: 1px solid blue;
 }
 
-/* Album Cards */
 
-.album-cards-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 2rem;
-}
-
-.album-card {
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: #555;
-  box-shadow: 2px 2px 4px rgba(23, 31, 36, 0.562), 2px 2px 4px rgba(22, 27, 32, 0.568);
-  height: 25vh;
-  display: grid;
-  grid-template-rows:70% 15% 15%;
-  transform-origin: center;
-  transition: transform 0.8s ease-in-out;
-}
-.album-card:hover {
-  cursor: auto;
-  transform: scale(1.03);
-}
-.album-card img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: 10px 10px 0 0;
-}
-.album-card button {
-  display: none;
-  width: 35px;
-  position: fixed;
-  height: auto;
-  border-radius: 50%;
-  bottom: 10px;
-  right: 15px;
-  border: none;
-  box-shadow: none;
-}
-.album-card:hover button{
-  display: block;
-  cursor: pointer;
-}
-.main-content-container h1 {
-  font-size: 1.1em;
-  padding: 1em;
-  padding-top: 0;
-}
-.main-content-container > div h2 {
- 
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    margin-top: 5vh;
-    padding:10px;
-    color: #da136f;
-}
-.album-card h3 {
-  font-size: 0.9rem;
-  padding: 5px 15px;
-  background-color: #180114b2;
-  color: #83878d;
-  word-wrap: break-word;
-  word-break: break-all;
-  
-}
-.album-card p {
-  padding: 5px 15px;
-  background-color: #180114b2;
-  color: #4f8f76;
-  font-size: 0.6em;
-  text-overflow: ellipsis;
-  word-break: break-all;
-  word-wrap: break-word;
-}
-.album-card p:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-.album-card h3:hover {
-  cursor: pointer;
-  text-decoration: underline;
-}
-/* Songs List */
-.songs-list-container {
-  margin-top: 2rem;
-  padding-top: 1rem;
-}
-.song-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.song-list li {
-  all: initial;
-  display: grid;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  padding: 5px;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.014);
-  grid-template-columns:5% 15% 25% 17.5% 25% 10% 2.5%;
-  transform-origin: center;
-  transition: transform 0.5s ease-in;
-  font-size: 0.8em;
-}
-.song-item button {
-  display: none;
-  position: fixed;
-  height: auto;
-  bottom: 10px;
-  right: 15px;
-  border: none;
-  box-shadow: none;
-}
-.song-item:hover button{
-  display: block;
-  cursor: pointer;
-  scale: 1.05;
-}
-
-.song-list li:hover {
-  background-color: #02212e2f;
-  scale: 1.001;
-  box-shadow: 1px 2px rgba(30, 30, 44, 0.712);
-  transform: scale(1.01);
-  cursor:auto;
-}
-.song-list li:first-child {
-  font-size: 0.6em;
-  color: #2b031a;
-}
-.song-list li:first-child:hover {
-  background-color: transparent;
-  cursor: text;
-  transform: scale(1);
-  box-shadow: none;
-}
-.song-list button {
-  display: none;
-}
-.song-list:hover button {
-  display: block;
-}
-.song-image img {
-  width: 40px;
-  height: 40px;
-  border-radius: 20%;
-  margin: auto;
-  border: 1px solid blue;
-}
-
-.song-title,
-.song-artist,
-.song-duration,
-.song-listens {
-  flex: 1;
-  margin-right: 10px;
-}
-.song-listens {
-  color: #859097ea;
-}
-.song-album,
-.song-artist {
-  color: #31755e;
-  font-size: 0.6em;
-  cursor: pointer;
-}
-.song-album {
-  font-size: 0.8em;
-  cursor: pointer;
-}
-.song-album,
-.song-artist:hover {
-  text-decoration: underline;
-}
-
-@media screen and (max-width: 768px) {
-  .song-list li {
-    flex-wrap: wrap;
-  }
-
-  .song-list li div {
-    flex-basis: 100%;
-    margin-bottom: 5px;
-  }
-}
-
-
-
-/* Artists */
-.artists-container {
-  margin-top: 2rem;
-  padding-top: 1rem;
-}
-
-
-.artist {
-  display: inline-block;
-  text-align: center;
-  width: 19%;
-  min-width: 80px;
-  margin: 0;
-}
-
-.artist img {
-  display: block;
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
-  border-radius: 50%;
-  border: 1px solid blue;
-}
-
-.artist h3 {
-  font-size: 0.8rem;
-  margin-top: 10px;
-  margin-bottom: 0;
-  padding: 10px;
-  color: #336659;
-}
-
-.song-player {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 80%;
-  background-color: #010a13f5;
-  border-top: 1px solid #03102c79;
-  z-index: 999;
-  height: 10vh;
-  overflow: hidden;
-  display: grid;
-  grid-template-columns: 20% 70% 10%;
-}
-
-.song-info {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-
-.song-info img {
-  width: 40px;
-  height: 40px;
-  border-radius: 20%;
-  margin: 10px;
-  border: 1px solid blue;
-}
-
-.song-details {
-  display: flex;
-  flex-direction: column;
-}
-
-.song-name {
-  font-size: 0.7em;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: #a50c8b;
-}
-
-.song-details .song-artist {
-  font-size: 0.6em;
-  color: #336659;
-}
-.song-playing {
-  display: grid;
-  grid-template-rows: 30% 70%;
-
-}
-.song-progress {
-  width: 100%;
-  padding: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: smaller;
-  
-}
-
-.progress-bar {
-  height: 50%;
-  background-color: rgb(22, 65, 62);
-  width: 70%;
-  border-radius: 10px;
-  margin: 3px 10px;
-}
-.song-controls {
-  display: flex;
-  justify-content:center;
-  align-items: center;
-}
-.song-controls button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  margin: 0 70px;
-  font-size: 16px;
-  color: #666666;
-}
-
-.song-controls button:hover {
-  color: #f00;
-}
-
-.fav-btn {
-  margin-right: 0;
-  font-size: 20px;
-  color: #f00;
-}
-
-.song-volume {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-.volume-bar {
-  background-color: #3a0528;
-  width: 0.5vw;
-  border-radius: 5px;
-  height: 90%;
-}
-.volume-bar-progress {
-  background-color: #abb6b2;
-  border-radius: 5px 5px 0px 0px;
-  width: 0.5vw;
-  height: 40%;
-  font-size: 0.5em;
-  padding: 2px;
-  color: #2c021b;
-  font-weight: bold;
-}
-.buttons {
-  display: grid;
-  grid-template-rows: 50% 50%;
-  padding: 10px;
-}
-.buttons button {
-  padding: 5px;
-}

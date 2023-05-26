@@ -172,49 +172,26 @@ div.logo {
     scrollbar-width: thin; /* set scrollbar width */
     scrollbar-color: #555 #222; /* set scrollbar color */
     display: grid;
-    grid-template-rows: 15% 85%;
-}
-.effect-type{
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.effect-type button {
-  border: 1px solid rgba(71, 1, 13, 0.884);
-  margin: 0;
-  padding: 0.5rem;
-  color: white;
-  margin: auto;
-}
-
-.effect-type button:hover {
-  scale: 1;
-  border-color: blue;
-}
-.effect-container {
-  width: 95%;
-  height: 90%;
-  border: 1px solid saddlebrown ;
-  margin: auto;
+    grid-template-columns: 85% 15%;
 }
 
 .wave-container {
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 32vh;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 32vh;
 }
+
 .wave-container > div {
   margin: auto;
 }
+
 .wave {
   width:  98%;
   height: 60%;
   border: 1px solid gray;
 }
+
 #waveform {
   margin: auto;
   width: 100%;
@@ -305,7 +282,7 @@ div.logo {
   
   #progress {
     height: 100%;
-    background-color: #076d26; /* Set the color for the progress */
+    background-color: #076d26;
     width: 0;
     border-radius: 5px;
   }

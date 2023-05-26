@@ -1,0 +1,90 @@
+/* Album Cards */
+.album-cards-container {
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+  }
+  
+.album-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 2px 2px 4px rgba(23, 31, 36, 0.562),
+                 2px 2px 4px rgba(22, 27, 32, 0.568);
+    height: 25vh;
+    display: grid;
+    grid-template-rows:70% 15% 15%;
+    transform-origin: center;
+    transition: transform 0.8s ease-in-out;
+  }
+
+.album-card:hover {
+    cursor: auto;
+    transform: scale(1.03);
+  }
+
+.album-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .album-card button {
+    display: none;
+    width: 35px;
+    position: fixed;
+    height: auto;
+    border-radius: 50%;
+    bottom: 10px;
+    right: 15px;
+    border: none;
+    box-shadow: none;
+  }
+
+.album-card:hover button{
+    display: block;
+    cursor: pointer;
+  }
+
+.main-content-container h1 {
+    font-size: 1.1em;
+    padding: 1em;
+    padding-top: 0;
+  }
+
+.main-content-container > div h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 5vh;
+    padding:10px;
+  }
+
+.album-card h3 {
+    font-size: 0.9rem;
+    padding: 5px 15px;
+    ;
+    
+    word-wrap: break-word;
+    word-break: break-all;
+  }
+
+.album-card p {
+    padding: 5px 15px;
+    ;
+    
+    font-size: 0.6em;
+    text-overflow: ellipsis;
+    word-break: break-all;
+    word-wrap: break-word;
+  }
+
+.album-card p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+.album-card h3:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }

@@ -3,6 +3,7 @@
 {% load static %}
 {% block static %}
   <link rel="stylesheet" href=" {% static '/css/record.css' %}">
+  <link rel="stylesheet" href=" {% static '/css/record-effects.css' %}">
   <script src="https://unpkg.com/wavesurfer.js/dist/wavesurfer.min.js"></script>
   <script src=" {% static '/js/record.js' %}"></script>
 {% endblock static %}
@@ -40,17 +41,79 @@
             The lyrics goes here.....
         </div>
         <div class="effects-container">
-            <div class="effect-type">
-                <button>Rythmn</button>
-                <button>volume</button>
-                <button>harmony</button>
-                <button>beats</button>
-                <button>mixer</button>
-                <button>reverb</button>
-                <button>tuner</button>
-            </div>
             <div class="effect-container">
-                
+            <div class="rythmn-effects">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="effect-Volume">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="effect-Reverb">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="effect-Tuner">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="effect-Beats">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="effect-Mixer">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="effect-Harmony">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            </div>
+            <div class="effect-type">
+                <button>
+                    <img src="{% static 'img/add-icon.svg' %}" width="10vw">
+                    Rythmn
+                </button>
+                <button>
+                    <img src="{% static 'img/music-icon.svg' %}" width="10vw">
+                    Volume
+                </button>
+                <button>
+                    <img src="{% static 'img/voice-icon.svg' %}" width="10vw">
+                    Harmony
+                </button>
+                <button>
+                    <img src="{% static 'img/play-icon.svg' %}" width="10vw">
+                    Beats
+                </button>
+                <button>                    
+                    <img src="{% static 'img/stop-icon.svg' %}" width="10vw">
+                    Mixer
+                </button>
+                <button>
+                    <img src="{% static 'img/next-icon.svg' %}" width="10vw">
+                    Reverb
+                </button>
+                <button>                   
+                    <img src="{% static 'img/pause-icon.svg' %}" width="10vw">
+                    Tuner
+                </button>
             </div>
         </div>
     </div>

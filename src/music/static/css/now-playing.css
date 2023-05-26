@@ -1,0 +1,117 @@
+.song-player {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 80%;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.37);
+    border-top: 1px solid #010d2779;
+    z-index: 999;
+    height: 10vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 20% 70% 10%;
+  }
+  
+  .song-info {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  
+  .song-info img {
+    width: 40px;
+    height: 40px;
+    border-radius: 20%;
+    margin: 10px;
+    border: 1px solid blue;
+  }
+  
+  .song-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .song-name {
+    font-size: 0.7em;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  .song-details .song-artist {
+    font-size: 0.6em;
+  }
+  .song-playing {
+    display: grid;
+    grid-template-rows: 30% 70%;
+  
+  }
+  .song-progress {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: smaller;
+    
+  }
+  
+  .progress-bar {
+    height: 50%;
+    background-color: rgb(22, 65, 62);
+    width: 70%;
+    border-radius: 10px;
+    margin: 3px 10px;
+  }
+  .song-controls {
+    display: flex;
+    justify-content:center;
+    align-items: center;
+  }
+  .song-controls button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 0 70px;
+    font-size: 16px;
+  }
+  
+  .song-controls button:hover{
+    scale: 1.1;
+  } 
+  
+  .fav-btn {
+    margin-right: 0;
+    font-size: 20px}
+  
+  .song-volume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .volume-bar {
+    background-color: #3a0528;
+    width: 0.5vw;
+    border-radius: 5px;
+    height: 90%;
+  }
+  .volume-bar-progress {
+    background-color: #abb6b2;
+    border-radius: 5px 5px 0px 0px;
+    width: 0.5vw;
+    height: 40%;
+    font-size: 0.5em;
+    padding: 2px;
+    font-weight: bold;
+  }
+  .buttons {
+    display: grid;
+    grid-template-rows: 50% 50%;
+    padding: 10px;
+  }
+  .buttons button {
+    padding: 5px;
+  }
