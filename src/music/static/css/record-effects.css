@@ -1,3 +1,9 @@
+.effects-container {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 95% 5%;
+}
+
 .effect-type{
     width: 100%;
     display: flex;
@@ -7,35 +13,21 @@
 }
 
 .effect-type button {
-  border: 1px solid rgba(3, 25, 51, 0.979);
-  margin: 0;
-  padding: 0.5rem;
-  color: white;
   margin: auto;
   width: 95%;
   margin-left: 0;
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
 }
 
 .effect-type button img {
   margin-right: 0.5em;
 }
 
-.effect-type button:hover {
-  scale: none;
-  border-color: rgb(6, 6, 97);
-}
-
 .effect-container {
   width: 99%;
   height: 99%;
-  border: 1px solid rgb(4, 36, 78) ;
-}
-
-.effect-container > div {
-  
 }
 

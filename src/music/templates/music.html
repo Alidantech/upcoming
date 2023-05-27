@@ -12,35 +12,31 @@
     <a href="/record"><img src="{% static 'img/record-icon.svg' %}" width="15vw" alt="next">Record</a>
     <a href="#"><img src="{% static 'img/beat-icon.svg' %}" width="15vw" alt="next">Beats</a>
   </div>  
-  <div class="change-list">
-   
-    <h2>Genres</h2>
-     
+  <div class="group-heading">
+    <h3>Genres</h3>
   </div>
   <div class="group-list">
     <ul class="content-list">
-      <li><img src="https://source.unsplash.com/random/400x400/?pop">Summer Vibes</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?rock"  width="50vw">Throwback Jams</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?hiphop"  width="50vw">Chill Beats</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?blues"  width="50vw">Workout Motivation</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?blues"  width="50vw">Relaxing Piano Melodies</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?pop">Summer Vibes</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?rock">Throwback Jams</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?hiphop">Chill Beats</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?blues">Workout Motivation</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?blues">Relaxing Piano Melodies</li>
     </ul>
   </div>
-  <div class="change-list">
-   
-    <h2>Playlists</h2>
-     
+  <div class="group-heading">
+    <h3>Playlists</h3>
   </div>
   <div class="group-list">
     <ul class="content-list">
-      <li><img src="https://source.unsplash.com/random/400x400/?pop"  width="50vw">Pop</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?rock"  width="50vw">Rock</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?hiphop"  width="50vw">Hip Hop</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?rnb"  width="50vw">R&B</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?blues"  width="50vw">blues</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?reggea"  width="50vw">reggea</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?guitarist"  width="50vw">Tanzania</li>
-      <li><img src="https://source.unsplash.com/random/400x400/?girl"  width="50vw">kenya</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?pop">Pop</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?rock">Rock</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?hiphop">Hip Hop</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?rnb">RnB</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?blues">blues</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?reggea">reggea</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?guitarist">Tanzania</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?girl">kenya</li>
     </ul>
   </div>
 </div>
@@ -49,7 +45,9 @@
 
 {% block content %}
   <div class="heading-container">
-    <h1>Diamond Plutnumz New Songs</h1>
+    <div class="main-heading">
+      <h1>Diamond plutnumz new songs that you will</h1>
+    </div>
     <div class="button-container">
       <button class="btn btn-all">All</button>
       <button class="btn btn-songs">Songs</button>
@@ -59,14 +57,15 @@
       <button class="btn btn-latest">Latest</button>
     </div>
     <div class="account-details">
-      <img src="https://source.unsplash.com/random/400x400/?guitarist" alt="Artist Profile Picture">
+      <img class="small-image" src="https://source.unsplash.com/random/400x400/?guitarist">
     </div>
   </div>
   <div class="main-content-container">
 
-      {% include 'music-albums.html' %}
       {% include 'music-songs.html' %}
       {% include 'now-playing.html' %}
+      {% include 'music-artists.html' %}
+      {% include 'music-albums.html' %}
     
       {% block albums %}
       {% endblock albums %}

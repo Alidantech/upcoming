@@ -1,9 +1,3 @@
-/* Reset Styles */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 /* Create a custom scroll bar */
 *::-webkit-scrollbar {
     width: 2px;
@@ -19,418 +13,77 @@
     background-color: #00000007;
   }
 
-/* General Styles */
-body {
-    background-color: #000000;
-    color: #fff;
-    font-family: sans-serif;
-    overflow: hidden;
+/* Navigation bar */
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
 }
 
+.navigation a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+
+/* Page Styling */
 .recording-page {
-    float: right;
-    margin-top: 0;
-    height: 100vh;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
     padding: 0.5vh;
+    border-radius: 3px;
     background-color: rgba(0, 0, 0, 0.582);
-    box-shadow: 0 4px 6px rgba(2, 51, 35, 0.781), 0 1px 3px rgba(2, 19, 53, 0.747);
 }
-.info{
-    height: 100vh;
-    background-color: #0f0f0f;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.5), 0 1px 3px rgba(0,0,0,0.5);
-}
-.heading {
-    background-color: #001310;
-    width: 100%;
-    height: 5vh;
-    display: grid;
-    grid-template-columns: 80% 20%;
-}
-div.logo {
-    float: left;
-    height: fit-content;
-    width: fit-content;
-    padding: 0.5em;
-    }
-    .logo:hover {
-        cursor: pointer;
-    }
-    .logo img{
-        animation: rotate 3s 3;
-    }
-    .logo p {
-        color: rgb(0, 255, 191);
-        text-indent: 0.5em;
-        padding: 0;
-        margin: 0;
-        float: right;
-        padding-top:0.1em;
-    }
-    .navigation {
-      z-index: -1;
-      border-bottom: 1px solid rgba(9, 63, 77, 0.322);
-      padding: 10px;
-      height: 33vh;
-      display: grid;
-      grid-template-rows: 33.33% 33.33% 33.33%;
-      box-shadow: 2px 2px 4px rgba(3, 26, 41, 0.466);
-      padding-bottom: 3.2vh;
-    }
-    
-    .navigation a {
-      background-color: #0a37425b;
-      box-shadow: 2px 2px 4px rgba(54, 70, 80, 0.315);
-      margin: auto;
-      width: 90%;
-      text-decoration: none;
-      text-align: start;
-      padding: 1vw;
-      transform: scale(1);
-      transition: transform 0.5s ease-out;
-      display: flex;
-      align-items: center;
-      color: wheat;
-    }
-    .navigation a > img {
-      margin-right: 1vw;
-    }
-    
-    .navigation a:hover {
-      text-decoration: underline;
-      transform: scale(1.01);
-    }
-    .mysongs-container h2 {
-      text-align: center;
-      width: 100%;
-      font-size: 1.1em;
-      color: #a50e48;
-      margin: auto;
-      padding-top: 0.5em;
-    }
-    .mysongs-container li {
-      display: flex;
-      align-items: center;
-      justify-content: start;
-    }
-    .mysongs-container img {
-      margin: 0;
-      border: 1px solid rgba(0, 0, 29, 0.178);
-      display: block;
-      max-width: 40px;
-      max-height: 40px;
-      border-radius: 5px;
-      margin-right: 10px;
-    }
-.recording-page {
-    width: 100%;
-}
-/* Add a card-like style to the divs */
+
 .recording-page > div {
-    background-color: #041114;
     border-radius: 5px;
     margin-bottom: 0.5vh;
+    overflow: hidden;
+    overflow-y: auto;
   }
-/* Specific Styles */
+
+.container-card {
+    background-color: #041114;
+}
+
+/* Effects and Lyrics Conatiner at the top */
 .top-continer {
-    height: 35vh;
+    height: 44%;
     display: grid;
-    grid-template-columns: 40% 60%; /* two columns of equal width */
-    grid-gap: 0.3em; /* gap between grid items */
-    overflow: hidden;
-    background-color: #091118ef;
-}
-.lyrics-container {
-    font-size: 1.4rem;
-    line-height: 2;
-    height: 100%;
-    background-color: #041114;
-
-    color: #19e2c1;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4);
-    overflow-y: auto;
-    scrollbar-width: thin; /* set scrollbar width */
-    scrollbar-color: #555 #222; /* set scrollbar color */
-}
-.bridge {
-    color: #5d756d;
+    grid-gap: 0.3em; 
+    grid-template-columns: 40% 60%;
 }
 
-.chorus {
-    color: #435c5f;
-}
-.verse {
-    color: #a18f9c;
-}
-.effects-container {
-    background-color: #041114;
-    height: 100%;
-    border-radius: 5px;
-    overflow-y: auto;
-    scrollbar-width: thin; /* set scrollbar width */
-    scrollbar-color: #555 #222; /* set scrollbar color */
-    display: grid;
-    grid-template-columns: 85% 15%;
-}
-
-.wave-container {
-  display:flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 32vh;
-}
-
-.wave-container > div {
-  margin: auto;
-}
-
-.wave {
-  width:  98%;
-  height: 60%;
-  border: 1px solid gray;
-}
-
-#waveform {
-  margin: auto;
-  width: 100%;
+.top-continer > div {
   height: 100%;
-}
-.mini-wave {
-  width:  98%;
-  height: 20%;
-  border: 1px solid rgb(124, 82, 82);
+  overflow-y: auto;
+  border-radius: 5px;
 }
 
-.progress-container {
-    height: 20vh;
+/* Conatiner for the top */
+.audio-container {
+  height: 45%;
 }
 
-.file-input-container {
-    position: relative;
-  }
-  
-  .hidden-input {
-    display: none;
-  }
-  
-  .custom-file-input {
-    color: rgb(98, 228, 12);
-    padding: 0;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .selected-file-name {
-    display: block;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 0.5em;
-    color: #19e2c1;
-    max-width: 8vw;
-  }
-  
-  .progress-container {
-    display: grid;
-    vertical-align: auto;    
-    grid-template-rows: 50% 50%;
-  }
-
-  .progress-container > div {
-    display: grid;
-    grid-template-columns: 5% 10% 5% 60% 5% 15%;
-    margin: auto;
-  }
-  .progress-container button {
-    background-color: transparent;
-  }
-  .progress-container h4 {
-    font-size: 0.9em;
-    text-align: center;
-    width: 100%;
-    color: #00aaff;
-  }
-  .vocal {
-    border: 1px solid rgb(48, 33, 33);
-    height: 100%;
-    width: 100%;
-    border-radius:  0px  0px 10px 10px ;
-  }
-  .vocal > div {
-    margin: auto;
-  }
-  
-  .beat {
-    height: 100%;
-    width: 100%;
-    border: 1px solid rgb(48, 33, 33);
-    border-radius: 10px 10px  0px  0px ;
-  }
-  .beat > div {
-    margin: auto;
-  }
-  
-  #progress-bar {
-    width: 100%;
-    height: 1vh;
-    background-color: #595e51;
-    margin: auto;
-    border-radius: 5px;
-  }
-  
-  #progress {
-    height: 100%;
-    background-color: #076d26;
-    width: 0;
-    border-radius: 5px;
-  }
-  
-  #elapsed-time,
-  #remaining-time {
-    font-size: 0.1em;
-    color: #6d0840;
-    text-align: center;
-  }
-  
-  .progress-buttons {
-    width: 100%;
-    height: 80%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  .progress-buttons div {
-    width: 80%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .progress-buttons button {
-    margin: 0 auto;
-  }
-  
+/* Container for the controls */
 .controls-container {
     display: grid;
     grid-template-columns: 15% 70% 15%;
-    height: 10vh;
-    padding: 1vh;
+    height: 10%;
 }
+
 .controls-container > div {
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .controls-container > div button {
     margin: auto;
-
-}
-.add-buttons{
-   padding: auto;
-}
-.control-buttons {
-    padding: auto;
-}
-.current-info {
-  display: inline;
-  align-items: start;
-  justify-content: start;
-  margin: 0;
-  padding: 0;
-}
-.audio-details {
-  width: 100%;
-
-}
-.current-info p {
-    font-size: 0.6em;
-    margin: 0;
-    padding: 2px;
-    color: #175249;
-}
-.file-input-container {
-  position: relative;
 }
 
-.hidden-input {
-  display: none;
-}
 
-.custom-file-input {
-  color: rgb(98, 228, 12);
-  padding: 0;
-  border-radius: 4px;
-  cursor: pointer;
-}
 
-.selected-file-name {
-  display: block;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 0.5em;
-  color: #19e2c1;
-  max-width: 70%;
-}
-.add-buttons {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.selected-file-name {
-  font-weight: bold;
-}
-
-#record, #stopButton {
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-}
-
-.vocal {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-#icon {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-#elapsed-time, #remaining-time {
-  font-size: 14px;
-  font-weight: bold;
-}
-
-#progressBar {
-  width: 100%;
-  height: 10px;
-  background-color: #ccc;
-  margin-bottom: 10px;
-}
-
-#progressFill {
-  height: 100%;
-  background-color: #00aaff;
-}
-
-#recorded-file-name {
-  font-weight: bold;
-}
-
-#recorded-file-name audio {
-  width: 100%;
-}
-
-#headphone, #pause, #mute {
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
-}

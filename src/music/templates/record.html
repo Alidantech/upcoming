@@ -13,21 +13,21 @@
 {% block sidebar %}
 <div id="sidebar">
     <div class="navigation">
-        <a href="/"><img src="{% static 'img/home-icon.svg' %}" width="15vw" alt="next">Home</a>
-        <a href="/music"><img src="{% static 'img/record-icon.svg' %}" width="15vw" alt="next">Music</a>
-        <a href="#"><img src="{% static 'img/beat-icon.svg' %}" width="15vw" alt="next">Beats</a>
+        <a href="/"><img src="{% static 'img/home-icon.svg' %}" width="15vw">Home</a>
+        <a href="/music"><img src="{% static 'img/record-icon.svg' %}" width="15vw">Music</a>
+        <a href="#"><img src="{% static 'img/beat-icon.svg' %}" width="15vw">Beats</a>
       </div>
       <div class="mysongs-container">
-        <h2>My Recorded Songs</h2>
+        <h4>My Recorded Songs</h4>
         <ul>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw" alt="next">Vampires Love</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw" alt="next">Manserera</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw" alt="next">Happy</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw" alt="next">Dance with You</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw" alt="next">This is Home</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw" alt="next">King ping</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw" alt="next">Mchezo</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw" alt="next">Wishes ishes</li>
+          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">Vampires Love</li>
+          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">Manserera</li>
+          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">Happy</li>
+          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">Dance with You</li>
+          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">This is Home</li>
+          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">King ping</li>
+          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">Mchezo</li>
+          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">Wishes ishes</li>
         </ul>
       </div>  
   </div>
@@ -35,213 +35,43 @@
 {% endblock %}
 
 {% block content %}
-    <div class="recording-page">
-        <div class="top-continer" style="background-color: #00000000;">
-        <div class="lyrics-container">
-            The lyrics goes here.....
+<div class="recording-page">
+    <div class="top-continer">
+        <div class="container-card lyrics-container">
         </div>
-        <div class="effects-container">
+        <div class="container-card effects-container">
             <div class="effect-container">
-            <div class="rythmn-effects">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="effect-Volume">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="effect-Reverb">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="effect-Tuner">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="effect-Beats">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="effect-Mixer">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-            <div class="effect-Harmony">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
             </div>
             <div class="effect-type">
-                <button>
-                    <img src="{% static 'img/add-icon.svg' %}" width="10vw">
-                    Rythmn
-                </button>
-                <button>
-                    <img src="{% static 'img/music-icon.svg' %}" width="10vw">
-                    Volume
-                </button>
-                <button>
-                    <img src="{% static 'img/voice-icon.svg' %}" width="10vw">
-                    Harmony
-                </button>
-                <button>
-                    <img src="{% static 'img/play-icon.svg' %}" width="10vw">
-                    Beats
-                </button>
-                <button>                    
-                    <img src="{% static 'img/stop-icon.svg' %}" width="10vw">
-                    Mixer
-                </button>
-                <button>
-                    <img src="{% static 'img/next-icon.svg' %}" width="10vw">
-                    Reverb
-                </button>
-                <button>                   
-                    <img src="{% static 'img/pause-icon.svg' %}" width="10vw">
-                    Tuner
-                </button>
+                <button><img src="{% static 'img/add-icon.svg' %}" width="15vw"></button>
+                <button><img src="{% static 'img/music-icon.svg' %}" width="15vw"></button>
+                <button><img src="{% static 'img/voice-icon.svg' %}" width="15vw"></button>
+                <button><img src="{% static 'img/headset-icon.svg' %}" width="15vw"></button>
+                <button><img src="{% static 'img/sound-icon.svg' %}" width="15vw"></button>
+                <button><img src="{% static 'img/vocal-icon.svg' %}" width="15vw"></button>
+                <button><img src="{% static 'img/equalizer-icon.svg' %}" width="15vw"></button>
             </div>
         </div>
     </div>
-    <div class="wave-container">
-        <div class="wave">
-            <div id="waveform"></div> 
-        </div>  
-        <div class="mini-wave">
-            <div id="mini-waveform"></div> 
-        </div>     
+    <div class="container-card audio-container">
     </div>
-    <div class="progress-container">
-        <div class="beat">
-            <div>
-                <button>
-                <label for="file-input" class="custom-file-input"> <img src="{% static 'img/add-icon.svg' %}" width="30vw" height="auto"></label>
-                </button>
-            </div>
-            <div class="progress-buttons">
-                <div>
-                    <button>
-                        <img src="{% static 'img/music-icon.svg' %}" width="15vw" height="auto">
-                    </button>
-                </div>
-                <div>
-                    <h4>Beats</h4>
-                </div>
-            </div>
-            <div id="elapsed-time"><P>00:00</P></div>
-            <div id="progress-bar"><div id="progress"></div></div>
-            <div id="remaining-time"><P>00:00</P></div>
-            <div class="progress-buttons">
-                <div>
-                    <button>
-                        <img src="{% static 'img/headset-icon.svg' %}" width="15vw" height="auto">
-                    </button>
-                    <button>
-                        <img src="{% static 'img/play-icon.svg' %}" width="15vw" height="auto">
-                    </button>
-                </div>
-                <div>
-                    <button>
-                        <img src="{% static 'img/sound-icon.svg' %}" width="15vw" height="auto">
-                    </button>
-                    <button>
-                        <img src="{% static 'img/stop-icon.svg' %}" width="15vw" height="auto">
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="vocal">
-            <div>
-                <button>
-                    <label for="file-input" class="custom-file-input"> <img src="{% static 'img/record-icon.svg' %}" width="25vw" height="auto"></label>
-                </button>      
-            </div>
-            <div class="progress-buttons">
-                <div>
-                    <button>
-                        <img src="{% static 'img/voice-icon.svg' %}" width="10vw" height="auto">
-                    </button>
-                </div>
-                <div>
-                    <h4>Vocal</h4>
-                </div>
-            </div>
-            <div id="elapsed-time">00:00</div>
-            <div id="progress-bar"><div id="progress"></div></div>
-            <div id="remaining-time">00:00</div>
-            <div class="progress-buttons">
-                <div>
-                    <button>
-                        <img src="{% static 'img/headset-icon.svg' %}" width="15vw" height="auto">
-                    </button>
-                    <button>
-                        <img src="{% static 'img/play-icon.svg' %}" width="15vw" height="auto">
-                    </button>
-                </div>
-                <div>
-                    <button>
-                        <img src="{% static 'img/mute-icon.svg' %}" width="15vw" height="auto">
-                    </button>
-                    <button>
-                        <img src="{% static 'img/stop-icon.svg' %}" width="15vw" height="auto">
-                    </button>
-                </div>
-            </div>
-        </div> 
-    </div>
-
-    <div class="controls-container">
+    <div class="container-card controls-container">
         <div class="vocal-info">
-           <p>Vocal 1
+            <p>No vocal recording</p>
         </div>
         <div class="control-buttons">
-            <button>
-                <img src="{% static 'img/left-icon.svg' %}" width="15vw" height="auto">
-            </button>
-            <button>
-                <img src="{% static 'img/undo-icon.svg' %}" width="20vw" height="auto">
-            </button>
-            <button>
-                <img src="{% static 'img/prev-icon.svg' %}" width="25vw" height="auto">
-            </button>
-            <button>
-                <img id="play-button" src="{% static 'img/play-icon.svg' %}" width="30vw" height="auto">
-            </button>
-            <button>
-                <img src="{% static 'img/next-icon.svg' %}" width="25vw" height="auto">
-            </button>
-            <button>
-                <img src="{% static 'img/redo-icon.svg' %}" width="20vw" height="auto">
-            </button>
-            <button>
-                <img src="{% static 'img/right-icon.svg' %}" width="15vw" height="auto">
-            </button>
+            <button><img src="{% static 'img/left-icon.svg' %}" width="20vw"></button>
+            <button> <img src="{% static 'img/undo-icon.svg' %}" width="20vw"></button>
+            <button><img src="{% static 'img/prev-icon.svg' %}" width="25vw"></button>
+            <button><img id="play-button" src="{% static 'img/play-icon.svg' %}" width="30vw"></button>
+            <button><img src="{% static 'img/next-icon.svg' %}" width="25vw"></button>
+            <button><img src="{% static 'img/redo-icon.svg' %}" width="20vw"></button>
+            <button><img src="{% static 'img/right-icon.svg' %}" width="20vw"></button>
         </div>
-        <div class="current-info">
-            <div class="file-input-container">
-                <input type="file" id="file-input" class="hidden-input">
-                <img src="{% static 'img/audio-icon.svg' %}" width="auto">
-            </div>
-            <div class="audio-details">
-                <span id="selected-file-name" class="selected-file-name">No beat selected</span>
-            </div>
+        <div class="beat-info">
+            <p>No beat selected</p>
         </div>
     </div>
-    </div>
-    </div>
+</div>
 {% endblock %}
 

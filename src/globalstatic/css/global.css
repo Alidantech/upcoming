@@ -48,7 +48,6 @@ header > h1, ul, li {
 /* Set global styles for the page */
 body {
     background-color: var(--color-background);
-    color: var(--color-text);
   }
   
 /* Header styles */

@@ -11,16 +11,17 @@
     overflow: hidden;
     box-shadow: 2px 2px 4px rgba(23, 31, 36, 0.562),
                  2px 2px 4px rgba(22, 27, 32, 0.568);
+    background-color: rgba(18, 175, 12, 0.5);
     height: 25vh;
     display: grid;
-    grid-template-rows:70% 15% 15%;
+    grid-template-rows:70% 30%;
     transform-origin: center;
     transition: transform 0.8s ease-in-out;
   }
 
 .album-card:hover {
     cursor: auto;
-    transform: scale(1.03);
+    transform: scale(1.01);
   }
 
 .album-card img {
@@ -30,7 +31,19 @@
     border-radius: 10px 10px 0 0;
   }
 
-  .album-card button {
+.album-details {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.205);
+    width: 100%;
+  }
+
+.album-details h3, p { 
+    height: 50%; 
+ }
+
+
+
+.album-card button {
     display: none;
     width: 35px;
     position: fixed;
@@ -47,44 +60,4 @@
     cursor: pointer;
   }
 
-.main-content-container h1 {
-    font-size: 1.1em;
-    padding: 1em;
-    padding-top: 0;
-  }
 
-.main-content-container > div h2 {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-    margin-top: 5vh;
-    padding:10px;
-  }
-
-.album-card h3 {
-    font-size: 0.9rem;
-    padding: 5px 15px;
-    ;
-    
-    word-wrap: break-word;
-    word-break: break-all;
-  }
-
-.album-card p {
-    padding: 5px 15px;
-    ;
-    
-    font-size: 0.6em;
-    text-overflow: ellipsis;
-    word-break: break-all;
-    word-wrap: break-word;
-  }
-
-.album-card p:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
-  
-.album-card h3:hover {
-    cursor: pointer;
-    text-decoration: underline;
-  }
