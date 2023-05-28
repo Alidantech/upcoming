@@ -57,15 +57,15 @@
       <button class="btn btn-latest">Latest</button>
     </div>
     <div class="account-details">
-      <img class="small-image" src="https://source.unsplash.com/random/400x400/?guitarist">
+      <img class="account-image" src="https://source.unsplash.com/random/400x400/?guitarist">
     </div>
   </div>
   <div class="main-content-container">
-
-      {% include 'music-songs.html' %}
-      {% include 'now-playing.html' %}
-      {% include 'music-artists.html' %}
       {% include 'music-albums.html' %}
+      {% include 'music-songs.html' %}
+      {% include 'music-artists.html' %}
+      {% include 'now-playing.html' %}
+      
     
       {% block albums %}
       {% endblock albums %}
@@ -85,7 +85,7 @@
 {% block static %}
   <link rel="stylesheet" href=" {% static '/css/music.css' %}">
   <link rel="stylesheet" href=" {% static '/css/albums.css' %}">
-  <link rel="stylesheet" href=" {% static '/css/artists.css' %}">
+  <link rel="stylesheet" href=" {% static '/css/music-artists.css' %}">
   <link rel="stylesheet" href=" {% static '/css/now-playing.css' %}">
   <link rel="stylesheet" href=" {% static '/css/songs.css' %}">
   <script src="{% static 'js/music.js' %}"></script>

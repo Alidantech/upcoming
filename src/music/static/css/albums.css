@@ -1,19 +1,15 @@
 /* Album Cards */
 .album-cards-container {
-    display: grid;
-    grid-template-columns: 
-    repeat(auto-fit, minmax(100px, 1fr));
-    gap: 2rem;
+  
   }
   
 .album-card {
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden;
-    box-shadow: 2px 2px 4px rgba(23, 31, 36, 0.562),
-                 2px 2px 4px rgba(22, 27, 32, 0.568);
-    background-color: rgba(18, 175, 12, 0.5);
-    height: 25vh;
+    background-color: rgba(32, 29, 29, 0.288);
     display: grid;
+    max-height: 30vh; 
+    max-width: 250px;
     grid-template-rows:70% 30%;
     transform-origin: center;
     transition: transform 0.8s ease-in-out;
@@ -28,20 +24,25 @@
     display: block;
     width: 100%;
     height: auto;
-    border-radius: 10px 10px 0 0;
   }
 
 .album-details {
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.205);
-    width: 100%;
+    background-color: rgba(1, 19, 7, 0.445);
+    width: 96%;
+    margin: auto;
+    z-index: 1;
+    border-radius: 5px;
+    height: 90%;
   }
 
 .album-details h3, p { 
     height: 50%; 
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
  }
-
-
 
 .album-card button {
     display: none;

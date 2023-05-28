@@ -41,6 +41,7 @@
   width: 100%;
 }
 
+
 .group-heading h3 {
   text-align: center;
   padding: 1em;
@@ -70,12 +71,13 @@
 
 .heading-container {
   top: 0;
+  left: 0;
   height: 10vh;
   display: grid;
   grid-template-columns: 50% 40% 10%;
   backdrop-filter: blur(5px);
   position: fixed;
-  width: calc(80% - 8px);
+  width: 100%;
   z-index: 100;
   background-color: rgba(2, 23, 51, 0.137);
 }
@@ -93,6 +95,9 @@
   margin-left: 0;
 }
 
+.button-container {
+  overflow-x: auto;
+}
 .btn {
   border: none;
   border-radius: 15px;
@@ -111,16 +116,7 @@
 
 
 .account-details {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 100%;
-}
-
-.account-details img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
 }
 
 .main-content-container > div h2 {

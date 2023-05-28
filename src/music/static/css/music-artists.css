@@ -1,0 +1,18 @@
+.artist {
+  background-color: rgba(27, 25, 25, 0.432);
+  border-radius: 5px;
+  height: 40vh;
+  max-height: 250px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 2px 2px solid rgb(5, 168, 5);
+  padding: 1em;
+  max-width: 200px;
+}
+
+.artist:hover {
+  cursor: pointer;
+  scale: 1.05;
+}

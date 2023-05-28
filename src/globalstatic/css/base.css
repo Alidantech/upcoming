@@ -21,8 +21,18 @@
   }
 
 *::-webkit-scrollbar-track {
-    background-color: #ffffff;
+    background-color: #ffffff00;
   }
+
+.side-content::-webkit-scrollbar {
+    width: 2px;
+  }
+
+.side-content::-webkit-scrollbar-thumb {
+    background-color: #1e6a74;
+    border-radius: 2px;
+  }
+
 
 /* Styling For Page Layout */
 body, html {
@@ -33,23 +43,24 @@ body, html {
 
 /* Main Part The Page */
 main {
-    display: grid;
-    grid-template-columns: 20% 80%;
+    
   }
 
 /* Side Bar Layout */
 .side-content {
     height: 100vh;
     overflow: auto;
-    background-color: #01141af8;
+    background-color: #242727f8;
     padding-bottom: 10vh;
+    display: none;
   }
+
 
 
 /* Main Content Layout */
 .main-content {
     height: 100vh;
-    background-color: #041114;
+    background-color: #1e2324;
     overflow: auto;
     padding: 0.5em;
   }
@@ -109,32 +120,32 @@ button[title]:hover::after {
   }
 
 li {
-    color: #929ea0;
+    color: wheat;
     font-size: 0.8em;
   }
 
 li div {
-    color: #929ea0;
+    color:oldlace;
   }
   
 h1 { 
     font-size: 1.5em;
-    color: #0b5555;
+    color: white;
  }
 
 h2 { 
   font-size: 1.2em;
-    color: #1e6a74;
+    color: white;
  }
 
 h3 { 
   font-size: 1em;
-  color: aqua;
+  color: white;
  }
 
  h4 { 
   font-size: 0.9em;
-  color: rgb(8, 98, 139);
+  color: white;
  }
 p { font-size: 0.8em; }
 
@@ -165,7 +176,37 @@ a:target { background-color: red }
     max-width: 40px;
     height: 40px;
     min-height: 40px;
-    border: 1px solid blue;
+    border: 1px solid rgb(242, 242, 248);
     border-radius: 5px;
     overflow: hidden;
+}
+
+.artist-image {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  border-radius: 50%;
+  border: 1px solid rgb(246, 246, 255);
+}
+
+.account-image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+/* cards Styling */
+.card-container {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+}
+
+.card {
+  max-width: 300px;
+  min-width: 150px;
+  flex: 0 1 300px;
+  margin: 10px;
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.507);
 }
