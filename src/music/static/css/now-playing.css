@@ -5,7 +5,7 @@
     width: calc(100% - 8px);
     background-color: transparent;
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.37);
+    background-color: rgba(0, 0, 0, 0.705);
     border-top: 1px solid #010d2779;
     z-index: 999;
     height: 10vh;

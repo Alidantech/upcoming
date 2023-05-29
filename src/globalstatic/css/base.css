@@ -183,8 +183,8 @@ a:target { background-color: red }
 
 .artist-image {
   display: block;
-  width: 150px;
-  height: 150px;
+  width: 80%;
+  height: 50%;
   margin: auto;
   border-radius: 50%;
   border: 1px solid rgb(246, 246, 255);
@@ -208,5 +208,5 @@ a:target { background-color: red }
   min-width: 150px;
   flex: 0 1 300px;
   margin: 10px;
-  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.507);
+  box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.329);
 }
