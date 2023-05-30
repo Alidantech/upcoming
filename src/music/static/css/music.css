@@ -4,88 +4,36 @@
   box-sizing: border-box;
 }
 
-/* the sidebar navigation part */
-.navigation {
-  border-bottom: 1px solid rgba(9, 63, 77, 0.322);
-  height: 30vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 2px 2px 4px rgba(3, 26, 41, 0.466);
-}
-
-.navigation a {
-  box-shadow: 2px 2px 4px rgba(4, 49, 75, 0.466);
-  background-color: rgba(3, 28, 49, 0.384);
-  margin: auto;
-  width: 90%;
-  text-decoration: none;
-  text-align: start;
-  padding: 1vw;
-  transform: scale(1);
-  transition: transform 0.5s ease-out;
-  display: flex;
-  align-items: center;
-}
-
-.navigation a > img {margin-right: 1vw;}
-
-.navigation a:hover {
-  text-decoration: underline;
-  transform: scale(1.01);
-}
-
-/* Side Bar Group Lists */
-.group-heading {
-  width: 100%;
-}
-
-
-.group-heading h3 {
-  text-align: center;
-  padding: 1em;
-}
-
-.group-list ul > li {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin: 1em;
-    padding: 0.5em;
-}
-
-.group-list ul > li:hover {
-  background-color: rgba(73, 38, 25, 0.342);
-
-}
-
-
-
 /* the main part of the page */
+.main-content {
+  padding: 0;
+}
+
 .main-content-container {
   padding: auto;
-  padding-top: 8vh;
-  padding-bottom: 10vh;
+  margin-top: 10vh;
+  height: 80vh;
+  overflow: auto;
 }
 
 .heading-container {
+  float: left;
   top: 0;
-  left: 0;
   height: 10vh;
   display: grid;
   grid-template-columns: 50% 40% 10%;
   backdrop-filter: blur(5px);
   position: fixed;
-  width: 100%;
+  width: 75%;
   z-index: 100;
-  background-color: rgba(2, 23, 51, 0.137);
+  background-color: rgba(0, 0, 0, 0.274);
 }
 
 .heading-container > div {
   display: flex;
   justify-content: center;
   align-items: center;
+  align-content: baseline;
   height: 100%;
   text-transform: capitalize;
 }
@@ -98,28 +46,12 @@
 .button-container {
   overflow-x: auto;
 }
-.btn {
-  border: none;
-  border-radius: 15px;
-  padding: 5px 10px;
-  border: 1px solid white;
-}
-
-.btn:hover {
-  background-color: white;
-  color: black;
-  scale: 1;
-}
-.btn:not(:last-child) {
-  margin-right: 10px;
-}
-
 
 .account-details {
   height: 100%;
 }
 
 .main-content-container > div h2 {
-  margin: 2em auto 1em auto;
+  margin: 1em auto 0.5em auto;
 }
 

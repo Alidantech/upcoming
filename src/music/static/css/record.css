@@ -13,21 +13,6 @@
     background-color: #00000007;
   }
 
-/* Navigation bar */
-.navigation {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 10vh;
-}
-
-.navigation a{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-}
-
 /* Page Styling */
 .recording-page {
     overflow: hidden;

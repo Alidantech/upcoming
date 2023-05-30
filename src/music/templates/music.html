@@ -13,30 +13,22 @@
     <a href="#"><img src="{% static 'img/beat-icon.svg' %}" width="15vw" alt="next">Beats</a>
   </div>  
   <div class="group-heading">
-    <h3>Genres</h3>
-  </div>
-  <div class="group-list">
-    <ul class="content-list">
-      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?pop">Summer Vibes</li>
-      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?rock">Throwback Jams</li>
-      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?hiphop">Chill Beats</li>
-      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?blues">Workout Motivation</li>
-      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?blues">Relaxing Piano Melodies</li>
-    </ul>
-  </div>
-  <div class="group-heading">
     <h3>Playlists</h3>
+    <div class="btns">
+      <button class="cartegory btn-album">Albums</button>
+      <button class="cartegory btn-music">Playlists</button>
+      <button class="cartegory btn-music">Genres</button>
+    </div>
   </div>
   <div class="group-list">
     <ul class="content-list">
-      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?pop">Pop</li>
-      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?rock">Rock</li>
       <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?hiphop">Hip Hop</li>
       <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?rnb">RnB</li>
       <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?blues">blues</li>
-      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?reggea">reggea</li>
-      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?guitarist">Tanzania</li>
-      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?girl">kenya</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?rap">Rap</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?Reggea">Reggea</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?Gospels">Gospels</li>
+      <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?Classics">Classics</li>
     </ul>
   </div>
 </div>
@@ -44,23 +36,24 @@
 {% endblock %}
 
 {% block content %}
-  <div class="heading-container">
-    <div class="main-heading">
-      <h1>Diamond plutnumz new songs that you will</h1>
-    </div>
-    <div class="button-container">
-      <button class="btn btn-all">All</button>
-      <button class="btn btn-songs">Songs</button>
-      <button class="btn btn-album">Albums</button>
-      <button class="btn btn-music">Music</button>
-      <button class="btn btn-music">Artists</button>
-      <button class="btn btn-latest">Latest</button>
-    </div>
-    <div class="account-details">
-      <img class="account-image" src="https://source.unsplash.com/random/400x400/?guitarist">
-    </div>
-  </div>
   <div class="main-content-container">
+    <div class="heading-container">
+      <div class="main-heading">
+        <h1>Diamond plutnumz new songs that you will</h1>
+      </div>
+      <div class="button-container">
+        <button class="btn btn-all">All</button>
+        <button class="btn btn-songs">Songs</button>
+        <button class="btn btn-album">Albums</button>
+        <button class="btn btn-music">Music</button>
+        <button class="btn btn-music">Artists</button>
+        <button class="btn btn-latest">Latest</button>
+      </div>
+      <div class="account-details">
+        <img class="account-image" src="https://source.unsplash.com/random/400x400/?guitarist">
+      </div>
+    </div>
+
       {% include 'music-albums.html' %}
       {% include 'music-songs.html' %}
       {% include 'music-artists.html' %}

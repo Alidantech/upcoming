@@ -8,7 +8,7 @@
 
 /* Custom Scroll Bar */
 *::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
   }
 
 *::-webkit-scrollbar-thumb {
@@ -43,25 +43,108 @@ body, html {
 
 /* Main Part The Page */
 main {
-    
+    display: grid;
+    grid-template-columns: 25% 75%;
   }
 
 /* Side Bar Layout */
 .side-content {
     height: 100vh;
-    overflow: auto;
-    background-color: #242727f8;
+    overflow: hidden;
+    background-color: #090a0af8;
     padding-bottom: 10vh;
-    display: none;
   }
 
+/* the sidebar navigation part */
+/* Navigation bar */
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10vh;
+  background-color: #010f0f93;
+}
 
+.navigation a{
+display: flex;
+align-items: center;
+justify-content: center;
+margin: auto;
+}
+
+/* Side Bar Group Lists */
+.group-heading {
+  width: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: #04161648;
+}
+
+
+.group-heading h3 {
+  text-align: center;
+  padding: 1em;
+}
+
+.btn {
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  border: 1px solid white;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  scale: 1;
+}
+.btn:not(:last-child) {
+  margin-right: 10px;
+}
+
+.cartegory {
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px;
+  color: gray;
+}
+
+.cartegory:hover {
+  color: rgb(10, 204, 42);
+  scale: 1;
+}
+.cartegory:not(:last-child) {
+  margin-right: 10px;
+}
+
+
+
+.group-list {
+  overflow: auto;
+  height: 85vh;
+}
+
+.group-list ul > li {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0.25em;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+.group-list ul > li:hover {
+  background-color: rgba(2, 22, 39, 0.795);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+}
 
 /* Main Content Layout */
 .main-content {
     height: 100vh;
-    background-color: #1e2324;
-    overflow: auto;
+    background-color: #151a1b;
+    overflow: hidden;
     padding: 0.5em;
   }
 
@@ -147,7 +230,7 @@ h3 {
   font-size: 0.9em;
   color: white;
  }
-p { font-size: 0.8em; }
+p { font-size: 0.6em; }
 
 
 /* Links Styling */
@@ -172,19 +255,19 @@ a:target { background-color: red }
 
 /* Images Styling */
 .small-image {
-    width: 40px;
-    max-width: 40px;
-    height: 40px;
-    min-height: 40px;
-    border: 1px solid rgb(242, 242, 248);
+    width: 50px;
+    max-width: 50px;
+    height: 50px;
+    min-height: 50px;
+    border: 1px solid rgba(19, 19, 32, 0.199);
     border-radius: 5px;
     overflow: hidden;
 }
 
 .artist-image {
   display: block;
-  width: 80%;
-  height: 50%;
+  width: 120px;
+  height: 120px;
   margin: auto;
   border-radius: 50%;
   border: 1px solid rgb(246, 246, 255);
@@ -201,11 +284,13 @@ a:target { background-color: red }
   display: flex;
   overflow-x: auto;
   flex-wrap: nowrap;
+  align-content: space-between;
 }
 
 .card {
   max-width: 300px;
   min-width: 150px;
+  min-height: 25vh;
   flex: 0 1 300px;
   margin: 10px;
   box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.329);

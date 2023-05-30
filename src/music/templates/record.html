@@ -17,19 +17,26 @@
         <a href="/music"><img src="{% static 'img/record-icon.svg' %}" width="15vw">Music</a>
         <a href="#"><img src="{% static 'img/beat-icon.svg' %}" width="15vw">Beats</a>
       </div>
-      <div class="mysongs-container">
-        <h4>My Recorded Songs</h4>
-        <ul>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">Vampires Love</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">Manserera</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">Happy</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">Dance with You</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">This is Home</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">King ping</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">Mchezo</li>
-          <li><img src="{% static 'img/audio-icon.svg' %}" width="45vw">Wishes ishes</li>
+      <div class="group-heading">
+        <h3>My Songs</h3>
+        <div class="btns">
+            <button class="cartegory btn-album">Albums</button>
+            <button class="cartegory btn-music">Music</button>
+            <button class="cartegory btn-music">Artists</button>
+        </div>
+      </div>
+      <div class="group-list">
+        <ul class="content-list">
+            <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?Vampires">Vampires Love</li>
+            <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?cute girl">Manserera</li>
+            <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?happiness">Happy</li>
+            <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?dance">Dance with You</li>
+            <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?home">This is Home</li>
+            <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?king">King ping</li>
+            <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?rapper">Mchezo</li>
+            <li><img class="small-image" src="https://source.unsplash.com/random/400x400/?hiphop">Wishes ishes</li>
         </ul>
-      </div>  
+      </div> 
   </div>
   
 {% endblock %}
