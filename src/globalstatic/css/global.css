@@ -19,7 +19,7 @@
   
 
 
-/* Create a custom scroll bar */
+/* Custom scroll Bar */
 ::-webkit-scrollbar { width: 8px; }
   
 ::-webkit-scrollbar-thumb {
@@ -29,7 +29,7 @@
   
 ::-webkit-scrollbar-thumb:hover { background-color: #0b4c55; }
   
-::-webkit-scrollbar-track { background-color: #f7f7f7; }
+::-webkit-scrollbar-track { background-color: #36333317; }
   
 * {
     margin: 0;
@@ -76,6 +76,8 @@ header {
     }
   }
 
+/* Logo for the site */
+
 div.logo {
     float: left;
     height: fit-content;
@@ -113,7 +115,6 @@ header h1 {
 
 /* Heading hover effect */
 h1:hover { color: #0b8831; }
-h2:hover { color: #0b8831; }
   
 /* Navigation bar styles */
 .navigation-bar {
@@ -163,49 +164,52 @@ main {
     margin-top: var(--header-height);
     overflow: auto;
   }
+
+input:focus {
+  outline: none;
+  outline-color: #333;
+}
+
+.error-message {
+  color: red;
+}
    
-/* Style the headings */
+/* Style the footer */
 footer {
-    background-color: #111c27;
-    color: #a39c9c;
-    width: 100%;
-    padding: 1rem 0;
+    background-color: #021218;
+    color: white;
     height: 50vh;
-    overflow: hidden;
-  }
-  
-footer h4 {
-    font-size: 1.2rem;
-    margin-bottom: 1rem;
-    text-align: center;
-  }
-  
-footer ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-footer li {
-    margin-bottom: 1rem;
-    width: 100%;
-    text-align: center;
-  }
-  
-footer a {
-    color: #738da3;
-    text-decoration: none;
-    transition: .2s ease-in-out;
-  }
-  
-footer a:hover {
-    color: #ffc107;
-    text-decoration: underline;
-  }
-
-.link-container {
     display: grid;
-    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 70% 30%;
   }
+footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer > div div {
+  width: 30%;
+  height: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 
-.section { padding: 5vw; }
+footer li {
+  margin: 1em;
+}
+
+footer a {
+  color: #7c7c7c;
+  text-decoration: none;
+}
+footer a:hover{
+  text-decoration: underline;
+  color: yellow;
+}
+
+.copyrights li {
+  text-align: center;
+  color: #14802b;
+}

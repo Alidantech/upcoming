@@ -10,7 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="{% static 'js/master.js' %}" defer></script>
     <title>{% block title %}{% endblock %}</title>
-    {% block static %}{% endblock %}
+    {% block static %}{% endblock static %}
 </head>
 <body>
 <header>
@@ -40,32 +40,39 @@
   {% comment %} main page content goes here {% endcomment %}
   {% endblock %}
 </main> 
-<footer class="bg-dark text-white py-4">
+<footer>
   <div class="link-container">
-      <div class="section">
+      <div>
         <h4>Developers</h4>
-        <ul class="list-unstyled">
+        <ul>
           <li><a href="#">API Documentation</a></li>
           <li><a href="#">Developer Blog</a></li>
           <li><a href="#">Developer Tools</a></li>
         </ul>
       </div>
-      <div class="section">
+      <div>
         <h4>Explore</h4>
-        <ul class="list-unstyled">
+        <ul>
           <li><a href="#">Record a Song</a></li>
           <li><a href="#">Discover Music</a></li>
           <li><a href="#">Home</a></li>
         </ul>
       </div>
-      <div class="section">
+      <div>
         <h4>Contact Us</h4>
-        <ul class="list-unstyled">
+        <ul>
           <li><a href="mailto:support@upcoming.com">support@upcoming.com</a></li>
           <li><a href="#">Join the Community</a></li>
+          <li><a href="#">Music Technologies</a></li>
         </ul>
       </div>
-    </div>
+  </div>
+  <div class="copyrights">
+    <ul>
+      <li>Developed by muztech.ltd</li>
+      <li>@2023</li>
+    </ul>
+  </div>
 </footer>      
 </body>
 </html>

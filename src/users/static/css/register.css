@@ -1,160 +1,76 @@
-:root {
-    /* transparent backgrounds */
-    --transparent--bg: rgba(0, 0, 0, 0);
-    /* all button colors */
-    --btn--bg--color: #02252b6f;
-    --btn--hover--bg-color: #0229042a;
-    --btn--txt--color: #022904;
-    --btn--border--color: rgb(6, 119, 85);
-    /* all heading colors */
-    --heading--txt--color: #094d59;
-    /* all inputs colors */
-    --input--label--color:#022904;
-    --input--txt--color: rgb(3, 34, 61);
-    --input--border--color: rgb(8, 101, 113);
-    --placeholder--txt--color: #0a8774;
-    /* text colors for p elements */
-    --warning--txt-color: red;
-  }
-  
-  
-html, body {
-    margin: 0;
-    padding: 0;
-    color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 1em;
-}
-
-/* login page styling */
-div.page {
-    width: 100%;
+.register-page {
     height: 100vh;
-    min-height: 500px;
-    background: linear-gradient(to bottom, rgba(0, 0, 255, 0.322), rgba(0, 128, 0, 0.267));
-}
-div.sign-in-button {
-    float: right;
-    height: fit-content;
-    width: fit-content;
-    padding: 1em;
-  
-}
-.sign-in-button  button{
-    border: 2px solid var(--btn--border--color);
-    background-color: var(--transparent-bg);
-    color: var(--btn--txt--color);
-    padding: 0.5em;
-    font-size: larger;
-    border-radius: 1em;
-    width: 10vw;
-}
-.sign-in-button  button:hover {
-    cursor: pointer;
-    background-color: var(--btn--hover--bg-color);
-}
-/* heading of the page */
-div.heading h1 {
-    margin: 0;
-    padding: 0;
-    color: var(--heading--txt--color) ;
-    font-size: 1.5em;
+    display: grid;
+    grid-template-rows: 10% 90%;
 }
 
-/* the user datails part */
-div.registration-container {
-    display: flex;
-    align-items: centerc;
-    justify-content: center;
-    padding-top: 5vh;
+.header-content {
+    display: grid;
+    grid-template-columns: 90% 10%;
 }
-div.inputs-container {
-    width:  100%;
-    height: 13vh;
+
+.header-content > div {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-div.inputs-container label {
-    color: var(--input--label--color);
-    font-size: smaller;
-    width: 5vw;
-    margin-right: 3em;
-    float: left;
-}
-.inputs-container input {
-    float: right;
-    all: initial;
-    width: 20vw;
-    color: var(--input--txt--color);
-    border-bottom:2px solid  var(--input--border--color);
-    padding: 0.7em;
-    text-indent: 1em;
-}
-input::placeholder {
-    color: var(--placeholder--txt--color);
-    font-style: italic;
-    font-size: medium;
-}
-div.warning {
-    color: var(--warning--txt-color);
+
+
+.main-container {
     display: flex;
+    align-items: flex-start;
     justify-content: center;
-    align-items: center;
-    font-size: 0.7vw;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    height: 2vh;
 }
-.inputs-container button {
-    background-color: var(--btn--bg--color);
-    padding: 1em;
+
+.register-page button {
+    background-color: green;
     border: none;
-    color: var(--btn--txt--color);
-    width: 15vw;
-}
-.inputs-container button:hover {
-    border-radius: 0.4em;
-    background-color: var(--btn--hover--bg-color);
+    padding: 1em 3em;
+    border-radius: 30px;
     cursor: pointer;
+    color: rgb(19, 223, 155);
+    font-weight: bold;
 }
 
-/* media query for smaller screens */
-@media (max-width: 1000px){
-    div.registration-container {
-        float: left;
-        width: auto;
-        padding-left: 5%;
-    }
-    div.sign-in-button {
-        padding: 0.9em;
-    }
-    .sign-in-button  button{
-        width: auto;
-    }
-    div.heading h1 {
-        font-size: 0.9em;
-        padding: 0.2em;
-    }
-    div.inputs-container {
-        width:  100%;
-        height: auto;
-        display: block;
-        padding: 0.8em 0 0.8em 0;
-    }
-    .inputs-container input {
-        width: 90%;
-        text-indent: 5em;
-        padding: 0.7em;
-        margin: 0;
-    }
-    .inputs-container button {
-        width: auto;
-    }
-    div.inputs-container label {
-        margin-right:5em ;
-    }
-    div.warning {
-        font-size: 2.5vw;
-        padding-left: 3em;
-    }
+.sign-in button {
+    background-color: transparent;
+    border: none;
+    border: 3px solid rgb(11, 145, 100);
+}
+
+.register-page button:hover {
+    background-color: rgb(127, 151, 145);
+}
+
+form {
+    width: 40%;
+    height: 80%;
+    margin-bottom: 10%;
+}
+
+form > div {
+    margin: auto;
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form input {
+    border: none;
+    border: 3px solid rgba(3, 80, 54, 0.568);
+    padding: 1em;
+    border-radius: 5px;
+    width: 80%;
+}
+
+form label {
+    font-size: 1.2em;
+    color: rgb(11, 145, 100);
+    font-weight: bold;
+}
+
+.inputs-container{
+    justify-content: space-between;
 }
