@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'users',
     'music',
+    'psycopg2',
 ]
 
 MIDDLEWARE = [
@@ -77,8 +78,16 @@ WSGI_APPLICATION = 'upcoming.wsgi.application'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-   
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'upcoming_ai_app',
+        'USER': 'upcoming_ai_app',
+        'PASSWORD': 'upcoming#*123',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
+
 
 
 # Password validation
