@@ -9,26 +9,18 @@
         <div>
         </div>
         <div class="sign-in">
-            <button >sign in</button>
+            <a href="#">Sign In</a>
         </div>
     </div>
     <div class="main-container">
-        <form method="post" action="" id="registration">
-            <div class="inputs-container">
-                <label for="username">Username: </label>
-                <input type="text" name="username" placeholder="eg. peter" required>
-            </div>
-            <div class="inputs-container">
-                <label for="email">Email: </label>
-                <input type="email" name="email" placeholder="youremail@example.com" required>
-            </div>
-            <div class="inputs-container">
-                <label for="password">Password: </label>
-                <input type="password" name="password" placeholder="eg. #$%$fxfgf56" required>
-            </div>
-            <div class="warning">
-                <p class="error-message">Warning you have entered a wrong password</p>
-            </div>
+        <form method="post" action="{% url 'register' %}" id="registration">
+            {% csrf_token %}
+            {{ form.as_p }}
+            {% if form.errors %}
+                <div class="warning">
+                    <p class="error-message">Warning: You have entered incorrect information.</p>
+                </div>
+            {% endif %}
             <div>
                 <button type="submit">Create Account</button>
             </div>
