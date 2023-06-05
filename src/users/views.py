@@ -11,13 +11,13 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('home')  # Replace 'home' with the URL name for your home page
+            return redirect('home')
     else:
         form = UserCreationForm()
-    return render(request, 'register.html', {'form': form})
+    return render(request, 'registration/register.html', {'form': form})
 
 def account(request):
-  template = loader.get_template('register.html')
+  template = loader.get_template('account.html')
   return HttpResponse(template.render())
 
 def main(request):
