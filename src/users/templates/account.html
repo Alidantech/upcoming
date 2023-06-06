@@ -2,13 +2,11 @@
 {% load static %}
 {% block title %} User name {% endblock %}
 {% block heading %} My Account Details  {% endblock %}
-
 {% block content %}
 <div class="account-page">
-    
+    <img class="artist-image" src="{% static 'img/person-in-studio.jpg' %}" alt="Musician recording a song" class="img-fluid">
 </div>
 {% endblock %}
-
 {% block static %}
 <link rel="stylesheet" href="{% static 'css/account.css' %}">
 {% endblock static %}

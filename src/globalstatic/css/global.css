@@ -35,6 +35,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
   }
   
 /* Reset some default styles */
@@ -95,14 +96,14 @@ div.logo {
     color: var(--logo--txt--color);
     font-family:cursive;
     text-indent: 0.5em;
-    padding: 0;
+    padding-top: 0.5em;
     margin: 0;
     float: right;
+    font-size: 0.6em;
   }
     
 /* Heading style */
 header h1 {
-    font-family: 'Montserrat', sans-serif;
     font-size: 1.5em;
     line-height: 1.5;
     font-weight: bold;
@@ -139,8 +140,8 @@ h1:hover { color: #0b8831; }
   
 .nav-links a {
     display: block;
-    padding: 10px;
-    color: #a9d6f5;
+    padding: 5px;
+    color: aliceblue;
     text-decoration: none;
     border: 1px solid transparent;
     transition: border-bottom 0.3s ease-in-out;
@@ -211,5 +212,48 @@ footer a:hover{
 
 .copyrights li {
   text-align: center;
-  color: #14802b;
+  color: #364b3a;
+}
+
+/* Images Styling */
+.small-image {
+  width: 50px;
+  max-width: 50px;
+  height: 50px;
+  min-height: 50px;
+  border: 1px solid rgba(19, 19, 32, 0.199);
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.artist-image {
+display: block;
+width: 120px;
+height: 120px;
+margin: auto;
+border-radius: 50%;
+border: 1px solid rgb(246, 246, 255);
+}
+
+.account-image {
+width: 50px;
+height: 50px;
+border-radius: 50%;
+}
+
+/* cards Styling */
+.card-container {
+display: flex;
+overflow-x: auto;
+flex-wrap: nowrap;
+align-content: space-between;
+}
+
+.card {
+max-width: 300px;
+min-width: 150px;
+min-height: 25vh;
+flex: 0 1 300px;
+margin: 10px;
+box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.329);
 }
