@@ -4,7 +4,21 @@
 {% block heading %} My Account Details  {% endblock %}
 {% block content %}
 <div class="account-page">
-    <img class="artist-image" src="{% static 'img/person-in-studio.jpg' %}" alt="Musician recording a song" class="img-fluid">
+    <div class="account-details-container">
+        <img class="myaccount-img" src="{% static 'img/person-in-studio.jpg' %}" alt="Musician recording a song" class="img-fluid">
+        <div class="">
+            <h2>Alidante</h2>
+            <div class="">followers 100k</div> <div class="">following 3k</div>
+        </div>
+        <div class="">
+            <p>I am a passionate musician with music capabilities.</p>
+        </div>
+        <div class="">
+            <div class="">songs 100</div> <div class="">listens 3000</div>
+        </div>
+    </div>
+    <div class="settings-container">
+    </div>
 </div>
 {% endblock %}
 {% block static %}
