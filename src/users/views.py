@@ -5,6 +5,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.template import loader
 
+# User authentication views
 def register(request):
     if request.method == 'POST':
         form = UserCreationForm(request.POST)
@@ -20,6 +21,8 @@ def account(request):
   template = loader.get_template('account.html')
   return HttpResponse(template.render())
 
+
+# Other pages views
 def main(request):
   template = loader.get_template('main.html')
   return HttpResponse(template.render())
