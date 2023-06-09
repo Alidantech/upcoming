@@ -1,7 +1,49 @@
+{% extends 'master.html' %}
+{% load static %}
 {% block content %}
-    <form method="post" action="{% url 'register' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Register</button>
-    </form>
+<div class="registration-container">
+  <form method="post" action="/register/" class="my-form">
+    {% csrf_token %}
+    <div class="form-group{% if form.username.errors %} has-error{% endif %}">
+      <label for="{{ form.username.id_for_label }}">Username:</label>
+      {{ form.username }}
+      {% if form.username.errors %}
+        <div class="error-message">
+          {{ form.username.errors|join:", " }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="form-group{% if form.email.errors %} has-error{% endif %}">
+      <label for="{{ form.email.id_for_label }}">Email:</label>
+      {{ form.email }}
+      {% if form.email.errors %}
+        <div class="error-message">
+          {{ form.email.errors|join:", " }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="form-group{% if form.password1.errors %} has-error{% endif %}">
+      <label for="{{ form.password1.id_for_label }}">Password:</label>
+      {{ form.password1 }}
+      {% if form.password1.errors %}
+        <div class="error-message">
+          {{ form.password1.errors|join:", " }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="form-group{% if form.password2.errors %} has-error{% endif %}">
+      <label for="{{ form.password2.id_for_label }}">Confirm Password:</label>
+      {{ form.password2 }}
+      {% if form.password2.errors %}
+        <div class="error-message">
+          {{ form.password2.errors|join:", " }}
+        </div>
+      {% endif %}
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+  </form>
+</div>
 {% endblock content %}
+{% block static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+{% endblock static %}

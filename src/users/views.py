@@ -1,36 +1,50 @@
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth import login
+from django.contrib.auth import authenticate, login
 from django.shortcuts import render, redirect
+from .forms import LoginForm
 
-from django.http import HttpResponse
-from django.template import loader
+from .forms import CustomUserCreationForm
 
 # User authentication views
 def register(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = CustomUserCreationForm(request.POST)
         if form.is_valid():
             user = form.save()
             login(request, user)
             return redirect('home')
     else:
-        form = UserCreationForm()
+        form = CustomUserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
 
-def account(request):
-  template = loader.get_template('account.html')
-  return HttpResponse(template.render())
+def login_view(request):
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')
+            else:
+                form.add_error(None, 'Invalid username or password')
+    else:
+        form = LoginForm()
+    return render(request, 'registration/login.html', {'form': form})
 
+def account(request):
+    template = 'account.html'
+    return render(request, template)
 
 # Other pages views
 def main(request):
-  template = loader.get_template('main.html')
-  return HttpResponse(template.render())
+    template = 'main.html'
+    return render(request, template)
 
 def about(request):
-  template = loader.get_template('about.html')
-  return HttpResponse(template.render())
+    template = 'about.html'
+    return render(request, template)
 
 def artists(request):
-  template = loader.get_template('artists.html')
-  return HttpResponse(template.render())
+    template = 'artists.html'
+    return render(request, template)

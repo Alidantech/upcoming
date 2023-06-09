@@ -1,76 +1,56 @@
-.register-page {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 10% 90%;
-}
-
-.header-content {
-    display: grid;
-    grid-template-columns: 90% 10%;
-}
-
-.header-content > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.registration-container {
+  min-height: 100vh;
+  padding: 2em;
 }
 
 
-.main-container {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
+.my-form {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background-color: whitesmoke;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.466);
 }
 
-.register-page button {
-    background-color: green;
-    border: none;
-    padding: 1em 3em;
-    border-radius: 30px;
-    cursor: pointer;
-    color: rgb(19, 223, 155);
-    font-weight: bold;
+.form-group {
+  margin-bottom: 20px;
 }
 
-.sign-in button {
-    background-color: transparent;
-    border: none;
-    border: 3px solid rgb(11, 145, 100);
+label {
+  font-weight: bold;
+  display: block;
+  color: #4285f4;
+  margin-bottom: 5px;
 }
 
-.register-page button:hover {
-    background-color: rgb(127, 151, 145);
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 20px;
+  border: 2px solid #4285f4;
+  border-radius: 4px;
+  background-color: transparent;
 }
 
-form {
-    width: 50%;
-    height: 80%;
-    margin-bottom: 10%;
+.error-message {
+  color: red;
+  margin-top: 5px;
 }
 
-form > div {
-    margin: auto;
-    width: 100%;
-    height: 20%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #4285f4;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-form input {
-    border: none;
-    border: 3px solid rgba(3, 80, 54, 0.568);
-    padding: 1em;
-    border-radius: 5px;
-    width: 80%;
-}
-
-form label {
-    font-size: 1.2em;
-    color: rgb(11, 145, 100);
-    font-weight: bold;
-}
-
-.inputs-container{
-    justify-content: space-between;
+.btn:hover {
+  background-color: #3367d6;
 }

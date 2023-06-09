@@ -1,0 +1,31 @@
+{% extends 'master.html' %}
+{% load static %}
+{% block content %}
+<div class="registration-container">
+  <form method="post" action="/login/" class="my-form">
+    {% csrf_token %}
+    <div class="form-group{% if form.username.errors %} has-error{% endif %}">
+      <label for="{{ form.username.id_for_label }}">Username:</label>
+      {{ form.username }}
+      {% if form.username.errors %}
+        <div class="error-message">
+          {{ form.username.errors|join:", " }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="form-group{% if form.password.errors %} has-error{% endif %}">
+      <label for="{{ form.password.id_for_label }}">Password:</label>
+      {{ form.password }}
+      {% if form.password.errors %}
+        <div class="error-message">
+          {{ form.password.errors|join:", " }}
+        </div>
+      {% endif %}
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+  </form>
+</div>
+{% endblock content %}
+{% block static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
+{% endblock static %}
