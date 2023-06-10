@@ -13,9 +13,6 @@
     grid-template-columns: 30% 70%;
 }
 
-.account-details-container{
-}
-
 .account-details-container > div {
     height: 15%;
     width: 100%;
