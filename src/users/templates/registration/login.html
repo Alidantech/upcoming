@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="registration-container">
-  <form method="post" action="/login/" class="my-form">
+  <form method="post" action="/accounts/login/" class="my-form">
     {% csrf_token %}
     <div class="form-group{% if form.username.errors %} has-error{% endif %}">
       <label for="{{ form.username.id_for_label }}">Username:</label>
@@ -23,6 +23,7 @@
       {% endif %}
     </div>
     <button type="submit" class="btn btn-primary">Login</button>
+    <input type="hidden" name="next" value="{{ next }}">
   </form>
 </div>
 {% endblock content %}

@@ -54,3 +54,25 @@ input[type="password"] {
 .btn:hover {
   background-color: #3367d6;
 }
+
+@keyframes tickAnimation {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.tick {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: green;
+  color: white;
+  animation-name: tickAnimation;
+  animation-duration: 1s;
+}

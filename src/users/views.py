@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, redirect
 from .forms import LoginForm
 
@@ -11,10 +12,12 @@ def register(request):
         if form.is_valid():
             user = form.save()
             login(request, user)
-            return redirect('home')
+            return redirect('music')  # Redirect to the music page URL
     else:
         form = CustomUserCreationForm()
     return render(request, 'registration/register.html', {'form': form})
+
+from django.shortcuts import redirect
 
 def login_view(request):
     if request.method == 'POST':
@@ -25,18 +28,23 @@ def login_view(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                return redirect('home')
+                next_url = request.POST.get('next') or 'music'  # Default to 'music' if 'next' is not provided
+                return redirect(next_url)
             else:
                 form.add_error(None, 'Invalid username or password')
     else:
         form = LoginForm()
-    return render(request, 'registration/login.html', {'form': form})
+    
+    # Retrieve 'next' parameter from the URL if present
+    next_url = request.GET.get('next', 'music')  # Default to 'music' if 'next' is not present in the URL
+    
+    return render(request, 'registration/login.html', {'form': form, 'next': next_url})
 
+@login_required
 def account(request):
     template = 'account.html'
     return render(request, template)
 
-# Other pages views
 def main(request):
     template = 'main.html'
     return render(request, template)
