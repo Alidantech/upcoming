@@ -1,24 +1,73 @@
+/* about.css */
 .container {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	text-align: center;
-    min-height: 100vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bold;
-    color: rgb(20, 41, 51);
+    margin: 0 auto;
+    padding: 20px;
 }
 
 .section {
-	margin:auto;
-    max-width: 90%;
-    line-height: 2em;
+    margin-bottom: 40px;
 }
-.section    ul {
-    list-style-type: disc;
+
+h2 {
+    margin-bottom: 30px;
+    color: #333;
     text-align: start;
-    padding-left: 20px;
-  }
-  .section li {
+    text-transform: capitalize;
+}
+
+p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+ul {
     list-style-type: disc;
-}  
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+.section ul > li {
+    font-size: 16px;
+    line-height: 1.5;
+    list-style-type: disc;
+}
+
+.about-image,
+.features-image,
+.why-use-image {
+    display: block;
+    margin: 20px auto;
+    border: 2px solid #eee;
+    border-radius: 4px;
+    max-width: 100%;
+}
+
+.about-image {
+    max-width: 400px;
+}
+
+.features-image {
+    max-width: 600px;
+}
+
+.why-use-image {
+    max-width: 500px;
+}
+
+
+/* Media Queries */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 24px;
+    }
+    p,
+    li {
+        font-size: 14px;
+    }
+    .about-image,
+    .features-image,
+    .why-use-image {
+        margin: 10px auto;
+    }
+}

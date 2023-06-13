@@ -1,11 +1,9 @@
-  $(document).ready(function() {
-    $(window).scroll(function() {
-      if ($(this).scrollTop() > 0) {
-        $('header').addClass('scrolled');
-      } else {
-        $('header').removeClass('scrolled');
-      }
-    });
+  document.addEventListener('DOMContentLoaded', function() {
+  window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 0) {
+      document.querySelector('header').classList.add('scrolled');
+    } else {
+      document.querySelector('header').classList.remove('scrolled');
+    }
   });
-  
-
+});

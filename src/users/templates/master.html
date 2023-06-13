@@ -7,15 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="{% static 'img/uia-icon.svg' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
     <script src="{% static 'js/master.js' %}" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <title>{% block title %}{% endblock %}</title>
     {% block static %}{% endblock static %}
 </head>
 <body>
 <header>
     <div class="logo">
-        <img src="{% static 'img/uia-icon.svg' %}" alt="logo" width="25vw"><p>upcoming.ai</p>
+        <img src="{% static 'img/uia-icon.svg' %}" alt="logo" width="15vw"><p>upcoming.ai</p>
     </div>
     <div class="page-heading">
     <div class="heading">
@@ -23,17 +23,17 @@
     </div>
     </div>
     <div class="page-links">
-        <nav class="navigation-bar">
-            <ul class="nav-links">
-                <li><a href="/">Home</a></li>
-                <li><a href="/artists/">Artists</a></li>
-                <li><a href="/record/">Record</a></li>
-                <li><a href="/music/">Music</a></li>
-                <li><a href="/account/">Account</a></li>
-                <li><a href="/about/">About</a></li>
-            </ul>
-          </nav>
-    </div>
+      <nav class="navigation-bar">
+        <ul class="nav-links">
+          <li {% if active_page == 'main' %} class="active"{% endif %}><a href="/"><i class="fas fa-home"></i> Home</a></li>
+          <li {% if active_page == 'artists' %} class="active"{% endif %}><a href="/artists/"><i class="fas fa-users"></i> Artists</a></li>
+          <li {% if active_page == 'account' %} class="active"{% endif %}><a href="/account/"><i class="fas fa-user"></i> Account</a></li>
+          <li {% if active_page == 'developers' %} class="active"{% endif %}><a href="/developers/"><i class="fas fa-code"></i> Developers</a></li>
+          <li {% if active_page == 'support' %} class="active"{% endif %}><a href="/support/"><i class="fas fa-hands-helping"></i> Support</a></li>
+          <li {% if active_page == 'about' %} class="active"{% endif %}><a href="/about/"><i class="fas fa-info-circle"></i> About</a></li>
+      </ul>      
+    </nav>
+  </div>
 </header>
 <main>
   {% block content %}
@@ -53,9 +53,9 @@
       <div>
         <h4>Explore</h4>
         <ul>
-          <li><a href="#">Record a Song</a></li>
-          <li><a href="#">Discover Music</a></li>
-          <li><a href="#">Home</a></li>
+          <li><a href="/record">Record a Song</a></li>
+          <li><a href="/music">Discover Music</a></li>
+          <li><a href="/">Home</a></li>
         </ul>
       </div>
       <div>

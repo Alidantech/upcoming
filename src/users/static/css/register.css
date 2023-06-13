@@ -55,6 +55,19 @@ input[type="password"] {
   background-color: #3367d6;
 }
 
+.welcome {
+  background-color: #02212bc5;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 2em;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+}
 @keyframes tickAnimation {
   0% {
     transform: scale(0);

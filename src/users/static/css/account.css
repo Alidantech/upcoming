@@ -11,6 +11,7 @@
 .account-page {
     display: grid;
     grid-template-columns: 30% 70%;
+    background-color: gray;
 }
 
 .account-details-container > div {
@@ -20,6 +21,13 @@
     text-indent: 1em;
 }
 .settings-container {
-    height: 100vh;
+    min-height: 100vh;
     border: 1px solid green;
+    
+}
+.settings-container > div {
+   min-height: 20vh;
+   padding: 1vh;
+    width: 100%;
+    border: 1px solid blue;
 }

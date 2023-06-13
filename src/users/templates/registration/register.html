@@ -3,10 +3,12 @@
 {% block content %}
 <div class="registration-container">
   {% if user.is_authenticated %}
+  <div class="welcome">
     <div class="tick">
       <i class="fas fa-check"></i>
     </div>
     <h3>Welcome, {{ user.username }}!</h3>
+  </div>
   {% else %}
   <form method="post" action="/register/" class="my-form">
     {% csrf_token %}
@@ -53,5 +55,4 @@
 {% endblock content %}
 {% block static %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/register.css' %}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 {% endblock static %}

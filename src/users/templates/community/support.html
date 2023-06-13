@@ -1,0 +1,39 @@
+{% extends "master.html" %}
+{% load static %}
+{% block title %}Support Team{% endblock %}
+{% block heading %}Support Team{% endblock %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/main.css' %}">
+<div class="main-content">
+  <div class="container">
+    <h2>Contact Information</h2>
+    <p>For any inquiries or support requests, please reach out to our support team using the following contact information:</p>
+    <ul>
+      <li>Email: support@yourwebsite.com</li>
+      <li>Phone: +1 123-456-7890</li>
+      <li>Live Chat: <a href="/live-chat">Start Live Chat</a></li>
+    </ul>
+    <h2>Frequently Asked Questions</h2>
+    <p>Before contacting our support team, you might find answers to your questions in our Frequently Asked Questions (FAQ) section. Please browse through the following common inquiries:</p>
+    <ul>
+      <li><a href="/faq/general">General Questions</a></li>
+      <li><a href="/faq/account">Account Related Questions</a></li>
+      <li><a href="/faq/payments">Payments and Billing</a></li>
+      <li><a href="/faq/technical">Technical Support</a></li>
+    </ul>
+    <h2>Additional Resources</h2>
+    <p>Here are some additional resources that may be helpful:</p>
+    <ul>
+      <li><a href="/documentation">API Documentation</a></li>
+      <li><a href="/tutorials">Tutorials</a></li>
+      <li><a href="/developer-guides">Developer Guides</a></li>
+    </ul>
+    <h2>Support Hours</h2>
+    <p>Our support team is available to assist you during the following hours:</p>
+    <ul>
+      <li>Monday-Friday: 9am-6pm (GMT)</li>
+      <li>Saturday-Sunday: Closed</li>
+    </ul>
+  </div>
+</div>
+{% endblock %}

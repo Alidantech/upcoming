@@ -1,26 +1,67 @@
 {% extends "master.html" %}
 {% load static %}
-{% block title %} User name {% endblock %}
-{% block heading %} My Account Details  {% endblock %}
+{% block title %}{{ user.username }}{% endblock %}
+{% block heading %}My Account{% endblock %}
 {% block content %}
 <div class="account-page">
     <div class="account-details-container">
         <img class="myaccount-img" src="{% static 'img/person-in-studio.jpg' %}" alt="Musician recording a song" class="img-fluid">
         <div class="">
-            <h2>Alidante</h2>
+            <h2>{{ user.username }}</h2>
             <div class="">followers 100k</div> <div class="">following 3k</div>
         </div>
         <div class="">
-            <p>I am a passionate musician with music capabilities.</p>
+            <p>{{ user.bio }}I am passionate</p>
         </div>
         <div class="">
             <div class="">songs 100</div> <div class="">listens 3000</div>
         </div>
     </div>
     <div class="settings-container">
+        <div class="">
+        <h3>update details</h3>
+        <form action="" method="POST">
+            {% csrf_token %}
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{ user.name }}" required>
+            <br>
+            <label for="bio">Bio:</label>
+            <textarea id="bio" name="bio" required>{{ user.bio }}</textarea>
+            <br>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" value="{{ user.username }}" required>
+            <br>
+            <label for="theme">Theme:</label>
+            <select id="theme" name="theme">
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+            <br>
+            <!-- Add more settings here as needed -->
+            <button type="submit">Update Details</button>
+        </form>
+        </div>
+        <div class="">
+            <h3>select theme</h3>
+            user theme
+        </div>
+        <div class="">
+            <h3>my songs</h3>
+                user songs
+        </div>
+        <div class="">
+            
+        </div>
+        <div class="">
+            
+        </div>
+        <div class="">
+            
+        </div>
     </div>
 </div>
 {% endblock %}
+
 {% block static %}
 <link rel="stylesheet" href="{% static 'css/account.css' %}">
 {% endblock static %}
