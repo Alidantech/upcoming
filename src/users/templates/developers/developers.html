@@ -3,23 +3,30 @@
 {% block title %}Developer Options{% endblock %}
 {% block heading %}Developer Options{% endblock %}
 {% block content %}
-<link rel="stylesheet" href="{% static 'css/main.css' %}">
-<div class="main-content">
-  <div class="container">
-    <h2>Developer Options</h2>
-    <p>Welcome to the Developer Options page. Here you can access various tools and features to enhance your development experience.</p>
-    <h3>API Key Generation</h3>
-    <p>To access our API services, you need to generate an API key. Please use the following button to generate your unique API key:</p>
-    <a href="/generate-api-key" class="btn btn-primary">Generate API Key</a>
-    <h3>API Documentation</h3>
-    <p>Refer to our comprehensive API documentation to learn how to integrate our APIs into your applications. The documentation includes detailed explanations, endpoints, and example code:</p>
-    <a href="/api-documentation" class="btn btn-primary">API Documentation</a>
-    <h3>Sample Code and SDKs</h3>
-    <p>Explore our sample code and SDKs to jumpstart your development process. We provide code snippets and software development kits for various programming languages and frameworks:</p>
-    <a href="/sample-code" class="btn btn-primary">Sample Code and SDKs</a>
-    <h3>Support and Community</h3>
-    <p>If you have any questions, need assistance, or want to connect with other developers, our support and community channels are available. Join our forums, chat groups, and social media communities to engage with fellow developers:</p>
-    <a href="/support" class="btn btn-primary">Support and Community</a>
-  </div>
-</div>
+<section>
+  <span>Welcome to the Developer Options page. Here you can access various tools and features to enhance your development experience.</span>
+</section>
+<section>
+<h2 class="heading">API Key Generation</h2>
+  <span>To access our API services, you need to generate an API key. Please use the following button to generate your unique API key:</span>
+  <a href="/generate-api-key" class="btn btn-primary">Generate API Key</a>
+</section>
+<section>
+<h2 class="heading">API Documentation</h2>
+  <span>Refer to our comprehensive API documentation to learn how to integrate our APIs into your applications. The documentation includes detailed explanations, endpoints, and example code:</span>
+  <a href="/api-documentation" class="btn btn-primary">API Documentation</a>
+</section>
+<section>
+  <h2 class="heading">Sample Code and SDKs</h2>
+  <span>Explore our sample code and SDKs to jumpstart your development process. We provide code snippets and software development kits for various programming languages and frameworks:</span>
+  <a href="/sample-code" class="btn btn-primary">Sample Code and SDKs</a>
+</section>
+<section> 
+  <h2 class="heading">Support and Community</h2>
+  <span>If you have any questions, need assistance, or want to connect with other developers, our support and community channels are available. Join our forums, chat groups, and social media communities to engage with fellow developers:</span>
+  <a href="/support" class="btn btn-primary">Support and Community</a>
+</section>
 {% endblock %}
+{% block static %}
+  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+{% endblock static %}
