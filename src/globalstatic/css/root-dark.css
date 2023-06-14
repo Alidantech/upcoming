@@ -1,0 +1,40 @@
+/* Define variables for font sizes and colors for dark mode */
+:root {
+    /* Page heights */
+    --header-height: 10vh;
+    --page-height: 90vh;
+    --footer-height: 50vh;
+  
+    /* Page colors */
+    --color-secondary: #057c72;
+    --color-primary: #afafaf;
+    --color-opposite: #000000;
+    --link-color: #2875ce;
+    --active-link-color: #0a8b0a;
+    --heading-color: #A52A2A;
+    --normal-text-color: #a7a7a7;
+  
+    /* Page shadows */
+    --header-shadow: #00000031;
+  
+    /* Page background */
+    --header-bg-color: #262626;
+    --page-bg-color: #1F1F1F;
+    --footer-bg-color: linear-gradient(to bottom, transparent, #000000);
+    --bg-welcome-container: linear-gradient(to bottom, #022e2e38, transparent);
+    --heading-bg-color: linear-gradient(to right, #94949421, transparent);
+  
+    /* Page fonts */
+    --heading-font-size: 1.8em;
+    --page-heading-font-size: 2em;
+    --heading-font-weight: 1.5em;
+    --large-font-size: 3.2em;
+    --btn-font-size: 1.1em;
+    --page-font-family: 'Montserrat', sans-serif;
+  
+    /* Scroll bar */
+    --scroll-bar-bg: #ffffff00;
+    --scroll-bar-thumb: #808080;
+  }
+  
+    

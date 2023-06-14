@@ -3,48 +3,50 @@
 {% block title %} Home Of  Upcoming Artists{% endblock %}
 {% block heading %} Homepage {% endblock %} 
 {% block content %}
-<section class="center-elements-y">
-  <h1 class="heading">Record and Share Your Music Online</h1>
-  <span>Upcoming is the app where you can record your songs and get feedback on their quality. Our platform is designed to help aspiring musicians improve their skills and get discovered by a wider audience.</span><br>
+<section class="center-elements-y welcome-container">
+  <h1 class="heading font-xl">Record and Share Your Music Online</h1>
+  <h1>on our</h1>
+  <h1 class="font-xl heading"> upcoming ai tool</h1>
+  <span class="center-text">Upcoming is the app where you can record your songs and get feedback on their quality. Our platform is designed to help aspiring musicians improve their skills and get discovered by a wider audience.</span><br>
 </section>
-<section class="col-2">
-  <div class="">
-    <img src="{% static 'img/person-in-studio.jpg' %}" alt="Musician recording a song" class="img-fluid">
+<section class="col-2 description-container">
+  <div class="center-elements-y">
+    <img src="{% static 'img/person-in-studio.jpg' %}" alt="Musician recording a song" class="demo-img">
   </div>
-  <div class="">
-   <h2 class="heading">How It Works</h2>
+  <div class="center-elements-y">
+   <h2 class="heading  header-left">How It Works</h2>
     <span>Simply sign up for an account, record your song, and upload it to our platform. Our innovative AI technology will analyze your song and provide you with feedback on various aspects of its quality, including melody, harmony, rhythm, and lyrics.</span><br>
-    <a href="/register" class="btn-bg">Sign Up Now</a>
+    <a href="/register" class="btn btn-bg">Sign Up Now</a>
   </div>
 </section>
-<section class="col-2">
-  <div class="">
-    <h2 class="heading">Record Your Songs Online</h2>
+<section class="col-2 description-container">
+  <div class="center-elements-y">
+    <h2 class="heading  header-left">Record Your Songs Online</h2>
     <span>With Upcoming, you can record your songs using our easy-to-use online recording tool. Our platform also allows you to edit and enhance your recordings, so you can create the perfect track.</span><br>
-    <a href="/record" class="btn-border">Start Recording Now</a>
+    <a href="/record" class="btn btn-border">Start Recording Now</a>
   </div>
-  <div class="">
-    <img src="{% static 'img/recording-online.jpg' %}" alt="Person recording music online" class="img-fluid">
+  <div class="center-elements-y">
+    <img src="{% static 'img/recording-online.jpg' %}" alt="Person recording music online" class="demo-img">
   </div>
 </section>
-<section class="col-2">
-  <div class="">
-    <img src="{% static 'img/listening-online.jpg' %}" alt="Person listening to music online" class="img-fluid">
+<section class="col-2 description-container">
+  <div class="center-elements-y">
+    <img src="{% static 'img/listening-online.jpg' %}" alt="Person listening to music online" class="demo-img">
   </div>
-  <div class="">
-    <h2 class="heading">Discover New Music</h2>
+  <div class="center-elements-y">
+    <h2 class="heading header-left">Discover New Music</h2>
     <span>Browse through our collection of songs and discover new artists. Our platform allows you to listen to songs, leave feedback, and connect with other musicians.</span><br>
-    <a href="/music" class="btn-border">Start Exploring Now</a>
+    <a href="/music" class="btn btn-border">Start Exploring Now</a>
   </div>
 </section>
-<section class="col-2">
-  <div class="">
-    <h2 class="heading">Create an Account</h2>
+<section class="col-2 description-container">
+  <div class="center-elements-y">
+    <h2 class="heading header-left">Create an Account</h2>
     <span>To get started with Upcoming, Login to your account today. With an account, you can record and upload your songs, listen to other artists, and connect with the music community.</span><br>
-    <a href="/accounts/login/" class="btn-bg">Sign in to Your Account Now</a>
+    <a href="/accounts/login/" class="btn btn-bg">Sign in to Your Account Now</a>
   </div>
-  <div class="">
-    <img src="{% static 'img/creating-account.jpg' %}" alt="Person creating an account on Upcoming" class="img-fluid">
+  <div class="center-elements-y">
+    <img src="{% static 'img/creating-account.jpg' %}" alt="Person creating an account on Upcoming" class="demo-img">
   </div>
 </section>
 {% endblock %}

@@ -1,37 +1,3 @@
-/* Define variables for font sizes and colors for light mode*/
-:root {
-  /*page heights*/
-  --header-height: 10vh;
-  --page-height: 90vh;
-  --footer-height: 50vh;
-
-  /* page colors */
-  --color-secondary: black;
-  --color-primary: black;
-  --link-color: blue;
-  --active-link-color: green;
-  --heading-color: brown;
-  --normal-text-color: black;
-
-  /* page shadows */
-  --header-shadow: rgba(0, 0, 0, 0.096);
-
-  /* page background */
-  --header-bg-color: rgba(255, 255, 255, 0.904);
-  --page-bg-color: white;
-  --footer-bg-color: #f3f3f3;
-
-  /* page fonts */
-  --heading-font-size: 1.8em;
-  --page-heading-font-size: 2em;
-  --heading-font-weight: 1.5em;
-  --page-font-family: 'Montserrat', sans-serif;
-
-  /* scroll bar */
-  --scroll-bar-bg: white;
-  --scroll-bar-thumb: gray;
-}
-  
 /* Custom scroll Bar */
 ::-webkit-scrollbar { width: 8px; }
 
@@ -75,6 +41,10 @@ body, html {
   color: var(--active-link-color);
 }
 
+.active i {
+  color: var(--active-link-color);
+}
+
 .fill-parent {
     width: 100%;
     height: 100%;
@@ -83,8 +53,15 @@ body, html {
 a {
   text-decoration: none;
   color: var(--link-color);
+  transition: color 0.4s ease-in-out;
 }
-
+a i {
+  color: var(--link-color);
+  transition: color 0.4s ease-in-out;
+}
+a:hover i {
+  color: var(--active-link-color);
+}
 a:hover {
   color: var(--active-link-color);
 }
@@ -100,49 +77,49 @@ h1 {
 img {
   max-width: 100%;
   max-height: 100%;
-  padding: 2em;
-  border-radius: 10px;
-  box-shadow: 2px 1px 2px var(--header-shadow);
 }
 
-.btn-border {
-  padding: 0.6em;
-  border: 3px solid green;
-  border-radius: 50px;
-  font-size: larger;
-  font-weight: bold;
-  margin-top: 5%;
-  float: right;
-  align-self: baseline;
+.btn {
+  text-align: center;
+  outline: none;
+  border-radius: 30px;
+  font-weight: 1.5em;
+  font-size: var(--btn-font-size);
 }
 
-.btn-bg {
-  padding: 0.6em;
-  background-color: gray;
-  border-radius: 50px;
-  font-size: larger;
-  margin-top: 5%;
-  float: right;
+.icon-btn {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5em;
+  color: black;
 }
 
-.col-2 {
-  display: grid;
-  grid-template-columns: 50% 50%;
+.font-xl {
+  font-size: var(--large-font-size);
+}
+
+.center-self {
+  margin: auto;
+}
+
+.center-text {
+  text-align: center;
 }
 
 /* page header */
 header {
+  background-color: var(--header-bg-color);
   box-shadow: 3px 2px 4px var(--header-shadow);
   backdrop-filter: blur(10px);
   height: var(--header-height);
   width: 100%;
   display: grid;
-  grid-template-columns:10% 40% 40%;
+  grid-template-columns:10% 40% 40% 10%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  transition: height 0.3s ease-in-out;
+  transition: height 1s ease-out;
 }
 
 .logo {
@@ -171,9 +148,11 @@ header.scrolled {
 main {
   width: auto;
   height: fit-content;
-  margin-top: var(--header-height);
   min-height: var(--page-height);
   overflow: auto;
+}
+main:first-child {
+  padding-top: var(--header-height);
 }
 
 section {
@@ -201,12 +180,12 @@ h2 {
   border-top-left-radius: 2px;
   border-bottom-left-radius: 2px;
   padding-left:  1em;
-  background: linear-gradient( to right, #94949421 , transparent);
+  background: var(--heading-bg-color);
 }
 
 /*Footer  Style */
 footer {
-  background-color: var(--footer-bg-color);
+  background: var(--footer-bg-color);
   height: var(--footer-height);
   display: grid;
   grid-template-rows: 70% 30%;
