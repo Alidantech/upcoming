@@ -18,7 +18,7 @@
     border-radius: 10px;
     box-shadow: 2px 1px 2px var(--header-shadow);
     margin: auto;
-    width: 90%;
+    width: 95%;
   }
   
   .col-2 {
@@ -45,3 +45,19 @@
     width: 100%;
   }
   
+  .pb-5 {
+    padding-bottom: 5em;
+  }
+  .pt-5 {
+    padding-top: 5em;
+  }
+
+  
+/* Styles for screens smaller than 600px */
+@media (max-width: 600px) {
+  .col-2 {
+    grid-template-columns: 100%;
+  }
+  
+  
+}

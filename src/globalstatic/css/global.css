@@ -150,8 +150,6 @@ main {
   height: fit-content;
   min-height: var(--page-height);
   overflow: auto;
-}
-main:first-child {
   padding-top: var(--header-height);
 }
 
@@ -198,4 +196,3 @@ footer nav {
 footer ul > li {
   margin: 10px;
 }
-

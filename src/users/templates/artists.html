@@ -1,11 +1,85 @@
 {% extends 'master.html' %}
 {% load static %}
+{% block title %}Our Artists{% endblock title %}
+{% block heading %}Latest Artists{% endblock heading %}
 {% block content %}
-<div class="main-container">
-
-</div>
+<section>
+  <h2 class="heading fit-content">Featured Artists </h2>
+  <div class="featured-artist-container card-group center-elements-x">
+    <div class="card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+    <div class="card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+    <div class="card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+    <div class="card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+  </div>
+  <h2 class="heading fit-content">New Artists </h2>
+  <div class="featured-artist-container profile-group center-elements-x">
+    <div class="profile-card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+    <div class="profile-card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+    <div class="profile-card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+    <div class="profile-card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+    <div class="profile-card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+  </div>
+  <h2 class="heading fit-content">Best Artists </h2>
+  <div class="featured-artist-container card-group center-elements-x">
+    <div class="card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+    <div class="card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+    <div class="card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+    <div class="card">
+      <img alt="artist-image" src="/" class="artist-img">
+    </div>
+  </div>
+  <h2 class="heading fit-content">Liked Artists</h2>
+  <div class="featured-artist-container profile-group center-elements-x">
+    <div class="hidden-card">
+      <img alt="artist-image" src="/" class="artist-img">
+      you cant see my borders
+    </div>
+    <div class="hidden-card">
+      <img alt="artist-image" src="/" class="artist-img">
+      you cant see my borders
+    </div>
+    <div class="hidden-card">
+      <img alt="artist-image" src="/" class="artist-img">
+      you cant see my borders
+    </div>
+    <div class="hidden-card">
+      <img alt="artist-image" src="/" class="artist-img">
+      you cant see my borders
+    </div>
+    <div class="hidden-card">
+      <img alt="artist-image" src="/" class="artist-img">
+      you cant see my borders
+    </div>
+  </div>
+</section>
+<section>
+  <a class="btn "> Become an Artists</a>
+</section>
 {% endblock %}
-
 {% block static %}
 <link rel="stylesheet" href="{% static 'css/artists.css' %}">
 {% endblock %}

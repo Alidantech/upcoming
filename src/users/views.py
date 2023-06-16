@@ -13,11 +13,8 @@ def register(request):
             return redirect('music')  # Redirect to the music page URL
     else:
         form = CustomUserCreationForm()
-    
-    context = {
-        'active_page': 'register'  # Set the active page as 'register'
-    }
-    return render(request, 'registration/register.html', {'form': form, 'active_page': active_page})
+   
+    return render(request, 'registration/register.html', {'form': form})
 
 def login_view(request):
     if request.method == 'POST':
