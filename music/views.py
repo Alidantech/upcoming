@@ -13,3 +13,7 @@ def record(request):
 def player(request):
     template = loader.get_template('player.html')
     return HttpResponse(template.render())
+
+def beats(request):
+    template = loader.get_template('beats.html')
+    return HttpResponse(template.render())

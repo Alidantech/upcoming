@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{% static 'img/uia-icon.svg' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/x-icon">
     <script>
       (function() {
         const prefersDarkTheme = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -27,36 +27,37 @@
     </script>
     <link rel="stylesheet" href="{% static 'css/global.css' %}">
     <script src="{% static 'js/master.js' %}" defer></script>
-
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,700" />
     <title>{% block title %}{% endblock %}</title>
     {% block static %}{% endblock static %}
 </head>
 <body>
 <header>
     <div class="center-elements-x">
-        <img class="logo" src="{% static 'img/uia-icon.svg' %}" alt="logo" width="25vw">upcoming
+        <img class="logo" src="{% static 'img/logo.png' %}" alt="logo" width="25vw">upc
     </div>
     <div class="center-elements-x">
         <h1 class="heading"> {% block heading %}{% endblock %} </h1>
     </div>
-    <nav class="center-elements-x">
-      <ul class="nav-list center-elements-x fill-parent">
+    <nav class="nav-bar">
+      <ul class="nav-list">
             <li><a {% if active_page == 'main' %} class="active"{% endif %} href="/"><i class="fas fa-home"></i> Home</a></li>
-            <li><a {% if active_page == 'artists' %} class="active"{% endif %} href="/artists/"><i class="fas fa-users"></i> Artists</a></li>
-            <li><a {% if active_page == 'developers' %} class="active"{% endif %} href="/developers/"><i class="fas fa-code"></i> Developers</a></li>
-            <li><a {% if active_page == 'support' %} class="active"{% endif %} href="/support/"><i class="fas fa-hands-helping"></i> Support</a></li>
+            <li><a {% if active_page == 'record' %} class="active"{% endif %} href="/record/"><i class="fas fa-microphone"></i> Record</a></li>
+            <li><a {% if active_page == 'beats' %} class="active"{% endif %} href="/beats/"><i class="fas fa-drum-steelpan"></i> Beats</a></li>
+            <li><a {% if active_page == 'music' %} class="active"{% endif %} href="/music/"><i class="fas fa-music"></i> Music</a></li>
             <li><a {% if active_page == 'about' %} class="active"{% endif %} href="/about/"><i class="fas fa-info-circle"></i> About</a></li>
       </ul>  
-    </nav>  
-    <div class="button-container center-elements-x">
-      <button id="theme-toggle" class="theme-button icon-btn">
-        <i class="fas fa-adjust"></i>
-      </button>
-      <a {% if active_page == 'account' %} class="active"{% endif %} href="/account/" class="theme-button icon-btn">
-          <i class="fas fa-user"></i>
-    </a>
-    </div>      
+      <div class="nav-buttons">
+        <button title="change theme" id="theme-toggle" class="theme-button icon-btn">
+          <i class="fas fa-adjust"></i>
+        </button>
+        <button class="account-btn icon-btn">
+          <img src="https://source.unsplash.com/random/400x400/?music" alt="user profile pic">
+        </button>
+      </div>
+    </nav>
+    <button class="toggle-navbar-btn" id="toggle-navbar-btn"> <i class="fas fa-bars"></i></button> 
 </header>
 <main>
     {% block content %}
@@ -64,32 +65,57 @@
     {% endblock %}
 </main> 
 <footer>
-    <nav>
-        <div class="center-elements-y">
-          <h4 class="heading">Developers</h4>
-          <ul class="nav-list">
-            <li><a href="#">API Documentation</a></li>
-            <li><a href="#">Developer Blog</a></li>
-            <li><a href="#">Developer Tools</a></li>
-          </ul>
-        </div>
-        <div class="center-elements-y">
-          <h4 class="heading">Explore</h4>
+    <div class="social-links center-elements-x">
+      <h5>upcoming AI</h5>
+      <div>
+          <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+      </div>
+    </div>
+    <div class="website-links">
+      <div>
+        <h6 class="heading">Developers</h6>
+        <nav>
+        <ul class="nav-list">
+          <li><a href="#">API Documentation</a></li>
+          <li><a href="#">Developer Blog</a></li>
+          <li><a href="#">Developer Tools</a></li>
+        </ul>
+        </nav>
+      </div>
+      <div>
+        <h6 class="heading">Explore</h6>
+        <nav>
           <ul class="nav-list">
             <li><a href="/record">Record a Song</a></li>
             <li><a href="/music">Discover Music</a></li>
             <li><a href="/">Home</a></li>
           </ul>
-        </div>
-        <div class="center-elements-y">
-          <h4 class="heading">Contact Us</h4>
+        </nav>
+      </div>
+      <div>
+        <h6 class="heading">Explore</h6>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="/record">Record a Song</a></li>
+            <li><a href="/music">Discover Music</a></li>
+            <li><a href="/">Home</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div>
+        <h6 class="heading">Contact Us</h6>
+        <nav>
           <ul class="nav-list">
             <li><a href="mailto:support@upcoming.com">support@upcoming.com</a></li>
             <li><a href="#">Join the Community</a></li>
             <li><a href="#">Music Technologies</a></li>
           </ul>
-        </div>
-    </nav>
+        </nav>
+      </div>
+    </div>
     <div class="copyrights center-elements-y">
       <ul class="nav-list center-elements-y">
         <li>Developed by muztech</li>

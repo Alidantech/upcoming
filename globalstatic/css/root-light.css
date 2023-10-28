@@ -23,6 +23,7 @@
     --footer-bg-color: linear-gradient(to bottom, transparent, #9ab4b6);
     --bg-welcome-container: linear-gradient(to bottom, #85dbc2, transparent);
     --heading-bg-color: linear-gradient( to right, #94949421 , transparent);
+    --logo-bg: rgb(194, 202, 201);
   
   
     /* Page fonts */
@@ -31,7 +32,7 @@
     --heading-font-weight: 1.5em;
     --large-font-size: 3.2em;
     --btn-font-size: 1.1em;
-    --page-font-family: 'Montserrat', sans-serif;
+    --page-font-family: 'Poppins', sans-serif;
   
     /* Scroll bar */
     --scroll-bar-bg: #FFFFFF;

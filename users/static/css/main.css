@@ -1,7 +1,6 @@
 .welcome-container {
     height: 100vh;
     background: var(--bg-welcome-container);
-    padding-top: 20vh;
   }
   
   .welcome-container * {
@@ -10,7 +9,6 @@
   
   .description-container {
     min-height: 60vh;
-    margin: 10vh 0;
   }
   
   .demo-img {

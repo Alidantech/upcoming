@@ -1,7 +1,4 @@
- /*
-*Adds a class of header scrolled when a user starts scrolling
-*/ 
-  document.addEventListener('DOMContentLoaded', function() {
+ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('scroll', function() {
     if (window.pageYOffset > 0) {
       document.querySelector('header').classList.add('scrolled');
@@ -20,7 +17,7 @@
   root.setAttribute('data-theme', initialTheme);
   const rootCSSFile = initialTheme === 'dark' ? 'root-dark.css' : 'root-light.css';
   loadCSS(rootCSSFile);
-})();
+});
 
 // Changes the theme of the page when a user clicks the theme toggle button
 const themeToggle = document.getElementById('theme-toggle');
@@ -47,3 +44,42 @@ function loadCSS(filename) {
   link.type = 'text/css';
   document.head.appendChild(link);
 }
+
+// nav bar toggle button
+// Get references to the navbar and button elements
+const navbar = document.querySelector(".nav-bar");
+const toggleBtn = document.getElementById("toggle-navbar-btn");
+let navbarVisible = false;
+
+const outsideClickListener = event => {
+    if (navbarVisible && !navbar.contains(event.target) && !toggleBtn.contains(event.target)) {
+        navbar.style.visibility = "hidden"; // Hide the navbar
+        navbar.classList.remove("slide-left");
+        navbar.classList.toggle('slide-right');
+        navbarVisible = false;
+        removeClickListener();
+    }
+};
+
+const removeClickListener = () => {
+    document.removeEventListener('click', outsideClickListener);
+};
+
+// Add a click event listener to the button
+toggleBtn.addEventListener("click", function () {
+  // Toggle the visibility of the navbar
+  if (navbar.style.visibility === "hidden" || navbar.style.visibility === "") {
+    navbar.style.visibility = "visible"; // Show the navbar
+    navbar.classList.remove("slide-right");
+    navbar.classList.toggle('slide-left');
+    navbarVisible = true;
+    document.addEventListener('click', outsideClickListener);
+  } else {
+    navbar.style.visibility = "hidden"; // Hide the navbar
+    navbar.classList.remove("slide-left");
+    navbar.classList.toggle('slide-right');
+    navbarVisible = false;
+    removeClickListener();
+  }
+});
+
