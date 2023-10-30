@@ -16,18 +16,22 @@
             <div class="total-time">4:30</div>
         </div>
         <div class="song-controls">
-            <button title="like" class="fav-btn"><img src="{% static 'img/like-icon.svg' %}" width="15vw" alt="next"></button>
-            <button title="previous" class="prev-btn"><img src="{% static 'img/prev-icon.svg' %}" width="20vw" alt="prvious"></button>
-            <button title="play" class="play-btn"><img src="{% static 'img/play-icon.svg' %}" width="25vw" alt="play"></button>
-            <button title="next" class="next-btn"><img src="{% static 'img/next-icon.svg' %}" width="20vw" alt="next"></button>
-            <a href="player/"><button title="maximize" class="maximize-btn"><img src="{% static 'img/max-icon.svg' %}" width="15vw" alt="next"></button></a>
+            <button title="like" class="fav-btn"><i class="fas fa-heart"></i></button>
+            <button title="previous" class="prev-btn"><i class="fas fa-step-backward"></i></button>
+            <button title="play" class="play-btn"><i class="fas fa-play"></i></button>
+            <button title="next" class="next-btn"><i class="fas fa-step-forward"></i></button>
+            <a href="player/"><button title="maximize" class="maximize-btn"><i class="fas fa-expand"></i></button></a>
         </div>
         </div>
         <div class="song-volume">
-        <div class="volume-bar"><div class="volume-bar-progress"></div></div>
-        <div class="buttons">
-            <button title="lyrics" class="play-btn"><img src="{% static 'img/lyrics-icon.svg' %}" width="15vw" alt="play"></button>
-            <button title="equalizer" class="next-btn"><img src="{% static 'img/equalizer-icon.svg' %}" width="15vw" alt="next"></button>
+            <div class="volume-container">
+                <input class="volume-control" type="range">
+            </div>
+            <button><i class="fas fa-volume-up"></i></button>
+            <div class="buttons">
+                <button title="lyrics" class="play-btn"><i class="fas fa-music"></i></button>
+                <button title="equalizer" class="next-btn"><i class="fas fa-sliders-h"></i></button>
+            </div>
         </div>
         </div>
     </div>

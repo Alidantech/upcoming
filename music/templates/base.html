@@ -5,27 +5,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="{% static 'img/uia-icon.svg' %}" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/logo.png' %}" type="image/x-icon">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:100,300" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'css/loading.css' %}">
     <script src="{% static 'js/base.js' %}" defer></script>
     <title>{% block title %}{% endblock %}</title>    
 </head>
 <body>
-    {% include 'loading.html' %} <!-- Include the loading overlay template -->
+    {% include 'loading.html' %}
 <main>
-    <div class="side-content">
+    <section class="side-content">
         {% block sidebar %}
         {% endblock sidebar %}
-    </div>
-    <div class="main-content">
+    </section>
+    <section class="main-content">
         {% block content %}
         {% endblock %}
-    </div>
+    </section>
 </main> 
+<footer>
+    <div class="social-links center-elements-x">
+        <h5>upcoming</h5>
+        <div>
+            <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+    <div class="website-links">
+        <div>
+            <h6 class="heading">Developers</h6>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#">API Documentation</a></li>
+                    <li><a href="#">Developer Blog</a></li>
+                    <li><a href="#">Developer Tools</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <h6 class="heading">Explore</h6>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="/record">Record a Song</a></li>
+                    <li><a href="/music">Discover Music</a></li>
+                    <li><a href="/">Home</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <h6 class="heading">utility pages</h6>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="/developers">Developers Options</a></li>
+                    <li><a href="/support">Support Team</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <h6 class="heading">Contact Us</h6>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="mailto:support@upcoming.com">support@upcoming.com</a></li>
+                    <li><a href="#">Join the Community</a></li>
+                    <li><a href="#">Music Technologies</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <div class="copyrights center-elements-y">
+        <ul class="nav-list center-elements-y">
+            <li>Developed by muztech</li>
+            <li>&copy 2023</li>
+        </ul>
+    </div>
+</footer>
 {% block static %}
 
 {% endblock static %}
-<script src="{% static 'js/loading.js' %}"></script> <!-- Include the loading.js script -->
+<script src="{% static 'js/loading.js' %}"></script>
 </body>
 </html>

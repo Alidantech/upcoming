@@ -33,6 +33,13 @@ h6 {font-size: clamp(1rem, 1.5vw, 1.4rem);}
 
 a,li {font-size: clamp(0.7rem, 0.8vw, 0.9rem);}
 p, span {font-size: clamp(0.8rem, 0.9vw, 1rem);}
+
+a {
+  color: var(--link-color);
+}
+a i{
+  color: var(--link-color);
+}
 /* page header */
 header {
   background-color: var(--header-bg-color);
@@ -241,21 +248,20 @@ footer {
   }
 
   .nav-bar {
-    width: 30vw;
+    width: 40vw;
     border-radius: 0 0 5px 5px;
-    height: clamp(90%, 70vh, 50vh);
+    height: 90vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: column-reverse;
-    background-color: var(--header-bg-color);
-    backdrop-filter: blur(20px);
+    background: var(--header-bg-color);
     box-shadow: 1px 1px 2px  var(--header-shadow);
     visibility: hidden;
     position: absolute;
     overflow: hidden;
     top: 100%;
-    right: 2%;
+    right: 0;
     transition: transform 1s, visibility 1s ease;
   }
 
@@ -290,7 +296,111 @@ footer {
   }
 
   .nav-bar {
-    width: 50vw;
+    width: 60vw;
   }
 
+}
+
+.section-1,
+.section-2,
+.section-3,
+.section-4,
+.section-5 {
+  height: 70vh;
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+
+section>h2,
+h1 {
+  color: var(--color-secondary);
+}
+
+section>h1,
+h2 {
+  color: var(--color-secondary);
+}
+
+section a {
+  text-decoration: none;
+}
+
+section img {
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.356);
+  border-radius: 5px;
+}
+
+.section-1 {
+  width: 100%;
+  background: var(--bg-welcome-container);
+  height: 100vh;
+}
+
+.text-desc {
+  padding: 5%;
+  color: var(--color-secondary);
+  height: 70%;
+  width: 50%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-content: space-around;
+  flex-direction: column;
+}
+
+.img-desc {
+  height: 90%;
+  float: right;
+  width: 50%;
+}
+
+iframe {
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Styles for screens smaller than 600px */
+@media (max-width: 800px) {
+
+  .section-1,
+  .section-2,
+  .section-3,
+  .section-4,
+  .section-5 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 10vh;
+  }
+
+  .section-1,
+  .section-3,
+  .section-5 {
+    flex-direction: column-reverse;
+  }
+
+  .section-1 {
+    height: 90vh;
+  }
+
+  .text-desc {
+    width: 100%;
+  }
+
+  .img-desc {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  section img {
+    width: 90%;
+    max-height: 40vh;
+  }
 }

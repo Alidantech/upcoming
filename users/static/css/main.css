@@ -23,7 +23,7 @@ section a {
 }
 
 section img{
-  box-shadow: 2px 2px 4px 4px rgba(0, 0, 0, 0.356);
+  box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.356);
   border-radius: 5px;
 }
 
@@ -56,18 +56,13 @@ iframe {
     height: 100%;
 }
   
-  .col-2 {
-    display: grid;
-    grid-template-columns: 50% 50%;
-  }
-  
   .btn-bg {
     background-color: var(--color-secondary);
     color: var(--color-opposite);
     text-decoration: underline;
     padding: 1em;
     border-radius: 5px;
-    box-shadow: 1px 2px 2px black;
+    box-shadow: 1px 2px 2px var(--header-shadow);
   }
   
   .btn-border {
@@ -76,7 +71,15 @@ iframe {
     padding: 1em;
     border: 3px solid var(--color-secondary);
     border-radius: 5px;
-    box-shadow: 1px 2px 2px black;
+    box-shadow: 1px 2px 2px var(--header-shadow);
+  }
+
+  .btn-bg:hover {
+      background-color: var(--color-secondary);
+  }
+
+  .btn-border:hover {
+      border-color: var(--color-secondary);
   }
   
   
@@ -92,6 +95,19 @@ iframe {
         align-items: center;
         justify-content: center;
         flex-direction: column;
+        height: auto;
+        overflow: hidden;
+        margin-bottom: 10vh;
+      }
+
+      .section-1,
+      .section-3,
+      .section-5 {
+        flex-direction: column-reverse;
+      }
+
+      .section-1 {
+        height: 90vh;
       }
 
       .text-desc {
@@ -104,8 +120,7 @@ iframe {
       }
 
       section img {
-        box-shadow: none;
-        width: 110%;
-        max-height: 80%;
+        width: 90%;
+        max-height: 40vh;
       }
 }

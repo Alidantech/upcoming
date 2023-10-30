@@ -1,17 +1,20 @@
 .song-player {
-    position: fixed;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 97%;
+    margin: 1.5%;
+    margin-bottom: 0.5%;
     background-color: transparent;
     backdrop-filter: blur(10px);
-    background-color: rgba(0, 0, 0, 0.705);
+    background-color: rgba(7, 126, 86, 0.253);
     border-top: 1px solid #010d2779;
     z-index: 999;
-    height: 10vh;
-    overflow: hidden;
+    height: 7.5vh;
+    border-radius: 15px;
     display: grid;
     grid-template-columns: 20% 70% 10%;
+    position: fixed;
+    overflow: visible;
   }
   
   .song-info {
@@ -34,13 +37,11 @@
   }
   
   .song-name {
-    font-size: 0.7em;
     font-weight: bold;
     margin-bottom: 5px;
   }
   
   .song-details .song-artist {
-    font-size: 0.6em;
   }
 
   .song-playing {
@@ -75,7 +76,6 @@
     outline: none;
     cursor: pointer;
     margin: 0 70px;
-    font-size: 16px;
   }
   
   .song-controls button:hover{
@@ -83,30 +83,27 @@
   } 
   
   .fav-btn {
-    margin-right: 0;
-    font-size: 20px}
+    margin-right: 0;}
   
   .song-volume {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%;
+    position: relative;
+    overflow: visible;
   }
-  .volume-bar {
-    background-color: #3a0528;
-    width: 0.5vw;
-    border-radius: 5px;
-    height: 90%;
+  .volume-container {
+    position: absolute;
+    bottom: 100%;
+    width: auto;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
   }
-  .volume-bar-progress {
-    background-color: #abb6b2;
-    border-radius: 5px 5px 0px 0px;
-    width: 0.5vw;
-    height: 40%;
-    font-size: 0.5em;
-    padding: 2px;
-    font-weight: bold;
-  }
+
   .buttons {
     display: grid;
     grid-template-rows: 50% 50%;

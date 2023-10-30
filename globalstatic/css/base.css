@@ -3,12 +3,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'poppins', sans-serif;
   }
 
 /* Custom Scroll Bar */
 *::-webkit-scrollbar {
     width: 6px;
+    height: 2px;
   }
 
 *::-webkit-scrollbar-thumb {
@@ -36,24 +37,60 @@
 
 /* Styling For Page Layout */
 body, html {
-    height: 100vh;
-    overflow: hidden;
-        
+    overflow: auto;
   }
 
 /* Main Part The Page */
-main {
-    display: grid;
-    grid-template-columns: 25% 75%;
-  }
 
+  
 /* Side Bar Layout */
 .side-content {
+    position: fixed;
     height: 100vh;
-    overflow: hidden;
+    overflow: auto;
     background-color: #090a0af8;
     padding-bottom: 10vh;
+    width: 50%;
+    visibility: hidden;
+    z-index: 1000;
   }
+
+    /* ANIMATIONS */
+    @keyframes slide-out {
+      0% {
+        transform: translateX(0);
+      }
+  
+      100% {
+        transform: translateX(-110%);
+      }
+    }
+  
+    @keyframes slide-in {
+      from {
+        transform: translateX(-110%);
+      }
+  
+      to {
+        transform: translateX(0);
+      }
+    }
+
+  .slide-left {
+    animation: slide-in 1s;
+  }
+
+  .slide-right {
+    animation: slide-out 1s;
+  }
+
+
+
+/* Main Content Layout */
+.main-content {
+  height: auto;
+  background-color: #151a1b;
+}
 
 /* the sidebar navigation part */
 /* Navigation bar */
@@ -140,13 +177,7 @@ margin: auto;
   cursor: pointer;
 }
 
-/* Main Content Layout */
-.main-content {
-    height: 100vh;
-    background-color: #151a1b;
-    overflow: hidden;
-    padding: 0.5em;
-  }
+
 
 /* Lists Styling */
 ul {
@@ -171,7 +202,6 @@ button {
     border: none;
     background-color: transparent;
     color: rgb(255, 255, 255);
-    font-size: 0.8em;
   }
 
 button[title]:hover::after {
@@ -204,7 +234,6 @@ button[title]:hover::after {
 
 li {
     color: wheat;
-    font-size: 0.8em;
   }
 
 li div {
@@ -212,25 +241,20 @@ li div {
   }
   
 h1 { 
-    font-size: 1.5em;
     color: white;
  }
 
 h2 { 
-  font-size: 1.2em;
     color: white;
  }
 
 h3 { 
-  font-size: 1em;
   color: white;
  }
 
  h4 { 
-  font-size: 0.9em;
   color: white;
  }
-p { font-size: 0.6em; }
 
 
 /* Links Styling */
@@ -294,4 +318,42 @@ a:target { background-color: red }
   flex: 0 1 300px;
   margin: 10px;
   box-shadow: 3px 2px 4px rgba(0, 0, 0, 0.329);
+}
+
+h1 {
+  font-size: clamp(1rem, 2vw, 1rem);
+}
+
+h2 {
+  font-size: clamp(0.8rem, 1vw, 0.9rem);
+}
+
+h3 {
+  font-size: clamp(0.7rem, 1vw, 1rem);
+}
+
+h4 {
+  font-size: clamp(0.7rem, 1vw, 1rem);
+}
+
+h5 {
+  font-size: clamp(0.7rem, 1vw, 1rem);
+}
+
+h6 {
+  font-size: clamp(0.7rem, 1vw, 1rem);
+}
+
+a,
+li {
+  font-size: clamp(0.6rem, 0.6vw, 0.7rem);
+}
+
+p,
+span {
+  font-size: clamp(0.6rem, 0.7vw, 0.7rem);
+}
+
+footer {
+  background-color: black;
 }

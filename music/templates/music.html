@@ -8,9 +8,9 @@
 {% block sidebar %}
 <div class="sidebar">
   <div class="navigation">
-    <a href="/"><img src="{% static 'img/home-icon.svg' %}" width="15vw" alt="next">Home</a>
-    <a href="/record"><img src="{% static 'img/record-icon.svg' %}" width="15vw" alt="next">Record</a>
-    <a href="#"><img src="{% static 'img/beat-icon.svg' %}" width="15vw" alt="next">Beats</a>
+    <a href="/"><i class="fas fa-home"></i>Home</a>
+    <a href="/record"><i class="fas fa-microphone"></i>Record</a>
+    <a href="#"><i class="fas fa-drum"></i>Beats</a>
   </div>  
   <div class="group-heading">
     <h3>Playlists</h3>
@@ -36,8 +36,8 @@
 {% endblock %}
 
 {% block content %}
-  <div class="main-content-container">
-    <div class="heading-container">
+    <div class="heading" id="heading">
+      <button class="toggle-navbar-btn" id="toggle-navbar-btn"> <i class="fas fa-bars"></i></button>
       <div class="main-heading">
         <h1>Diamond plutnumz new songs that you will</h1>
       </div>
@@ -71,8 +71,6 @@
 
       {% block now-playing %}
       {% endblock now-playing %}
-
-  </div>
 {% endblock content %}
 
 {% block static %}
