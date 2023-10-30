@@ -60,8 +60,12 @@ header.scrolled {
   
 /* Main content styles */
 main {
-  width: auto;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: fit-content;
+  flex-direction: column;
   min-height: var(--page-height);
   overflow: auto;
 }

@@ -3,4 +3,8 @@ src/productionfiles
 src/globalstatic/audio
 # Ignore Python cache files
 upcoming/__pycache__/
-users/__pycache__/
+users/__pycache__
+upcoming/__pycache__
+music/__pycache__
+music/migrations/__pycache__
+users/migrations/__pycache__
