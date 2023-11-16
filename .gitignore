@@ -8,3 +8,4 @@ upcoming/__pycache__
 music/__pycache__
 music/migrations/__pycache__
 users/migrations/__pycache__
+.vscode/*

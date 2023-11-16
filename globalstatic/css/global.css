@@ -135,10 +135,12 @@ footer {
   width: 30px;
   height: 30px;
   overflow: hidden;
+  cursor: pointer;
 }
 .account-btn img {
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 .center-elements-x {
   display: flex;

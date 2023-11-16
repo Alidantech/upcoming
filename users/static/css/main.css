@@ -81,6 +81,14 @@ iframe {
   .btn-border:hover {
       border-color: var(--color-secondary);
   }
+
+  .auth-links {
+    height: 40%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
   
   
 /* Styles for screens smaller than 600px */
