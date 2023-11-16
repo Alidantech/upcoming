@@ -1,0 +1,75 @@
+/* Common styling for the section */
+        section.api-box {
+            width: 50%;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+
+        /* Styling for the form and input */
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            height: 40vh;
+        }
+
+        label {
+            margin-bottom: 5px;
+        }
+
+      /* Styling for the submit button */
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        input {
+            padding: 10px;
+            border-radius: 10px;
+                        width: 50%;
+
+        }
+
+        /* Styling for the copy button */
+        button.copy-button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            display: flex;
+            align-items: center;
+        }
+
+        button.copy-button:hover {
+            background-color: #0056b3;
+        }
+
+        .copy-icon {
+            margin-right: 5px;
+        }
+
+        .api-buttons{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            width: 50%;
+        }

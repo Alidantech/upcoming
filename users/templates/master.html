@@ -18,7 +18,7 @@
   
         function loadCSS(filename) {
           const link = document.createElement('link');
-          link.href = `/static/css/${filename}`;  // Modify the path to the CSS file
+          link.href = `/static/css/${filename}`;
           link.rel = 'stylesheet';
           link.type = 'text/css';
           document.head.appendChild(link);
@@ -35,7 +35,7 @@
 <body>
 <header>
     <div class="center-elements-x">
-        <img class="logo" src="{% static 'img/logo.png' %}" alt="logo" width="25vw">upc
+        <img class="logo" src="{% static 'img/logo.png' %}" alt="logo" width="25vw">
     </div>
     <div class="center-elements-x">
         <h1 class="heading"> {% block heading %}{% endblock %} </h1>
@@ -49,9 +49,10 @@
             <li><a {% if active_page == 'about' %} class="active"{% endif %} href="/about/"><i class="fas fa-info-circle"></i> About</a></li>
       </ul>  
       <div class="nav-buttons">
-        <button title="change theme" id="theme-toggle" class="theme-button icon-btn">
-          <i class="fas fa-adjust"></i>
-        </button>
+        <label title="Change Theme" class="switch">
+          <input type="checkbox" id="theme-toggle">
+          <span class="slider"></span>
+        </label>
         <a href="/account"><button class="account-btn icon-btn">
           <img src="https://source.unsplash.com/random/400x400/?music" alt="user profile pic">
         </button></a>

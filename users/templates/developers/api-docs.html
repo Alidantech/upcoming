@@ -3,52 +3,90 @@
 {% block title %}API Documentation{% endblock %}
 {% block heading %}Developer Documentation{% endblock %}
 {% block content %}
-<section class="section-1">
-      <div class="text-desc">
+<section>
+      <div class="docs">
             <span>Welcome to the Developer Options page. Here you can access various tools and features to enhance your
-                  development
-                  experience.</span>
+                  development experience.
+            </span>
       </div>
 </section>
-<section class="section-2">
-      <div class="text-desc">
+<section>
+      <div class="docs">
             <h2 class="heading">API Key Generation</h2>
             <span>To access our API services, you need to generate an API key. Please use the following button to
                   generate your
-                  unique API key:</span>
-            <a href="/generate-api-key" class="btn btn-primary">Generate API Key</a>
+                  unique API key:
+            </span>
+            <a href="/developers" class="btn btn-border">Generate API Key</a>
       </div>
 </section>
-<section class="section-2">
-      <div class="text-desc">
+<section>
+      <div class="docs">
             <h2 class="heading">API Documentation</h2>
             <span>Refer to our comprehensive API documentation to learn how to integrate our APIs into your
                   applications. The
                   documentation includes detailed explanations, endpoints, and example code:</span>
-            <a href="/api-documentation" class="btn btn-primary">API Documentation</a>
       </div>
 </section>
-<section class="section-2">
-      <div class="text-desc">
+<section>
+      <div class="docs">
             <h2 class="heading">Sample Code and SDKs</h2>
             <span>Explore our sample code and SDKs to jumpstart your development process. We provide code snippets and
                   software
                   development kits for various programming languages and frameworks:</span>
-            <a href="/sample-code" class="btn btn-primary">Sample Code and SDKs</a>
       </div>
 </section>
-<section class="section-2">
-      <div class="text-desc">
+<section>
+      <div class="docs">
             <h2 class="heading">Support and Community</h2>
             <span>If you have any questions, need assistance, or want to connect with other developers, our support and
                   community
                   channels are available. Join our forums, chat groups, and social media communities to engage with
                   fellow
                   developers:</span>
-            <a href="/support" class="btn btn-primary">Support and Community</a>
       </div>
+
+      <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const faqList = document.getElementById('faq-list');
+
+    const faqs = [
+        { question: 'What is your return policy?', answer: 'Our return policy allows for returns within 30 days of the purchase date.' },
+        { question: 'How can I track my order?', answer: 'You can track your order by logging into your account on our website.' },
+        { question: 'Do you offer international shipping?', answer: 'Yes, we offer international shipping to several countries.' },
+        // Add more questions and answers as needed
+    ];
+
+    faqs.forEach((faq, index) => {
+        const faqItem = document.createElement('div');
+        faqItem.classList.add('faq-item');
+
+        const faqQuestion = document.createElement('div');
+        faqQuestion.classList.add('faq-question');
+        faqQuestion.textContent = `${index + 1}. ${faq.question}`;
+        faqQuestion.addEventListener('click', () => toggleFaq(faqItem));
+
+        const faqAnswer = document.createElement('div');
+        faqAnswer.classList.add('faq-answer');
+        const answerParagraph = document.createElement('p');
+        answerParagraph.textContent = faq.answer;
+        faqAnswer.appendChild(answerParagraph);
+
+        faqItem.appendChild(faqQuestion);
+        faqItem.appendChild(faqAnswer);
+        faqList.appendChild(faqItem);
+    });
+
+    function toggleFaq(faqItem) {
+        faqItem.classList.toggle('active');
+    }
+});
+
+</script>
 </section>
+
 {% endblock %}
 {% block static %}
+<link rel="stylesheet" href="{% static 'css/api.css' %}">
 <link rel="stylesheet" href="{% static 'css/main.css' %}">
 {% endblock static %}

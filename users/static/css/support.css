@@ -7,7 +7,7 @@ section {
     border-radius: 8px;
 }
 
-h2 {
+h2.heading {
     color: #007BFF;
     text-align: center;
 }
@@ -15,13 +15,6 @@ h2 {
 span {
     display: block;
     margin-bottom: 20px;
-}
-
-img {
-    display: block;
-    margin: 0 auto;
-    max-width: 100%;
-    border-radius: 8px;
 }
 
 ul {
@@ -33,15 +26,11 @@ li {
     margin-bottom: 15px;
 }
 
-/* Specific styles for each section */
-.about-section {
-    background-color: #f0f8ff; /* AliceBlue */
+a {
+    color: #007BFF;
+    text-decoration: none;
 }
 
-.features-section {
-    background-color: #ffe4b5; /* Moccasin */
-}
-
-.why-use-section {
-    background-color: #e0ffff; /* LightCyan */
+a:hover {
+    text-decoration: underline;
 }

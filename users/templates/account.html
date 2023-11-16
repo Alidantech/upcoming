@@ -1,67 +1,69 @@
 {% extends "master.html" %}
-{% load static %}
-{% block title %}{{ user.username }}{% endblock %}
-{% block heading %}My Account{% endblock %}
-{% block content %}
-<div class="account-page">
-    <div class="account-details-container">
-        <img class="myaccount-img" src="{% static 'img/person-in-studio.jpg' %}" alt="Musician recording a song" class="img-fluid">
-        <div class="">
-            <h2>{{ user.username }}</h2>
-            <div class="">followers 100k</div> <div class="">following 3k</div>
-        </div>
-        <div class="">
-            <p>{{ user.bio }}I am passionate</p>
-        </div>
-        <div class="">
-            <div class="">songs 100</div> <div class="">listens 3000</div>
-        </div>
-    </div>
-    <div class="settings-container">
-        <div class="">
-        <h3>update details</h3>
-        <form action="" method="POST">
-            {% csrf_token %}
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" value="{{ user.name }}" required>
-            <br>
-            <label for="bio">Bio:</label>
-            <textarea id="bio" name="bio" required>{{ user.bio }}</textarea>
-            <br>
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" value="{{ user.username }}" required>
-            <br>
-            <label for="theme">Theme:</label>
-            <select id="theme" name="theme">
-                <option value="light">Light</option>
-                <option value="dark">Dark</option>
-            </select>
-            <br>
-            <!-- Add more settings here as needed -->
-            <button type="submit">Update Details</button>
-        </form>
-        </div>
-        <div class="">
-            <h3>select theme</h3>
-            user theme
-        </div>
-        <div class="">
-            <h3>my songs</h3>
-                user songs
-        </div>
-        <div class="">
-            
-        </div>
-        <div class="">
-            
-        </div>
-        <div class="">
-            
-        </div>
-    </div>
-</div>
-{% endblock %}
+{% load static %} 
 
-{% block static %}
-<link rel="stylesheet" href="{% static 'css/account.css' %}">
+{% block title %}{{ user.username}}{% endblock %} 
+{% block heading %}My Account{% endblock %} {% block content %}
+<section class="account-details">
+  <div>
+      <img class="account-pic" src="https://source.unsplash.com/random/400x400/?music" alt="user profile pic">
+    <h2>{{ user.username}}</h2>
+    <p>Music for life. An a artist with shear passion.</p>
+  </div>
+  <div class="settings">
+    <h2>Settings</h2>
+
+    <div class="setting-item">
+        <label for="enable-notifications">Enable Notifications:</label>
+        <input type="checkbox" id="enable-notifications">
+    </div>
+
+    <div class="setting-item">
+        <label for="language">Select Language:</label>
+        <select id="language">
+            <option value="english">English</option>
+            <option value="spanish">Spanish</option>
+            <option value="french">French</option>
+        </select>
+    </div>
+
+    <div class="setting-item">
+        <label for="username">Username:</label>
+        <input type="text" id="username" placeholder="Enter your username">
+    </div>
+    <h2>Music Settings</h2>
+
+    <div class="setting-item">
+        <label for="enable-notifications">Enable Notifications:</label>
+        <input type="checkbox" id="enable-notifications">
+    </div>
+
+    <div class="setting-item">
+        <label for="volume">Volume:</label>
+        <input type="range" id="volume" min="0" max="100" step="1">
+    </div>
+
+    <div class="setting-item">
+        <label for="theme">Select Theme:</label>
+        <select id="theme">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+        </select>
+    </div>
+
+    <div class="setting-item">
+        <label for="autoplay">Autoplay:</label>
+        <input type="checkbox" id="autoplay">
+    </div>
+
+    <div class="setting-item">
+        <label for="playlist">Default Playlist:</label>
+        <input type="text" id="playlist" placeholder="Enter default playlist name">
+    </div>
+
+    <button class="save-button">Save Settings</button>
+
+</div>
+</section>
+{% endblock %} {% block static %}
+<link rel="stylesheet" href="{% static 'css/account.css' %}" />
 {% endblock static %}

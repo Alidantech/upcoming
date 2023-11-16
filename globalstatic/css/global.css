@@ -217,6 +217,69 @@ footer {
     margin-bottom: 10px;
 }
 
+/* The switch container */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 30px; /* Adjusted width */
+  height: 14px; /* Adjusted height */
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  display: none;
+}
+
+/* The slider (rounded) */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: gray;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 22px; /* Adjusted border-radius */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px; /* Adjusted height */
+  width: 19px; /* Adjusted width */
+  left: -1px;
+  bottom: -2px; /* Adjusted position */
+  background-color: rgb(180, 180, 180);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 20px; /* Adjusted border-radius */
+}
+
+
+/* Rounded sliders on activation */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 34px;
+}
+
+/* Toggle effect when the checkbox is checked */
+input:checked + .slider {
+  background-color: rgb(6, 151, 127);
+}
+
+input:checked + .slider:before {
+    background-color: rgb(85, 85, 85);
+  -webkit-transform: translateX(70%);
+  -ms-transform: translateX(70%);
+  transform: translateX(70%);
+}
+
+
 /* ANIMATIONS */
 @keyframes slide-out {
   0% {

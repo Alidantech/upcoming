@@ -3,9 +3,8 @@
 {% block title %}Support Team{% endblock %}
 {% block heading %}Support Team{% endblock %}
 {% block content %}
-<section class="section-1">
-    <div class="text-desc">
-      <h2 class="heading">Contact Information</h2>
+<section>
+      <h2>Contact Information</h2>
       <span>For any inquiries or support requests, please reach out to our support team using the following contact
         information:</span>
       <ul>
@@ -13,11 +12,10 @@
         <li><span>Phone: +1 123-456-7890</span></li>
         <li><span>Live Chat:</span> <a href="/live-chat">Start Live Chat</a></li>
       </ul>
-    </div>
+
 </section>
-<section class="section-2">
-    <div class="text-desc">
-      <h2 class="heading">Frequently Asked Questions</h2>
+<section>
+      <h2>Frequently Asked Questions</h2>
       <span>Before contacting our support team, you might find answers to your questions in our Frequently Asked Questions
         (FAQ) section. Please browse through the following common inquiries:</span>
       <ul>
@@ -26,30 +24,26 @@
         <li><a href="/faq/payments">Payments and Billing</a></li>
         <li><a href="/faq/technical">Technical Support</a></li>
       </ul>
-    </div>
+
 </section>
-<section class="section-2">
-  <div class="text-desc">
-    <h2 class="heading">Additional Resources</h2>
+<section>
+    <h2>Additional Resources</h2>
     <span>Here are some additional resources that may be helpful:</span>
     <ul>
       <li><a href="/documentation">API Documentation</a></li>
       <li><a href="/tutorials">Tutorials</a></li>
       <li><a href="/developer-guides">Developer Guides</a></li>
     </ul>
-  </div>
 </section>
-<section class="section-2">
-    <div class="text-desc">
-      <h2 class="heading">Support Hours</h2>
+<section>
+      <h2>Support Hours</h2>
       <span>Our support team is available to assist you during the following hours:</span>
       <ul>
         <li><span>Monday-Friday: 9am-6pm (GMT)</span></li>
         <li><span>Saturday-Sunday: Closed</span></li>
       </ul>
-    </div>
 </section>
 {% endblock %}
 {% block static %}
-  <link rel="stylesheet" href="{% static 'css/main.css' %}">
+  <link rel="stylesheet" href="{% static 'css/support.css' %}">
 {% endblock static %}
