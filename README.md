@@ -50,11 +50,3 @@ The front-end languages used are JavaScript, HTML, and CSS for the user interfac
     ```
 
 2. Open your web browser and access the project at [http://localhost:8000/](http://localhost:8000/).
-
-## Usage
-
-
-
-## Troubleshooting
-
-
